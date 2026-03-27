@@ -1,0 +1,13 @@
+[
+  { "ka": "და", "la": "da", "en": "and" },
+  { "ka": "ან", "la": "an", "en": "or" },
+  { "ka": "მაგრამ", "la": "magram", "en": "but" },
+  { "ka": "ისევე როგორც", "la": "iseve rogorc", "en": "as well as" },
+  {
+    "ka": "იქიდან გამომდინარე რომ",
+    "la": "ikidan gamoxdinebulia rom",
+    "en": "because"
+  },
+  { "ka": "ანუ", "la": "anu", "en": "that is / i.e." },
+  { "ka": "თანაც", "la": "tanats", "en": "also / moreover" }
+]

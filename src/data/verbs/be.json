@@ -1,128 +1,125 @@
 {
-  "verb": {
+  "infinive": {
     "ka": "ყოფნა",
     "la": "qopna",
     "en": "to be"
   },
-  "type": "irregular",
-  "forms": {
-    "present": {
-      "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
-      "conjugation": {
-        "1sg": { "ka": "ვარ", "la": "var", "en": "I am" },
-        "2sg": { "ka": "ხარ", "la": "khar", "en": "you are" },
-        "3sg": { "ka": "არის", "la": "aris", "en": "he/she/it is" },
-        "1pl": { "ka": "ვართ", "la": "vart", "en": "we are" },
-        "2pl": { "ka": "ხართ", "la": "khart", "en": "you are (plural/formal)" },
-        "3pl": { "ka": "არიან", "la": "arian", "en": "they are" }
-      }
-    },
-    "past": {
-      "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
-      "conjugation": {
-        "1sg": { "ka": "ვიყავი", "la": "viqavi", "en": "I was" },
-        "2sg": { "ka": "იყავი", "la": "iqavi", "en": "you were" },
-        "3sg": { "ka": "იყო", "la": "iqo", "en": "he/she/it was" },
-        "1pl": { "ka": "ვიყავით", "la": "viqavit", "en": "we were" },
-        "2pl": {
-          "ka": "იყავით",
-          "la": "iqavit",
-          "en": "you were (plural/formal)"
-        },
-        "3pl": { "ka": "იყვნენ", "la": "iyvnen", "en": "they were" }
-      }
-    },
-    "future": {
-      "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
-      "conjugation": {
-        "1sg": { "ka": "ვიქნები", "la": "viqnebi", "en": "I will be" },
-        "2sg": { "ka": "იქნები", "la": "iqnebi", "en": "you will be" },
-        "3sg": { "ka": "იქნება", "la": "iqneba", "en": "he/she/it will be" },
-        "1pl": { "ka": "ვიქნებით", "la": "viqnebit", "en": "we will be" },
-        "2pl": {
-          "ka": "იქნებით",
-          "la": "iqnebit",
-          "en": "you will be (plural/formal)"
-        },
-        "3pl": { "ka": "იქნებიან", "la": "iqnebian", "en": "they will be" }
-      }
-    },
-    "present_continuous": {
-      "name": {
-        "ka": "აწმყო მიმდინარე",
-        "la": "atsmqo martskhene",
-        "en": "present continuous context"
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვარ", "la": "var", "en": "I am" },
+      "2sg": { "ka": "ხარ", "la": "khar", "en": "you are" },
+      "3sg": { "ka": "არის", "la": "aris", "en": "he/she/it is" },
+      "1pl": { "ka": "ვართ", "la": "vart", "en": "we are" },
+      "2pl": { "ka": "ხართ", "la": "khart", "en": "you are (plural/formal)" },
+      "3pl": { "ka": "არიან", "la": "arian", "en": "they are" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "ვიყავი", "la": "viqavi", "en": "I was" },
+      "2sg": { "ka": "იყავი", "la": "iqavi", "en": "you were" },
+      "3sg": { "ka": "იყო", "la": "iqo", "en": "he/she/it was" },
+      "1pl": { "ka": "ვიყავით", "la": "viqavit", "en": "we were" },
+      "2pl": {
+        "ka": "იყავით",
+        "la": "iqavit",
+        "en": "you were (plural/formal)"
       },
-      "conjugation": {
-        "1sg": {
-          "ka": "მე ახლა ვარ",
-          "la": "me akhla var",
-          "en": "I am at home now"
-        },
-        "2sg": {
-          "ka": "შენ ახლა ხარ",
-          "la": "shen akhla khar",
-          "en": "You are at home now"
-        },
-        "3sg": {
-          "ka": "ის ახლა არის",
-          "la": "is akhla aris",
-          "en": "He/she is at home now"
-        },
-        "1pl": {
-          "ka": "ჩვენ ახლა ვართ",
-          "la": "chven akhla vart",
-          "en": "We are at home now"
-        },
-        "2pl": {
-          "ka": "თქვენ ახლა ხართ",
-          "la": "tkven akhla khart",
-          "en": "You are at home now (plural/formal)"
-        },
-        "3pl": {
-          "ka": "ისინი ახლა არიან",
-          "la": "isini akhla arian",
-          "en": "They are at home now"
-        }
-      }
-    },
-    "present_perfect": {
-      "name": {
-        "ka": "აწმყო სრულყოფილი",
-        "la": "atsmqo srulqopili",
-        "en": "present perfect context"
+      "3pl": { "ka": "იყვნენ", "la": "iyvnen", "en": "they were" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "ვიქნები", "la": "viqnebi", "en": "I will be" },
+      "2sg": { "ka": "იქნები", "la": "iqnebi", "en": "you will be" },
+      "3sg": { "ka": "იქნება", "la": "iqneba", "en": "he/she/it will be" },
+      "1pl": { "ka": "ვიქნებით", "la": "viqnebit", "en": "we will be" },
+      "2pl": {
+        "ka": "იქნებით",
+        "la": "iqnebit",
+        "en": "you will be (plural/formal)"
       },
-      "conjugation": {
-        "1sg": {
-          "ka": "მე უკვე ვიყავი",
-          "la": "me ukve viqavi",
-          "en": "I have already been"
-        },
-        "2sg": {
-          "ka": "შენ უკვე იყავი",
-          "la": "shen ukve iqavi",
-          "en": "You have already been"
-        },
-        "3sg": {
-          "ka": "ის უკვე იყო",
-          "la": "is ukve iqo",
-          "en": "He/she has already been"
-        },
-        "1pl": {
-          "ka": "ჩვენ უკვე ვიყავით",
-          "la": "chven ukve viqavit",
-          "en": "We have already been"
-        },
-        "2pl": {
-          "ka": "თქვენ უკვე იყავით",
-          "la": "tkven ukve iqavit",
-          "en": "You have already been (plural/formal)"
-        },
-        "3pl": {
-          "ka": "ისინი უკვე იყვნენ",
-          "la": "isini ukve ikhlen",
-          "en": "They have already been"
-        }
+      "3pl": { "ka": "იქნებიან", "la": "iqnebian", "en": "they will be" }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo martskhene",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვარ",
+        "la": "me akhla var",
+        "en": "I am at home now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ხარ",
+        "la": "shen akhla khar",
+        "en": "You are at home now"
+      },
+      "3sg": {
+        "ka": "ის ახლა არის",
+        "la": "is akhla aris",
+        "en": "He/she is at home now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვართ",
+        "la": "chven akhla vart",
+        "en": "We are at home now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა ხართ",
+        "la": "tkven akhla khart",
+        "en": "You are at home now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა არიან",
+        "la": "isini akhla arian",
+        "en": "They are at home now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე ვიყავი",
+        "la": "me ukve viqavi",
+        "en": "I have already been"
+      },
+      "2sg": {
+        "ka": "შენ უკვე იყავი",
+        "la": "shen ukve iqavi",
+        "en": "You have already been"
+      },
+      "3sg": {
+        "ka": "ის უკვე იყო",
+        "la": "is ukve iqo",
+        "en": "He/she has already been"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე ვიყავით",
+        "la": "chven ukve viqavit",
+        "en": "We have already been"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე იყავით",
+        "la": "tkven ukve iqavit",
+        "en": "You have already been (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე იყვნენ",
+        "la": "isini ukve ikhlen",
+        "en": "They have already been"
       }
     }
   }
