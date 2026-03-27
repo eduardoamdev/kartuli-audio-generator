@@ -1,0 +1,146 @@
+{
+  "infinitive": {
+    "ka": "მოწონა",
+    "la": "mochona",
+    "en": "to want"
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "მინდა", "la": "minda", "en": "I want" },
+      "2sg": { "ka": "ინდა", "la": "inda", "en": "you want" },
+      "3sg": { "ka": "უნდა", "la": "unda", "en": "he/she wants" },
+      "1pl": { "ka": "ვმინდა", "la": "vminda", "en": "we want" },
+      "2pl": { "ka": "ინდეთ", "la": "indet", "en": "you want (plural/formal)" },
+      "3pl": { "ka": "უნდიან", "la": "undian", "en": "they want" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "მინდოდა", "la": "mindoda", "en": "I wanted" },
+      "2sg": { "ka": "ინდოდა", "la": "indoda", "en": "you wanted" },
+      "3sg": { "ka": "უნდოდა", "la": "undoda", "en": "he/she wanted" },
+      "1pl": { "ka": "მინდოდით", "la": "mindodit", "en": "we wanted" },
+      "2pl": {
+        "ka": "ინდოდით",
+        "la": "indodit",
+        "en": "you wanted (plural/formal)"
+      },
+      "3pl": { "ka": "უნდოდათ", "la": "undodat", "en": "they wanted" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": {
+        "ka": "მინდა ვიქნები",
+        "la": "minda viqnebi",
+        "en": "I will want"
+      },
+      "2sg": {
+        "ka": "ინდა იქნები",
+        "la": "inda iqnebi",
+        "en": "you will want"
+      },
+      "3sg": {
+        "ka": "უნდა იქნება",
+        "la": "unda iqneba",
+        "en": "he/she will want"
+      },
+      "1pl": {
+        "ka": "ვმინდა ვიქნებით",
+        "la": "vminda viqnebit",
+        "en": "we will want"
+      },
+      "2pl": {
+        "ka": "ინდეთ იქნებით",
+        "la": "indet iqnebit",
+        "en": "you will want (plural/formal)"
+      },
+      "3pl": {
+        "ka": "უნდიან იქნებიან",
+        "la": "undian iqnebian",
+        "en": "they will want"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo martskhene",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა მინდა",
+        "la": "me akhla minda",
+        "en": "I am wanting now"
+      },
+      "2sg": {
+        "ka": "შენ ახლაინდა",
+        "la": "shen akhla inda",
+        "en": "You are wanting now"
+      },
+      "3sg": {
+        "ka": "ის ახლა უნდა",
+        "la": "is akhla unda",
+        "en": "He/she is wanting now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვმინდა",
+        "la": "chven akhla vminda",
+        "en": "We are wanting now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლაინდეთ",
+        "la": "tkven akhla indet",
+        "en": "You are wanting now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლაუნდიან",
+        "la": "isini akhla undian",
+        "en": "They are wanting now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე მინდოდა",
+        "la": "me ukve mindoda",
+        "en": "I have already wanted"
+      },
+      "2sg": {
+        "ka": "შენ უკვეინდოდა",
+        "la": "shen ukve indoda",
+        "en": "You have already wanted"
+      },
+      "3sg": {
+        "ka": "ის უკვეუნდოდა",
+        "la": "is ukve undoda",
+        "en": "He/she has already wanted"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე მინდოდით",
+        "la": "chven ukve mindodit",
+        "en": "We have already wanted"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვეინდოდით",
+        "la": "tkven ukve indodit",
+        "en": "You have already wanted (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვეუნდოდათ",
+        "la": "isini ukve undodat",
+        "en": "They have already wanted"
+      }
+    }
+  }
+}

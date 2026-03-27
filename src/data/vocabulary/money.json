@@ -1,0 +1,36 @@
+[
+  { "ka": "ლარი", "la": "lari", "en": "lari (Georgian currency)" },
+  { "ka": "ტელეფონი", "la": "telefoni", "en": "phone (to pay bills, etc.)" },
+  { "ka": "ფული", "la": "puli", "en": "money" },
+  { "ka": "ქვითარი", "la": "kvitari", "en": "receipt" },
+  { "ka": "ბანკი", "la": "banki", "en": "bank" },
+  { "ka": "ბანკომატი", "la": "bankomati", "en": "ATM" },
+  { "ka": "საბანკო ანგარიში", "la": "sabanko angarishi", "en": "bank account" },
+  { "ka": "ბარათი", "la": "barati", "en": "credit/debit card" },
+  { "ka": "ნაღდი ფული", "la": "nagdi puli", "en": "cash" },
+  {
+    "ka": "გახსნა / დახურვა",
+    "la": "gakhsa / dakhurva",
+    "en": "deposit / withdrawal"
+  },
+  { "ka": "გადახდა", "la": "gadakhda", "en": "payment" },
+  { "ka": "თეთრი", "la": "tetri", "en": "cents" },
+  { "ka": "გაყიდვა", "la": "gakyidva", "en": "sale / selling" },
+  { "ka": "ყიდვა", "la": "qidva", "en": "purchase / buying" },
+  { "ka": "ფასი", "la": "pasi", "en": "price" },
+  { "ka": "ფულის გაცვლა", "la": "pulis gatsvla", "en": "currency exchange" },
+  { "ka": "ხარჯვა", "la": "khardzva", "en": "spending" },
+  { "ka": "გადაიხადო ონლაინ", "la": "gadaikhado online", "en": "pay online" },
+  { "ka": "სესხი", "la": "seskhi", "en": "loan" },
+  { "ka": "ინვესტიცია", "la": "investitsia", "en": "investment" },
+  { "ka": "ბიუჯეტი", "la": "biujeti", "en": "budget" },
+  { "ka": "გადასახადი", "la": "gadasakhadi", "en": "tax" },
+  {
+    "ka": "გადაუხდელი თანხა",
+    "la": "gadaukhdele tanxa",
+    "en": "outstanding amount"
+  },
+  { "ka": "ვალუტა", "la": "valuta", "en": "currency (foreign or domestic)" },
+  { "ka": "კუპიურა", "la": "kupiura", "en": "banknote / bill" },
+  { "ka": "მონეტა", "la": "moneta", "en": "coin" }
+]
