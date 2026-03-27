@@ -1,0 +1,9 @@
+[
+  { "ka": "მე", "la": "me", "en": "I" },
+  { "ka": "შენ", "la": "shen", "en": "you (singular informal)" },
+  { "ka": "ის", "la": "is", "en": "he / she / it" },
+
+  { "ka": "ჩვენ", "la": "chven", "en": "we" },
+  { "ka": "თქვენ", "la": "tkven", "en": "you (plural / formal)" },
+  { "ka": "ისინი", "la": "isini", "en": "they" }
+]
