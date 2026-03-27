@@ -57,13 +57,13 @@ const extractKaFromNestedObject = (value: unknown): string[] => {
   return values;
 };
 
-const extractKaValues = (value: unknown) => {
-  if (Array.isArray(value)) {
-    return extractKaFromArrayEntries(value);
+const extractKaValues = (parsedFileContent: unknown) => {
+  if (Array.isArray(parsedFileContent)) {
+    return extractKaFromArrayEntries(parsedFileContent);
   }
 
-  if (isRecord(value)) {
-    return extractKaFromNestedObject(value);
+  if (isRecord(parsedFileContent)) {
+    return extractKaFromNestedObject(parsedFileContent);
   }
 
   throw new Error("Unsupported JSON structure. Expected an array or object.");
@@ -71,33 +71,23 @@ const extractKaValues = (value: unknown) => {
 
 const readDataFile = async ({ folder, filename }: DataFileRequest) => {
   const safeFolder = validateFolder(folder.trim());
+
   const safeFilename = validateFilename(filename.trim());
+
   const filePath = path.join(DATA_DIRECTORY, safeFolder, safeFilename);
 
-  let fileContent: string;
+  const fileContent = await readFile(filePath, "utf-8");
 
-  try {
-    fileContent = await readFile(filePath, "utf-8");
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    throw new Error(`Unable to read ${safeFolder}/${safeFilename}: ${message}`);
-  }
-
-  try {
-    return JSON.parse(fileContent) as unknown;
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    throw new Error(
-      `Invalid JSON in ${safeFolder}/${safeFilename}: ${message}`,
-    );
-  }
+  return JSON.parse(fileContent) as unknown;
 };
 
 export const extractKaValuesFromDataFiles = async (
   files: DataFileRequest[],
 ) => {
   const valuesByFile = await Promise.all(
-    files.map(async (file) => extractKaValues(await readDataFile(file))),
+    files.map(async (fileInfo) =>
+      extractKaValues(await readDataFile(fileInfo)),
+    ),
   );
 
   return valuesByFile.flat();
