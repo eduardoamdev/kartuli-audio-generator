@@ -4,7 +4,7 @@ import { DATA_DIRECTORY } from "@/utils/constants";
 
 import type { DataNames } from "@/types/data";
 
-export const getDataFoldersAndFiles = async (): Promise<DataNames> => {
+export const getNamesOfDataFoldersAndFiles = async (): Promise<DataNames> => {
   const dataEntries = await readdir(DATA_DIRECTORY, { withFileTypes: true });
 
   const folderNames = dataEntries
