@@ -1,94 +1,39 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { DATA_DIRECTORY } from "@/utils/constants";
+import { TEXT_FILE_ENCODING } from "@/utils/constants";
 
-const DATA_DIRECTORY = path.join(process.cwd(), "src", "data");
+import type {
+  VerbData,
+  VerbTense,
+  SupportedDataFile,
+  DataFileRequest,
+} from "@/types/data";
 
-export type DataFileRequest = {
-  folder: string;
-  filename: string;
-};
+const extractKaFromVerbTense = (tense: VerbTense) => [
+  tense.name.ka,
+  ...Object.values(tense.conjugation).map((conjugation) => conjugation.ka),
+];
 
-type JsonRecord = Record<string, unknown>;
+const extractKaFromVerbData = (verbData: VerbData) =>
+  Object.values(verbData)
+    .flatMap(extractKaFromVerbTense)
+    .filter((value): value is string => Boolean(value));
 
-const isRecord = (value: unknown): value is JsonRecord =>
-  typeof value === "object" && value !== null && !Array.isArray(value);
+const extractKaValues = (parsedFileContent: SupportedDataFile) =>
+  Array.isArray(parsedFileContent)
+    ? parsedFileContent.map((entry) => entry.ka)
+    : extractKaFromVerbData(parsedFileContent);
 
-const normalizeFilename = (filename: string) =>
-  filename.endsWith(".json") ? filename : `${filename}.json`;
-
-const validateFolder = (folder: string) => {
-  if (!/^[a-zA-Z0-9-]+$/.test(folder)) {
-    throw new Error(`Invalid folder name: ${folder}`);
-  }
-
-  return folder;
-};
-
-const validateFilename = (filename: string) => {
-  const normalizedFilename = normalizeFilename(filename);
-
-  if (!/^[a-zA-Z0-9-]+\.json$/.test(normalizedFilename)) {
-    throw new Error(`Invalid filename: ${filename}`);
-  }
-
-  return normalizedFilename;
-};
-
-const extractKaFromArrayEntries = (entries: unknown[]) =>
-  entries.flatMap((entry) => {
-    if (!isRecord(entry) || typeof entry.ka !== "string") {
-      return [];
-    }
-
-    return [entry.ka];
-  });
-
-const extractKaFromNestedObject = (value: unknown): string[] => {
-  if (!isRecord(value)) {
-    return [];
-  }
-
-  const values = typeof value.ka === "string" ? [value.ka] : [];
-
-  for (const nestedValue of Object.values(value)) {
-    values.push(...extractKaFromNestedObject(nestedValue));
-  }
-
-  return values;
-};
-
-const extractKaValues = (parsedFileContent: unknown) => {
-  if (Array.isArray(parsedFileContent)) {
-    return extractKaFromArrayEntries(parsedFileContent);
-  }
-
-  if (isRecord(parsedFileContent)) {
-    return extractKaFromNestedObject(parsedFileContent);
-  }
-
-  throw new Error("Unsupported JSON structure. Expected an array or object.");
-};
-
-const readDataFile = async ({ folder, filename }: DataFileRequest) => {
-  const safeFolder = validateFolder(folder.trim());
-
-  const safeFilename = validateFilename(filename.trim());
-
-  const filePath = path.join(DATA_DIRECTORY, safeFolder, safeFilename);
-
-  const fileContent = await readFile(filePath, "utf-8");
-
-  return JSON.parse(fileContent) as unknown;
-};
+const readDataFile = async ({ folder, filename }: DataFileRequest) =>
+  JSON.parse(
+    await readFile(
+      path.join(DATA_DIRECTORY, folder, filename),
+      TEXT_FILE_ENCODING,
+    ),
+  ) as SupportedDataFile;
 
 export const extractKaValuesFromDataFiles = async (
   files: DataFileRequest[],
-) => {
-  const valuesByFile = await Promise.all(
-    files.map(async (fileInfo) =>
-      extractKaValues(await readDataFile(fileInfo)),
-    ),
-  );
-
-  return valuesByFile.flat();
-};
+): Promise<string[]> =>
+  (await Promise.all(files.map(readDataFile))).flatMap(extractKaValues);

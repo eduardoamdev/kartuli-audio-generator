@@ -4,6 +4,16 @@ export type DataTextInfo = {
   en: string;
 };
 
+export type DataNames = {
+  folderNames: string[];
+  fileNames: string[];
+};
+
+export type DataFileRequest = {
+  folder: string;
+  filename: string;
+};
+
 export type VerbConjugation = {
   "1sg": DataTextInfo;
   "2sg": DataTextInfo;
@@ -15,11 +25,11 @@ export type VerbConjugation = {
 
 export type VerbTense = {
   name: DataTextInfo;
-  conjugation: DataTextInfo;
+  conjugation: VerbConjugation;
 };
 
 export type VerbData = {
-  infinitive?: DataTextInfo;
+  infinitive?: VerbTense;
   present: VerbTense;
   past: VerbTense;
   future: VerbTense;
@@ -27,4 +37,6 @@ export type VerbData = {
   present_perfect: VerbTense;
 };
 
-export type VocalubaryAndFuncionWordsData = DataTextInfo[];
+export type VocabularyAndFunctionWordsData = DataTextInfo[];
+
+export type SupportedDataFile = VerbData | VocabularyAndFunctionWordsData;

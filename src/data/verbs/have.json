@@ -1,8 +1,7 @@
 {
   "infinitive": {
-    "ka": "მოწონა",
-    "la": "mochona",
-    "en": "to want"
+    "name": { "ka": "მოწონა", "la": "mochona", "en": "to want" },
+    "conjugation": {}
   },
   "present": {
     "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
