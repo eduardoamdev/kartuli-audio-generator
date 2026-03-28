@@ -1,10 +1,11 @@
 export const buildPrompt = (
   words_json: string,
   conversation_type: "dialogue" | "monologue",
+  conversation_description: string,
 ) =>
   `You are a Georgian language teacher and a native speaker. Generate a conversation in Georgian using the words provided in this document.
 - Only use the words provided. 
-- Create a natural, real-life situation (e.g., shopping, talking about food, money, daily activities). 
+- Create a natural coversation. 
 - The Georgian must include Latin transcription. 
 - Include English translation for each message.
 - The output must be strictly in JSON format.
@@ -16,6 +17,9 @@ ${words_json}
 
 CONVERSATION_TYPE:
 ${conversation_type}
+
+CONVERSATION_DESCRIPTION:
+${conversation_description}
 
 Output structure:
 
