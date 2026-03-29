@@ -3,7 +3,7 @@ import type { ActivityCards } from "../types/cards";
 
 const activityCards: ActivityCards = [
   {
-    href: "/material-generators/image-lesson/generator",
+    href: "/",
     variant: "blue",
     icon: "🔊",
     eyebrow: "Improve your listening",
@@ -12,7 +12,7 @@ const activityCards: ActivityCards = [
       "Daily life conversations, read aloud by native speakers and organized by topic and level.",
   },
   {
-    href: "/material-generators/conversation-lesson/generator",
+    href: "/",
     variant: "purple",
     icon: "🤖",
     eyebrow: "Create your own conversations",
@@ -21,7 +21,7 @@ const activityCards: ActivityCards = [
       "Craft custom dialogues with AI for any topic, level, or scenario you choose.",
   },
   {
-    href: "/material-generators/video-lesson/generator",
+    href: "/",
     variant: "teal",
     icon: "📚",
     eyebrow: "Review grammar and vocabulary",
