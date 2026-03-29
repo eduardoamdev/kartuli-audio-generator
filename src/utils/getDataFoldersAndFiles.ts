@@ -5,12 +5,7 @@ import { DATA_DIRECTORY } from "@/utils/constants";
 import type { DataNames } from "@/types/data";
 
 export const getNamesOfDataFoldersAndFiles = async (): Promise<DataNames> => {
-  const dataEntries = await readdir(DATA_DIRECTORY, { withFileTypes: true });
-
-  const folderNames = dataEntries
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort();
+  const folderNames = await getNamesOfDataFolders();
 
   const fileNamesByFolder = await Promise.all(
     folderNames.map(async (folderName) => {
@@ -29,4 +24,15 @@ export const getNamesOfDataFoldersAndFiles = async (): Promise<DataNames> => {
     folderNames,
     fileNames,
   };
+};
+
+export const getNamesOfDataFolders = async (): Promise<string[]> => {
+  const dataEntries = await readdir(DATA_DIRECTORY, { withFileTypes: true });
+
+  const folderNames = dataEntries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort();
+
+  return folderNames;
 };
