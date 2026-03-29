@@ -45,9 +45,6 @@ export default function Button({
         <span className="btn-label">{children}</span>
         {description && <span className="btn-description">{description}</span>}
       </span>
-      <span className="btn-arrow" aria-hidden="true">
-        -&gt;
-      </span>
     </>
   );
 
