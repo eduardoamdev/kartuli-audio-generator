@@ -24,7 +24,7 @@ const activityCards: ActivityCards = [
   },
   {
     id: "grammar-library",
-    href: "/",
+    href: "/grammar-library/grammar-selector",
     variant: "teal",
     icon: "📚",
     eyebrow: "Review grammar and vocabulary",
