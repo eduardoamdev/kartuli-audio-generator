@@ -3,6 +3,7 @@ import type { ActivityCards } from "../types/cards";
 
 const activityCards: ActivityCards = [
   {
+    id: "audio-library",
     href: "/",
     variant: "blue",
     icon: "🔊",
@@ -12,15 +13,17 @@ const activityCards: ActivityCards = [
       "Daily life conversations, read aloud by native speakers and organized by topic and level.",
   },
   {
+    id: "audio-generator",
     href: "/",
     variant: "purple",
     icon: "🤖",
-    eyebrow: "Create your own conversations",
-    title: "Conversation Generator",
+    eyebrow: "Create your own audios",
+    title: "Audio Generator",
     description:
-      "Craft custom dialogues with AI for any topic, level, or scenario you choose.",
+      "Craft custom audios with AI for any topic, level, or scenario you choose.",
   },
   {
+    id: "grammar-library",
     href: "/",
     variant: "teal",
     icon: "📚",
@@ -76,7 +79,7 @@ export default function Home() {
               <div className="space-y-4">
                 {activityCards.map((activity) => (
                   <Button
-                    key={activity.href}
+                    key={activity.id}
                     href={activity.href}
                     variant={activity.variant}
                     icon={activity.icon}
