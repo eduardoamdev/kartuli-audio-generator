@@ -30,9 +30,10 @@ export default function Button({
     blue: "btn-blue",
     purple: "btn-purple",
     teal: "btn-teal",
-    outline: "border border-[#1e3a8a]/50 text-[#60a5fa] hover:bg-[#1e3a8a]/10",
+    outline:
+      "border border-[rgba(255,79,162,0.48)] text-[#ffb6df] hover:bg-[rgba(255,79,162,0.16)]",
     gradient:
-      "bg-gradient-to-r from-[#1e3a8a] to-[#581c87] hover:brightness-110 active:scale-[0.98] shadow-xl shadow-blue-950/40",
+      "bg-gradient-to-r from-[#c026d3] to-[#ff4fa2] hover:brightness-110 active:scale-[0.98] shadow-xl shadow-[rgba(98,6,48,0.4)]",
   };
 
   const baseClasses = "btn-base";

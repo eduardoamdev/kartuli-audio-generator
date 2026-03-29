@@ -19,13 +19,13 @@ export default function TextArea({
 }: TextAreaProps) {
   return (
     <div className="space-y-3">
-      <label className="text-[#e2e8f0] font-semibold block text-base pl-1">
+      <label className="block pl-1 text-base font-semibold text-[#fce7f3]">
         {label}
       </label>
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-[#1c1c1c] border border-white/5 rounded-2xl p-6 text-[#cbd5e1] min-h-[160px] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/20 focus:border-[#3b82f6]/50 resize-none transition-all placeholder:text-[#475569]"
+        className="min-h-[160px] w-full resize-none rounded-2xl border border-[rgba(255,220,240,0.16)] bg-[rgba(63,12,52,0.88)] p-6 text-[#ffe0f0] transition-all placeholder:text-[#c78cb4] focus:border-[rgba(255,79,162,0.58)] focus:outline-none focus:ring-2 focus:ring-[rgba(255,79,162,0.22)]"
         placeholder={placeholder}
       />
     </div>
