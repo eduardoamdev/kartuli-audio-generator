@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import CardGrid from "@/components/ui/CardGrid";
 import { getNamesOfDataFolders } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderName } from "@/utils/formatFolderName";
 
@@ -22,7 +23,7 @@ export default async function GrammarSelectorPage() {
             Choose a data section to browse the grammar library.
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <CardGrid>
             {folderNames.map((folderName, index) => (
               <Button
                 key={folderName}
@@ -36,7 +37,7 @@ export default async function GrammarSelectorPage() {
                 {formatFolderName(folderName)}
               </Button>
             ))}
-          </div>
+          </CardGrid>
         </div>
       </div>
     </main>
