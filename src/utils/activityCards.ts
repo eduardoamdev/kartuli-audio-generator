@@ -23,7 +23,7 @@ export const activityCards: ActivityCards = [
   },
   {
     id: "grammar-library",
-    href: "/grammar-library/grammar-selector",
+    href: "/grammar-library/selector",
     variant: "teal",
     icon: "📚",
     eyebrow: "Review grammar and vocabulary",
