@@ -5,7 +5,11 @@ import { useState } from "react";
 
 import { activityCards } from "@/utils/activityCards";
 
-export default function Navbar() {
+type NavbarProps = {
+  siteTitle: string;
+};
+
+export default function Navbar({ siteTitle }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -17,7 +21,7 @@ export default function Navbar() {
               href="/"
               className="inline-flex items-center rounded-full border border-[rgba(255,220,240,0.2)] bg-[rgba(255,227,243,0.12)] px-4 py-2 text-sm font-semibold tracking-[0.12em] text-[#fff0fb] transition hover:border-[rgba(255,220,240,0.34)] hover:bg-[rgba(255,227,243,0.18)]"
             >
-              გამარჯობა
+              {siteTitle}
             </Link>
 
             <button

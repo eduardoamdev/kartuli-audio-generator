@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import Navbar from "@/components/features/Navbar";
+import { SITE_TITLE } from "@/utils/constants";
 
 import "./globals.css";
 
@@ -39,7 +40,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        <Navbar />
+        <Navbar siteTitle={SITE_TITLE} />
         {children}
       </body>
     </html>
