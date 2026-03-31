@@ -65,13 +65,13 @@ export default function Navbar({ siteTitle }: NavbarProps) {
           <div
             id="primary-navigation"
             className={[
-              "grid overflow-hidden transition-all duration-200 ease-out",
+              "absolute inset-x-0 top-full z-50 pt-4 transition-all duration-200 ease-out",
               isOpen
-                ? "mt-4 grid-rows-[1fr] opacity-100"
-                : "mt-0 grid-rows-[0fr] opacity-0",
+                ? "pointer-events-auto translate-y-0 opacity-100"
+                : "pointer-events-none -translate-y-2 opacity-0",
             ].join(" ")}
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden rounded-[1.5rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(43,8,34,0.9)] p-2 shadow-[0_24px_80px_rgba(24,2,17,0.56)] backdrop-blur-xl">
               <div className="flex flex-col gap-2">
                 {activityCards.map((activity) => (
                   <Link
@@ -85,9 +85,6 @@ export default function Navbar({ siteTitle }: NavbarProps) {
                         {activity.icon}
                       </span>
                       <span>{activity.title}</span>
-                    </span>
-                    <span className="text-xs uppercase tracking-[0.16em] text-[rgba(255,220,240,0.74)]">
-                      Open
                     </span>
                   </Link>
                 ))}

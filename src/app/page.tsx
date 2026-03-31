@@ -9,11 +9,11 @@ import { activityCards } from "@/utils/activityCards";
  */
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative flex flex-1 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(244,114,182,0.34),_transparent_34%),radial-gradient(circle_at_82%_16%,_rgba(196,132,252,0.28),_transparent_30%),radial-gradient(circle_at_bottom,_rgba(217,70,239,0.24),_transparent_38%)]" />
       <div className="absolute left-1/2 top-24 h-96 w-96 -translate-x-1/2 rounded-full bg-[rgba(244,114,182,0.22)] blur-3xl" />
       <div className="absolute right-[-4rem] top-20 h-72 w-72 rounded-full bg-[rgba(168,85,247,0.18)] blur-3xl" />
-      <div className="relative mx-auto flex min-h-screen w-full max-w-6xl items-start px-5 pb-10 pt-3 sm:px-8 sm:pt-15 lg:px-10">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-1 items-start px-5 pb-10 pt-3 sm:px-8 sm:pt-15 lg:px-10">
         <div className="grid w-full gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <section className="space-y-8">
             <div className="inline-flex items-center gap-3 rounded-full border border-[rgba(255,220,240,0.2)] bg-[rgba(255,227,243,0.1)] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#ffd3ef] backdrop-blur-md">
