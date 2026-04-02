@@ -3,6 +3,7 @@ import { ReactNode, ButtonHTMLAttributes } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "blue" | "purple" | "teal" | "outline" | "gradient";
+  fullWidth?: boolean;
   href?: string;
   icon?: ReactNode;
   eyebrow?: string;
@@ -18,12 +19,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  */
 export default function Button({
   variant = "blue",
+  fullWidth = true,
   href,
   icon,
   eyebrow,
   description,
   className = "",
   children,
+  style,
   ...props
 }: ButtonProps) {
   const variantClasses = {
@@ -37,7 +40,13 @@ export default function Button({
   };
 
   const baseClasses = "btn-base";
-  const combinedClasses = `${baseClasses} ${variantClasses[variant] || ""} ${className}`;
+  const widthClasses = fullWidth ? "w-full" : "w-auto shrink-0";
+  const combinedClasses = `${baseClasses} ${widthClasses} ${variantClasses[variant] || ""} ${className}`;
+  const combinedStyle = {
+    width: fullWidth ? undefined : "fit-content",
+    flexShrink: fullWidth ? undefined : 0,
+    ...style,
+  };
   const content = (
     <>
       {icon && <span className="btn-icon">{icon}</span>}
@@ -51,14 +60,14 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={combinedClasses}>
+      <Link href={href} className={combinedClasses} style={combinedStyle}>
         {content}
       </Link>
     );
   }
 
   return (
-    <button className={combinedClasses} {...props}>
+    <button className={combinedClasses} style={combinedStyle} {...props}>
       {content}
     </button>
   );

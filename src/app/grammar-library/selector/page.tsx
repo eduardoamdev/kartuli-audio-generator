@@ -1,9 +1,17 @@
 import Button from "@/components/ui/Button";
 import CardGrid from "@/components/ui/CardGrid";
 import { getNamesOfDataFolders } from "@/utils/getDataFoldersAndFiles";
-import { formatFolderName } from "@/utils/formatFolderName";
+import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 
 const CARD_VARIANTS = ["blue", "purple", "teal"] as const;
+
+const getFolderHref = (folderName: string) => {
+  if (folderName === "vocabulary") {
+    return "/grammar-library/vocabulary/selector";
+  }
+
+  return `?folder=${encodeURIComponent(folderName)}`;
+};
 
 export default async function GrammarSelectorPage() {
   const folderNames = await getNamesOfDataFolders();
@@ -27,14 +35,14 @@ export default async function GrammarSelectorPage() {
             {folderNames.map((folderName, index) => (
               <Button
                 key={folderName}
-                href={`?folder=${encodeURIComponent(folderName)}`}
+                href={getFolderHref(folderName)}
                 variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
                 icon={String(index + 1).padStart(2, "0")}
                 eyebrow="Data folder"
                 description="Open this section and continue with the available cards."
                 className="h-full min-h-[148px] items-start"
               >
-                {formatFolderName(folderName)}
+                {formatFolderOrFileName(folderName)}
               </Button>
             ))}
           </CardGrid>

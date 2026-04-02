@@ -40,3 +40,5 @@ export type VerbData = {
 export type VocabularyAndFunctionWordsData = DataTextInfo[];
 
 export type SupportedDataFile = VerbData | VocabularyAndFunctionWordsData;
+
+export type LanguageCode = keyof DataTextInfo;
