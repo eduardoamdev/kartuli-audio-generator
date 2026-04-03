@@ -1,7 +1,9 @@
 export const buildPrompt = (
-  words_json: string,
-  conversation_type: "dialogue" | "monologue",
-  conversation_description: string,
+  words: string,
+  age: string,
+  level: string,
+  conversationDescription: string,
+  typeOfSpeech: "dialogue" | "monologue",
 ) =>
   `You are a Georgian language teacher and a native speaker. Generate a conversation in Georgian using the words provided in this document.
 - Only use the words provided. 
@@ -13,13 +15,19 @@ export const buildPrompt = (
 Variables provided:
 
 WORDS:
-${words_json}
+${words}
 
-CONVERSATION_TYPE:
-${conversation_type}
+AGE:
+${age}
+
+LEVEL:
+${level}
 
 CONVERSATION_DESCRIPTION:
-${conversation_description}
+${conversationDescription}
+
+TYPE_OF_SPEECH:
+${typeOfSpeech}
 
 Output structure:
 
