@@ -1,8 +1,19 @@
 import { NextResponse } from "next/server";
 
+import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
+
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as unknown;
+    const body = await request.json();
+
+    const selectedFilesContentByFolder = await getSelectedFilesContentByFolder(
+      body.selectedFilesByFolder ?? {},
+    );
+
+    console.log(
+      "Selected files content by folder:",
+      selectedFilesContentByFolder,
+    );
 
     return NextResponse.json(
       {
@@ -11,10 +22,15 @@ export async function POST(request: Request) {
       },
       { status: 200 },
     );
-  } catch {
+  } catch (error) {
+    console.error("Failed to process audio generation payload.", error);
+
     return NextResponse.json(
-      { success: false, message: "Failed to parse audio generation payload." },
-      { status: 400 },
+      {
+        success: false,
+        message: "Failed to process audio generation payload.",
+      },
+      { status: 500 },
     );
   }
 }
