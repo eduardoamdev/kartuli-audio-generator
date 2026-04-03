@@ -1,4 +1,5 @@
 import CardGridPageShell from "@/components/features/CardGridPageShell";
+import NonClickableCard from "@/components/features/NonClickableCard";
 import CardGrid from "@/components/ui/CardGrid";
 import type {
   FilenameSearchParams,
@@ -8,7 +9,7 @@ import { extractVocabularyEntriesFromDataFile } from "@/utils/extractVocabularyE
 import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 import { getSingleSearchParam } from "@/utils/getSingleSearchParam";
-import { DATA_FOLDERS, NON_CLICKABLE_CARD_SURFACES } from "@/utils/constants";
+import { DATA_FOLDERS } from "@/utils/constants";
 
 export default async function VocabularyPage({
   searchParams,
@@ -43,27 +44,11 @@ export default async function VocabularyPage({
         <section className="space-y-4">
           <CardGrid>
             {vocabularyEntries.map((entry, index) => (
-              <article
+              <NonClickableCard
                 key={`${selectedFileName}-${entry.ka}-${index}`}
-                className={[
-                  "min-h-[168px] rounded-[1.4rem] border border-[rgba(255,196,232,0.2)] p-5 shadow-[0_24px_62px_-26px_rgba(36,4,28,0.94)] backdrop-blur-[18px]",
-                  NON_CLICKABLE_CARD_SURFACES[
-                    index % NON_CLICKABLE_CARD_SURFACES.length
-                  ],
-                ].join(" ")}
-              >
-                <div className="space-y-3 text-left">
-                  <p className="text-2xl font-bold leading-tight text-[#fff0fb]">
-                    {entry.ka}
-                  </p>
-                  <p className="text-base font-medium text-[rgba(255,232,245,0.9)]">
-                    {entry.la}
-                  </p>
-                  <p className="text-sm leading-relaxed text-[rgba(255,211,239,0.9)]">
-                    {entry.en}
-                  </p>
-                </div>
-              </article>
+                entry={entry}
+                index={index}
+              />
             ))}
           </CardGrid>
         </section>
