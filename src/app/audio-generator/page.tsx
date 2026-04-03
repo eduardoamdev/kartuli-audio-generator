@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import Button from "@/components/ui/Button";
 import CardGridPageShell from "@/components/features/CardGridPageShell";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
@@ -18,12 +17,13 @@ type AudioGeneratorFormState = {
   selectedFilesByFolder: Record<string, string[]>;
 };
 
-type SavedAudioBrief = AudioGeneratorFormState & {
-  totalSelectedFiles: number;
-};
-
 type AudioGeneratorOptionsResponse = {
   foldersWithFiles: FolderWithFiles[];
+  message?: string;
+};
+
+type AudioGeneratorResponse = {
+  success: boolean;
   message?: string;
 };
 
@@ -49,17 +49,13 @@ const sanitizeSelections = (
     ]),
   );
 
-const buildSavedBrief = (
+const buildGenerationPayload = (
   formState: AudioGeneratorFormState,
   foldersWithFiles: FolderWithFiles[],
-): SavedAudioBrief => {
+): AudioGeneratorFormState => {
   const selectedFilesByFolder = sanitizeSelections(
     foldersWithFiles,
     formState.selectedFilesByFolder,
-  );
-  const totalSelectedFiles = Object.values(selectedFilesByFolder).reduce(
-    (count, selectedFiles) => count + selectedFiles.length,
-    0,
   );
 
   return {
@@ -67,7 +63,6 @@ const buildSavedBrief = (
     level: formState.level,
     details: formState.details,
     selectedFilesByFolder,
-    totalSelectedFiles,
   };
 };
 
@@ -79,21 +74,30 @@ const defaultFormState: AudioGeneratorFormState = {
 };
 
 export default function AudioGeneratorPage() {
+  const [hasMounted, setHasMounted] = useState(false);
   const [foldersWithFiles, setFoldersWithFiles] = useState<FolderWithFiles[]>(
     [],
   );
   const [formState, setFormState] =
     useState<AudioGeneratorFormState>(defaultFormState);
-  const [savedBrief, setSavedBrief] = useState<SavedAudioBrief | null>(null);
   const [isLoadingOptions, setIsLoadingOptions] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [generationError, setGenerationError] = useState<string | null>(null);
+  const [generationMessage, setGenerationMessage] = useState<string | null>(
+    null,
+  );
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     let isCancelled = false;
 
     const loadOptions = async () => {
       try {
-        const response = await fetch("/api/audio-generator/options");
+        const response = await fetch("/api/audio/options");
 
         if (!response.ok) {
           throw new Error("Failed to load audio generator data sources.");
@@ -145,6 +149,8 @@ export default function AudioGeneratorPage() {
       ...current,
       age: value.replace(/\D+/gu, ""),
     }));
+    setGenerationError(null);
+    setGenerationMessage(null);
   };
 
   const handleLevelChange = (value: string) => {
@@ -152,6 +158,8 @@ export default function AudioGeneratorPage() {
       ...current,
       level: value,
     }));
+    setGenerationError(null);
+    setGenerationMessage(null);
   };
 
   const handleDetailsChange = (value: string) => {
@@ -159,32 +167,84 @@ export default function AudioGeneratorPage() {
       ...current,
       details: value,
     }));
+    setGenerationError(null);
+    setGenerationMessage(null);
   };
 
-  const handleFolderSelectionChange = (
+  const handleFolderFileToggle = (
     folderName: string,
-    selectedFileNames: string[],
+    fileName: string,
+    folderFileNames: string[],
+    isSelected: boolean,
   ) => {
-    setFormState((current) => ({
-      ...current,
-      selectedFilesByFolder: {
-        ...current.selectedFilesByFolder,
-        [folderName]: selectedFileNames,
-      },
-    }));
+    setFormState((current) => {
+      const selectedFileNames = current.selectedFilesByFolder[folderName] ?? [];
+      const nextSelectedFileNames = new Set(selectedFileNames);
+
+      if (isSelected) {
+        nextSelectedFileNames.add(fileName);
+      } else {
+        nextSelectedFileNames.delete(fileName);
+      }
+
+      return {
+        ...current,
+        selectedFilesByFolder: {
+          ...current.selectedFilesByFolder,
+          [folderName]: folderFileNames.filter((candidateFileName) =>
+            nextSelectedFileNames.has(candidateFileName),
+          ),
+        },
+      };
+    });
+    setGenerationError(null);
+    setGenerationMessage(null);
   };
 
-  const handleSave = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleGenerate = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const nextSavedBrief = buildSavedBrief(formState, foldersWithFiles);
-    setSavedBrief(nextSavedBrief);
-    console.log(nextSavedBrief);
-  };
+    setIsGenerating(true);
+    setGenerationError(null);
+    setGenerationMessage(null);
 
-  const handleGenerate = () => {
-    const generationPayload = buildSavedBrief(formState, foldersWithFiles);
-    console.log(generationPayload);
+    try {
+      const generationPayload = buildGenerationPayload(
+        formState,
+        foldersWithFiles,
+      );
+      const response = await fetch("/api/audio/generator", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(generationPayload),
+      });
+
+      const data = (await response.json()) as AudioGeneratorResponse;
+
+      console.log("Audio generator route response", {
+        status: response.status,
+        ok: response.ok,
+        data,
+      });
+
+      if (!response.ok || !data.success) {
+        throw new Error(
+          data.message || "Failed to send audio generation request.",
+        );
+      }
+
+      setGenerationMessage(data.message || "Audio generation request sent.");
+    } catch (error) {
+      setGenerationError(
+        error instanceof Error
+          ? error.message
+          : "Failed to send audio generation request.",
+      );
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const handleClear = () => {
@@ -192,17 +252,24 @@ export default function AudioGeneratorPage() {
       ...defaultFormState,
       selectedFilesByFolder: buildEmptySelections(foldersWithFiles),
     });
-    setSavedBrief(null);
+    setGenerationError(null);
+    setGenerationMessage(null);
   };
 
-  const hasSavedBrief =
-    savedBrief !== null &&
-    (Boolean(savedBrief.age) ||
-      Boolean(savedBrief.level) ||
-      Boolean(savedBrief.details) ||
-      savedBrief.totalSelectedFiles > 0);
-
-  const totalSelectedFiles = savedBrief?.totalSelectedFiles ?? 0;
+  if (!hasMounted) {
+    return (
+      <CardGridPageShell
+        title="Build an audio generation brief"
+        icon="🤖"
+        showBackButton
+        backHref="/"
+      >
+        <div className="rounded-[1.8rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(33,6,27,0.5)] p-6 text-sm leading-6 text-[rgba(255,232,245,0.82)] shadow-[0_24px_70px_rgba(24,2,19,0.36)] backdrop-blur-xl sm:p-8">
+          Loading audio generator...
+        </div>
+      </CardGridPageShell>
+    );
+  }
 
   return (
     <CardGridPageShell
@@ -211,268 +278,206 @@ export default function AudioGeneratorPage() {
       showBackButton
       backHref="/"
     >
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.75fr)]">
-        <section className="rounded-[1.8rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(33,6,27,0.5)] p-5 shadow-[0_24px_70px_rgba(24,2,19,0.36)] backdrop-blur-xl sm:p-6">
-          <form className="space-y-6" onSubmit={handleSave}>
-            <div className="space-y-2">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
-                Conversation setup
-              </p>
-              <p className="max-w-2xl text-sm leading-6 text-[rgba(255,232,245,0.82)]">
-                Add learner details, describe the scenario, and choose the data
-                files that should feed the generated conversation. Saving keeps
-                everything in local component state and logs the same payload to
-                the console.
-              </p>
-            </div>
+      <section className="rounded-[1.8rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(33,6,27,0.5)] p-5 shadow-[0_24px_70px_rgba(24,2,19,0.36)] backdrop-blur-xl sm:p-6">
+        <form className="space-y-6" onSubmit={handleGenerate}>
+          <div className="space-y-2">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
+              Conversation setup
+            </p>
+            <p className="max-w-2xl text-sm leading-6 text-[rgba(255,232,245,0.82)]">
+              Add learner details, describe the scenario, and choose the data
+              files that should feed the generated conversation. Generate sends
+              the current payload directly to the route handler.
+            </p>
+          </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              <label className="space-y-2">
-                <span className="text-sm font-medium text-[#fff0fb]">Age</span>
-                <input
-                  type="text"
-                  name="age"
-                  inputMode="numeric"
-                  pattern="[0-9]*"
-                  autoComplete="off"
-                  value={formState.age}
-                  onChange={(event) => handleAgeChange(event.target.value)}
-                  placeholder="e.g. 12"
-                  className="min-h-12 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
-                />
-              </label>
-
-              <label className="space-y-2">
-                <span className="text-sm font-medium text-[#fff0fb]">
-                  Level
-                </span>
-                <div className="relative">
-                  <select
-                    name="level"
-                    value={formState.level}
-                    onChange={(event) => handleLevelChange(event.target.value)}
-                    className="min-h-12 w-full appearance-none rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 pr-12 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
-                  >
-                    <option value="" className="bg-[#411134] text-[#fff7fd]">
-                      Select a level
-                    </option>
-                    {LEVEL_OPTIONS.map((levelOption) => (
-                      <option
-                        key={levelOption}
-                        value={levelOption}
-                        className="bg-[#411134] text-[#fff7fd]"
-                      >
-                        {levelOption}
-                      </option>
-                    ))}
-                  </select>
-
-                  <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#ffc6e8]">
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      className="h-4 w-4"
-                    >
-                      <path
-                        d="M5 7.5L10 12.5L15 7.5"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </label>
-            </div>
-
-            <label className="block space-y-2">
-              <span className="text-sm font-medium text-[#fff0fb]">
-                Open information about the conversation
-              </span>
-              <textarea
-                name="details"
-                value={formState.details}
-                onChange={(event) => handleDetailsChange(event.target.value)}
-                rows={5}
-                placeholder="Describe the situation, tone, goal, speakers, or any constraints for the generated conversation."
-                className="min-h-36 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base leading-6 text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
+          <div className="grid gap-4 md:grid-cols-2">
+            <label className="space-y-2">
+              <span className="text-sm font-medium text-[#fff0fb]">Age</span>
+              <input
+                type="text"
+                name="age"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                autoComplete="off"
+                value={formState.age}
+                onChange={(event) => handleAgeChange(event.target.value)}
+                placeholder="e.g. 12"
+                className="min-h-12 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
               />
             </label>
 
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
-                  Data sources
-                </p>
-                <p className="text-sm leading-6 text-[rgba(255,232,245,0.82)]">
-                  Each folder gets its own multi-select. Use Ctrl or Cmd while
-                  clicking to keep multiple files selected.
-                </p>
-              </div>
+            <label className="space-y-2">
+              <span className="text-sm font-medium text-[#fff0fb]">Level</span>
+              <div className="relative">
+                <select
+                  name="level"
+                  value={formState.level}
+                  onChange={(event) => handleLevelChange(event.target.value)}
+                  className="min-h-12 w-full appearance-none rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 pr-12 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
+                >
+                  <option value="" className="bg-[#411134] text-[#fff7fd]">
+                    Select a level
+                  </option>
+                  {LEVEL_OPTIONS.map((levelOption) => (
+                    <option
+                      key={levelOption}
+                      value={levelOption}
+                      className="bg-[#411134] text-[#fff7fd]"
+                    >
+                      {levelOption}
+                    </option>
+                  ))}
+                </select>
 
-              {loadError ? (
-                <div className="rounded-[1.4rem] border border-[rgba(255,140,174,0.28)] bg-[rgba(90,15,43,0.34)] p-4 text-sm leading-6 text-[#ffd7e7]">
-                  {loadError}
-                </div>
-              ) : null}
-
-              <div className="grid gap-4 lg:grid-cols-2">
-                {foldersWithFiles.map(({ folderName, fileNames }) => (
-                  <label
-                    key={folderName}
-                    className="block space-y-2 rounded-[1.4rem] border border-[rgba(255,220,240,0.14)] bg-[rgba(255,255,255,0.04)] p-4"
+                <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#ffc6e8]">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="h-4 w-4"
                   >
-                    {(() => {
-                      const selectedFileNames =
-                        formState.selectedFilesByFolder[folderName] ?? [];
-
-                      return (
-                        <>
-                          <span className="flex items-center justify-between gap-3 text-sm font-medium text-[#fff0fb]">
-                            <span>{formatFolderOrFileName(folderName)}</span>
-                            <span className="rounded-full border border-[rgba(255,220,240,0.18)] bg-[rgba(255,232,245,0.08)] px-2.5 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-[#ffc6e8]">
-                              {selectedFileNames.length} selected
-                            </span>
-                          </span>
-                          <select
-                            name={folderName}
-                            multiple
-                            value={selectedFileNames}
-                            onChange={(event) =>
-                              handleFolderSelectionChange(
-                                folderName,
-                                Array.from(
-                                  event.currentTarget.selectedOptions,
-                                  (option) => option.value,
-                                ),
-                              )
-                            }
-                            size={Math.min(Math.max(fileNames.length, 4), 8)}
-                            className="w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-3 py-3 text-sm text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
-                          >
-                            {fileNames.map((fileName) => (
-                              <option
-                                key={`${folderName}-${fileName}`}
-                                value={fileName}
-                                className="bg-[#411134] text-[#fff7fd]"
-                              >
-                                {formatFolderOrFileName(fileName)}
-                              </option>
-                            ))}
-                          </select>
-                        </>
-                      );
-                    })()}
-                  </label>
-                ))}
-              </div>
-
-              {isLoadingOptions ? (
-                <p className="text-sm leading-6 text-[rgba(255,232,245,0.72)]">
-                  Loading available data folders...
-                </p>
-              ) : null}
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <Button
-                type="submit"
-                variant="gradient"
-                fullWidth={false}
-                disabled={isLoadingOptions || Boolean(loadError)}
-                className="disabled:cursor-not-allowed disabled:opacity-60"
-              >
-                Save brief
-              </Button>
-              <Button
-                type="button"
-                variant="blue"
-                fullWidth={false}
-                disabled={isLoadingOptions || Boolean(loadError)}
-                className="disabled:cursor-not-allowed disabled:opacity-60"
-                onClick={handleGenerate}
-              >
-                Generate
-              </Button>
-              <Button
-                type="button"
-                variant="outline"
-                fullWidth={false}
-                onClick={handleClear}
-              >
-                Clear form
-              </Button>
-            </div>
-          </form>
-        </section>
-
-        <aside className="space-y-4 rounded-[1.8rem] border border-[rgba(255,220,240,0.16)] bg-[linear-gradient(180deg,rgba(66,14,54,0.72),rgba(39,7,31,0.64))] p-5 shadow-[0_24px_70px_rgba(24,2,19,0.36)] backdrop-blur-xl sm:p-6">
-          <div className="space-y-2">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
-              Saved brief
-            </p>
-            <h2 className="text-2xl font-semibold text-[#fff4fc]">
-              {hasSavedBrief ? "Ready to generate" : "Nothing saved yet"}
-            </h2>
-            <p className="text-sm leading-6 text-[rgba(255,232,245,0.82)]">
-              {hasSavedBrief
-                ? "These are the values saved from the form and logged to the console on the last save action."
-                : "Fill out the form and press Save brief to store the payload in component state."}
-            </p>
-          </div>
-
-          <div className="space-y-3 text-sm text-[rgba(255,240,248,0.9)]">
-            <div className="rounded-[1.2rem] border border-[rgba(255,220,240,0.14)] bg-[rgba(255,255,255,0.04)] p-4">
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[#ffbde4]">
-                Learner
-              </p>
-              <p className="mt-2 text-base text-[#fff7fd]">
-                {savedBrief?.age || "No age provided"}
-              </p>
-              <p className="mt-1 text-base text-[#fff7fd]">
-                {savedBrief?.level || "No level provided"}
-              </p>
-            </div>
-
-            <div className="rounded-[1.2rem] border border-[rgba(255,220,240,0.14)] bg-[rgba(255,255,255,0.04)] p-4">
-              <div className="flex items-center justify-between gap-3">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[#ffbde4]">
-                  Selected files
-                </p>
-                <span className="rounded-full border border-[rgba(255,220,240,0.18)] bg-[rgba(255,232,245,0.08)] px-2.5 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-[#ffc6e8]">
-                  {totalSelectedFiles} total
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </span>
               </div>
-
-              <div className="mt-3 space-y-3">
-                {foldersWithFiles.map(({ folderName }) => {
-                  const selectedFileNames =
-                    savedBrief?.selectedFilesByFolder[folderName] ?? [];
-
-                  return (
-                    <div key={`summary-${folderName}`} className="space-y-1.5">
-                      <p className="text-sm font-medium text-[#ffe6f5]">
-                        {formatFolderOrFileName(folderName)}
-                      </p>
-                      <p className="text-sm leading-6 text-[rgba(255,232,245,0.82)]">
-                        {selectedFileNames.length > 0
-                          ? selectedFileNames
-                              .map((fileName) =>
-                                formatFolderOrFileName(fileName),
-                              )
-                              .join(", ")
-                          : "No files selected."}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            </label>
           </div>
-        </aside>
-      </div>
+
+          <label className="block space-y-2">
+            <span className="text-sm font-medium text-[#fff0fb]">
+              Open information about the conversation
+            </span>
+            <textarea
+              name="details"
+              value={formState.details}
+              onChange={(event) => handleDetailsChange(event.target.value)}
+              rows={5}
+              placeholder="Describe the situation, tone, goal, speakers, or any constraints for the generated conversation."
+              className="min-h-36 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base leading-6 text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
+            />
+          </label>
+
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
+                Data sources
+              </p>
+              <p className="text-sm leading-6 text-[rgba(255,232,245,0.82)]">
+                Tick the files you want from each folder. Checked items stay
+                selected while you move between folders.
+              </p>
+            </div>
+
+            {loadError ? (
+              <div className="rounded-[1.4rem] border border-[rgba(255,140,174,0.28)] bg-[rgba(90,15,43,0.34)] p-4 text-sm leading-6 text-[#ffd7e7]">
+                {loadError}
+              </div>
+            ) : null}
+
+            <div className="grid gap-4 lg:grid-cols-2">
+              {foldersWithFiles.map(({ folderName, fileNames }) => (
+                <label
+                  key={folderName}
+                  className="block rounded-[1.4rem] border border-[rgba(255,220,240,0.14)] bg-[rgba(255,255,255,0.04)] p-4"
+                >
+                  {(() => {
+                    const selectedFileNames =
+                      formState.selectedFilesByFolder[folderName] ?? [];
+
+                    return (
+                      <>
+                        <span className="mb-4 block text-sm font-medium text-[#fff0fb]">
+                          {formatFolderOrFileName(folderName)}
+                        </span>
+                        <div
+                          className="space-y-2 rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] p-3"
+                          role="group"
+                          aria-label={`${formatFolderOrFileName(folderName)} data files`}
+                        >
+                          {fileNames.map((fileName) => {
+                            const isSelected =
+                              selectedFileNames.includes(fileName);
+
+                            return (
+                              <label
+                                key={`${folderName}-${fileName}`}
+                                className="flex cursor-pointer items-center gap-3 rounded-[0.9rem] border border-[rgba(255,220,240,0.14)] bg-[rgba(255,255,255,0.04)] px-3 py-2.5 text-sm text-[#fff7fd] transition hover:border-[rgba(255,215,239,0.28)] hover:bg-[rgba(255,232,245,0.1)]"
+                              >
+                                <input
+                                  type="checkbox"
+                                  name={`${folderName}-${fileName}`}
+                                  checked={isSelected}
+                                  onChange={(event) =>
+                                    handleFolderFileToggle(
+                                      folderName,
+                                      fileName,
+                                      fileNames,
+                                      event.target.checked,
+                                    )
+                                  }
+                                  className="h-4 w-4 rounded border-[rgba(255,196,232,0.34)] bg-transparent text-[#ff8fc8] accent-[#ff8fc8]"
+                                />
+                                <span className="leading-6 text-[rgba(255,244,251,0.92)]">
+                                  {formatFolderOrFileName(fileName)}
+                                </span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                      </>
+                    );
+                  })()}
+                </label>
+              ))}
+            </div>
+
+            {isLoadingOptions ? (
+              <p className="text-sm leading-6 text-[rgba(255,232,245,0.72)]">
+                Loading available data folders...
+              </p>
+            ) : null}
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <Button
+              type="submit"
+              variant="blue"
+              fullWidth={false}
+              disabled={isLoadingOptions || Boolean(loadError) || isGenerating}
+              className="disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {isGenerating ? "Sending..." : "Generate"}
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              fullWidth={false}
+              onClick={handleClear}
+            >
+              Clear form
+            </Button>
+          </div>
+
+          {generationError ? (
+            <div className="rounded-[1.4rem] border border-[rgba(255,140,174,0.28)] bg-[rgba(90,15,43,0.34)] p-4 text-sm leading-6 text-[#ffd7e7]">
+              {generationError}
+            </div>
+          ) : null}
+
+          {generationMessage ? (
+            <div className="rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm leading-6 text-[#d9fff2]">
+              {generationMessage}
+            </div>
+          ) : null}
+        </form>
+      </section>
     </CardGridPageShell>
   );
 }
