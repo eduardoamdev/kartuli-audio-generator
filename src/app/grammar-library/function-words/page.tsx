@@ -6,8 +6,8 @@ import type {
   SearchParamsPageProps,
 } from "@/types/searchParams";
 import { DATA_FOLDERS } from "@/utils/constants";
-import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 import { getSelectedWordEntries } from "@/utils/getSelectedWordEntries";
+import { composePageTitle } from "@/utils/composePageTitle";
 
 export default async function FunctionWordsPage({
   searchParams,
@@ -18,9 +18,7 @@ export default async function FunctionWordsPage({
       searchParams,
     });
 
-  const pageTitle = selectedFileName
-    ? `Words in ${formatFolderOrFileName(selectedFileName)}`
-    : "Choose a function words file";
+  const pageTitle = composePageTitle(selectedFileName);
 
   return (
     <CardGridPageShell

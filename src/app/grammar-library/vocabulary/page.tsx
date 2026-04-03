@@ -5,9 +5,9 @@ import type {
   FilenameSearchParams,
   SearchParamsPageProps,
 } from "@/types/searchParams";
-import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 import { DATA_FOLDERS } from "@/utils/constants";
 import { getSelectedWordEntries } from "@/utils/getSelectedWordEntries";
+import { composePageTitle } from "@/utils/composePageTitle";
 
 export default async function VocabularyPage({
   searchParams,
@@ -18,9 +18,7 @@ export default async function VocabularyPage({
       searchParams,
     });
 
-  const pageTitle = selectedFileName
-    ? `Words in ${formatFolderOrFileName(selectedFileName)}`
-    : "Choose a vocabulary file";
+  const pageTitle = composePageTitle(selectedFileName);
 
   return (
     <CardGridPageShell
