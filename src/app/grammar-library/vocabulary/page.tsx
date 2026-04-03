@@ -5,32 +5,18 @@ import type {
   FilenameSearchParams,
   SearchParamsPageProps,
 } from "@/types/searchParams";
-import { extractVocabularyEntriesFromDataFile } from "@/utils/extractVocabularyEntriesFromDataFile";
-import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
-import { getSingleSearchParam } from "@/utils/getSingleSearchParam";
 import { DATA_FOLDERS } from "@/utils/constants";
+import { getSelectedWordEntries } from "@/utils/getSelectedWordEntries";
 
 export default async function VocabularyPage({
   searchParams,
 }: SearchParamsPageProps<FilenameSearchParams>) {
-  const fileNames = await getNamesOfFolderDataFiles(DATA_FOLDERS.VOCABULARY);
-
-  const resolvedSearchParams = await searchParams;
-
-  const requestedFileName = getSingleSearchParam(resolvedSearchParams.filename);
-
-  const selectedFileName =
-    requestedFileName && fileNames.includes(requestedFileName)
-      ? requestedFileName
-      : null;
-
-  const vocabularyEntries = selectedFileName
-    ? await extractVocabularyEntriesFromDataFile({
-        folder: DATA_FOLDERS.VOCABULARY,
-        filename: selectedFileName,
-      })
-    : [];
+  const { entries: vocabularyEntries, selectedFileName } =
+    await getSelectedWordEntries({
+      folder: DATA_FOLDERS.VOCABULARY,
+      searchParams,
+    });
 
   const pageTitle = selectedFileName
     ? `Words in ${formatFolderOrFileName(selectedFileName)}`
