@@ -27,6 +27,8 @@ type AudioGeneratorOptionsResponse = {
   message?: string;
 };
 
+const LEVEL_OPTIONS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+
 const buildEmptySelections = (
   foldersWithFiles: FolderWithFiles[],
 ): Record<string, string[]> =>
@@ -244,14 +246,44 @@ export default function AudioGeneratorPage() {
                 <span className="text-sm font-medium text-[#fff0fb]">
                   Level
                 </span>
-                <input
-                  type="text"
-                  name="level"
-                  value={formState.level}
-                  onChange={(event) => handleLevelChange(event.target.value)}
-                  placeholder="e.g. beginner, A2, intermediate"
-                  className="min-h-12 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
-                />
+                <div className="relative">
+                  <select
+                    name="level"
+                    value={formState.level}
+                    onChange={(event) => handleLevelChange(event.target.value)}
+                    className="min-h-12 w-full appearance-none rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 pr-12 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
+                  >
+                    <option value="" className="bg-[#411134] text-[#fff7fd]">
+                      Select a level
+                    </option>
+                    {LEVEL_OPTIONS.map((levelOption) => (
+                      <option
+                        key={levelOption}
+                        value={levelOption}
+                        className="bg-[#411134] text-[#fff7fd]"
+                      >
+                        {levelOption}
+                      </option>
+                    ))}
+                  </select>
+
+                  <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#ffc6e8]">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="h-4 w-4"
+                    >
+                      <path
+                        d="M5 7.5L10 12.5L15 7.5"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </label>
             </div>
 
