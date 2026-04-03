@@ -17,8 +17,11 @@ export default async function FunctionWordsPage({
   const fileNames = await getNamesOfFolderDataFiles(
     DATA_FOLDERS.FUNCTION_WORDS,
   );
+
   const resolvedSearchParams = await searchParams;
+
   const requestedFileName = getSingleSearchParam(resolvedSearchParams.filename);
+
   const selectedFileName =
     requestedFileName && fileNames.includes(requestedFileName)
       ? requestedFileName

@@ -4,8 +4,7 @@ import CardGrid from "@/components/ui/CardGrid";
 import { DATA_FOLDERS } from "@/utils/constants";
 import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
-
-const CARD_VARIANTS = ["blue", "purple", "teal"] as const;
+import { CARD_VARIANTS } from "@/utils/constants";
 
 export default async function VerbsSelectorPage() {
   const fileNames = await getNamesOfFolderDataFiles(DATA_FOLDERS.VERBS);

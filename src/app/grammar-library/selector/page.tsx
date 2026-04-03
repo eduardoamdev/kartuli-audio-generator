@@ -3,8 +3,7 @@ import CardGridPageShell from "@/components/features/CardGridPageShell";
 import CardGrid from "@/components/ui/CardGrid";
 import { getNamesOfDataFolders } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
-
-const CARD_VARIANTS = ["blue", "purple", "teal"] as const;
+import { CARD_VARIANTS } from "@/utils/constants";
 
 const getFolderHref = (folderName: string) =>
   `/grammar-library/${encodeURIComponent(folderName)}/selector`;

@@ -3,8 +3,7 @@ import CardGridPageShell from "@/components/features/CardGridPageShell";
 import CardGrid from "@/components/ui/CardGrid";
 import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
-
-const CARD_VARIANTS = ["blue", "purple", "teal"] as const;
+import { CARD_VARIANTS } from "@/utils/constants";
 import { DATA_FOLDERS } from "@/utils/constants";
 
 export default async function VocabularySelectorPage() {

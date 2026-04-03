@@ -15,8 +15,11 @@ export default async function VocabularyPage({
   searchParams,
 }: SearchParamsPageProps<FilenameSearchParams>) {
   const fileNames = await getNamesOfFolderDataFiles(DATA_FOLDERS.VOCABULARY);
+
   const resolvedSearchParams = await searchParams;
+
   const requestedFileName = getSingleSearchParam(resolvedSearchParams.filename);
+
   const selectedFileName =
     requestedFileName && fileNames.includes(requestedFileName)
       ? requestedFileName

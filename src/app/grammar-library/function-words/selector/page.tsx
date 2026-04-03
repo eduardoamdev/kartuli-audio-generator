@@ -1,11 +1,9 @@
 import Button from "@/components/ui/Button";
 import CardGridPageShell from "@/components/features/CardGridPageShell";
 import CardGrid from "@/components/ui/CardGrid";
-import { DATA_FOLDERS } from "@/utils/constants";
+import { DATA_FOLDERS, CARD_VARIANTS } from "@/utils/constants";
 import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
-
-const CARD_VARIANTS = ["blue", "purple", "teal"] as const;
 
 export default async function FunctionWordsSelectorPage() {
   const fileNames = await getNamesOfFolderDataFiles(
