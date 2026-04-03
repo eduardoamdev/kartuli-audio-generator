@@ -1,11 +1,18 @@
 import { NextResponse } from "next/server";
+import { SPEECH_TYPES } from "@/utils/constants";
+
+type SpeechType = (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES];
 
 type AudioGeneratorRequestBody = {
   age: string;
   level: string;
+  typeOfSpeech: SpeechType;
   details: string;
   selectedFilesByFolder: Record<string, string[]>;
 };
+
+const isSpeechType = (value: unknown): value is SpeechType =>
+  value === SPEECH_TYPES.dialogue || value === SPEECH_TYPES.monologue;
 
 const isStringArrayRecord = (
   value: unknown,
@@ -32,6 +39,7 @@ const isAudioGeneratorRequestBody = (
   return (
     typeof candidate.age === "string" &&
     typeof candidate.level === "string" &&
+    isSpeechType(candidate.typeOfSpeech) &&
     typeof candidate.details === "string" &&
     isStringArrayRecord(candidate.selectedFilesByFolder)
   );

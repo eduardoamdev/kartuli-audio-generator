@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
 import CardGridPageShell from "@/components/features/CardGridPageShell";
+import { SPEECH_TYPES } from "@/utils/constants";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 
 type FolderWithFiles = {
@@ -10,9 +11,12 @@ type FolderWithFiles = {
   fileNames: string[];
 };
 
+type SpeechType = (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES];
+
 type AudioGeneratorFormState = {
   age: string;
   level: string;
+  typeOfSpeech: SpeechType | "";
   details: string;
   selectedFilesByFolder: Record<string, string[]>;
 };
@@ -28,6 +32,7 @@ type AudioGeneratorResponse = {
 };
 
 const LEVEL_OPTIONS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+const SPEECH_TYPE_OPTIONS = Object.values(SPEECH_TYPES);
 
 const buildEmptySelections = (
   foldersWithFiles: FolderWithFiles[],
@@ -61,6 +66,7 @@ const buildGenerationPayload = (
   return {
     age: formState.age,
     level: formState.level,
+    typeOfSpeech: formState.typeOfSpeech,
     details: formState.details,
     selectedFilesByFolder,
   };
@@ -69,6 +75,7 @@ const buildGenerationPayload = (
 const defaultFormState: AudioGeneratorFormState = {
   age: "",
   level: "",
+  typeOfSpeech: "",
   details: "",
   selectedFilesByFolder: {},
 };
@@ -157,6 +164,15 @@ export default function AudioGeneratorPage() {
     setFormState((current) => ({
       ...current,
       level: value,
+    }));
+    setGenerationError(null);
+    setGenerationMessage(null);
+  };
+
+  const handleTypeOfSpeechChange = (value: SpeechType | "") => {
+    setFormState((current) => ({
+      ...current,
+      typeOfSpeech: value,
     }));
     setGenerationError(null);
     setGenerationMessage(null);
@@ -291,7 +307,7 @@ export default function AudioGeneratorPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-3">
             <label className="space-y-2">
               <span className="text-sm font-medium text-[#fff0fb]">Age</span>
               <input
@@ -326,6 +342,56 @@ export default function AudioGeneratorPage() {
                       className="bg-[#411134] text-[#fff7fd]"
                     >
                       {levelOption}
+                    </option>
+                  ))}
+                </select>
+
+                <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#ffc6e8]">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="h-4 w-4"
+                  >
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </label>
+
+            <label className="space-y-2">
+              <span className="text-sm font-medium text-[#fff0fb]">
+                Type of speech
+              </span>
+              <div className="relative">
+                <select
+                  name="typeOfSpeech"
+                  value={formState.typeOfSpeech}
+                  onChange={(event) =>
+                    handleTypeOfSpeechChange(
+                      event.target.value as SpeechType | "",
+                    )
+                  }
+                  className="min-h-12 w-full appearance-none rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 pr-12 text-base text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
+                >
+                  <option value="" className="bg-[#411134] text-[#fff7fd]">
+                    Select a type
+                  </option>
+                  {SPEECH_TYPE_OPTIONS.map((speechType) => (
+                    <option
+                      key={speechType}
+                      value={speechType}
+                      className="bg-[#411134] text-[#fff7fd]"
+                    >
+                      {speechType === SPEECH_TYPES.dialogue
+                        ? "Dialogue"
+                        : "Monologue"}
                     </option>
                   ))}
                 </select>
