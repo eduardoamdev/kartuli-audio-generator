@@ -5,11 +5,10 @@ import {
   getNamesOfFolderDataFiles,
 } from "@/utils/getDataFoldersAndFiles";
 
-export const runtime = "nodejs";
-
 export async function GET() {
   try {
     const folderNames = await getNamesOfDataFolders();
+
     const foldersWithFiles = await Promise.all(
       folderNames.map(async (folderName) => ({
         folderName,
