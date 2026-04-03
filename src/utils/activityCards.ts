@@ -25,7 +25,7 @@ export const activityCards: ActivityCards = [
   },
   {
     id: "audio-generator",
-    href: "/",
+    href: "/audio-generator",
     variant: "purple",
     icon: "🤖",
     eyebrow: "Create your own audios",
