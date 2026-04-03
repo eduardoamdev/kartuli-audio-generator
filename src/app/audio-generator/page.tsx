@@ -308,7 +308,7 @@ export default function AudioGeneratorPage() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            <label className="space-y-2">
+            <label className="flex flex-col gap-5">
               <span className="text-sm font-medium text-[#fff0fb]">Age</span>
               <input
                 type="text"
@@ -323,7 +323,7 @@ export default function AudioGeneratorPage() {
               />
             </label>
 
-            <label className="space-y-2">
+            <label className="flex flex-col gap-5">
               <span className="text-sm font-medium text-[#fff0fb]">Level</span>
               <div className="relative">
                 <select
@@ -365,7 +365,7 @@ export default function AudioGeneratorPage() {
               </div>
             </label>
 
-            <label className="space-y-2">
+            <label className="flex flex-col gap-5">
               <span className="text-sm font-medium text-[#fff0fb]">
                 Type of speech
               </span>
@@ -416,7 +416,7 @@ export default function AudioGeneratorPage() {
             </label>
           </div>
 
-          <label className="block space-y-2">
+          <label className="flex flex-col gap-5">
             <span className="text-sm font-medium text-[#fff0fb]">
               Open information about the conversation
             </span>
