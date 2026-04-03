@@ -8,7 +8,7 @@ import { extractVocabularyEntriesFromDataFile } from "@/utils/extractVocabularyE
 import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 import { getSingleSearchParam } from "@/utils/getSingleSearchParam";
-import { DATA_FOLDERS, CARD_SURFACES } from "@/utils/constants";
+import { DATA_FOLDERS, NON_CLICKABLE_CARD_SURFACES } from "@/utils/constants";
 
 export default async function VocabularyPage({
   searchParams,
@@ -47,7 +47,9 @@ export default async function VocabularyPage({
                 key={`${selectedFileName}-${entry.ka}-${index}`}
                 className={[
                   "min-h-[168px] rounded-[1.4rem] border border-[rgba(255,196,232,0.2)] p-5 shadow-[0_24px_62px_-26px_rgba(36,4,28,0.94)] backdrop-blur-[18px]",
-                  CARD_SURFACES[index % CARD_SURFACES.length],
+                  NON_CLICKABLE_CARD_SURFACES[
+                    index % NON_CLICKABLE_CARD_SURFACES.length
+                  ],
                 ].join(" ")}
               >
                 <div className="space-y-3 text-left">
