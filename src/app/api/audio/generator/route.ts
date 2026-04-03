@@ -49,13 +49,6 @@ export async function POST(request: Request) {
   try {
     const body = (await request.json()) as unknown;
 
-    if (!isAudioGeneratorRequestBody(body)) {
-      return NextResponse.json(
-        { success: false, message: "Invalid audio generation payload." },
-        { status: 400 },
-      );
-    }
-
     return NextResponse.json(
       {
         success: true,
