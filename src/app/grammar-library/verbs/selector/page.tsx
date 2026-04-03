@@ -20,7 +20,6 @@ export default async function VerbsSelectorPage() {
               href={`/grammar-library/verb?name=${fileName}`}
               variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
               icon={String(index + 1).padStart(2, "0")}
-              eyebrow="Data file"
               description={fileName}
               className="h-full min-h-[148px] items-start opacity-80"
             >
