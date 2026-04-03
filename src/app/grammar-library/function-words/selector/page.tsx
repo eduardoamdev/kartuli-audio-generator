@@ -19,13 +19,11 @@ export default async function FunctionWordsSelectorPage() {
           {fileNames.map((fileName, index) => (
             <Button
               key={fileName}
-              type="button"
-              disabled
+              href={`/grammar-library/function-words?filename=${encodeURIComponent(fileName)}`}
               variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
               icon={String(index + 1).padStart(2, "0")}
-              eyebrow="Data file"
               description={fileName}
-              className="h-full min-h-[148px] items-start opacity-80"
+              className="h-full min-h-[148px] items-start"
             >
               {formatFolderOrFileName(fileName)}
             </Button>
