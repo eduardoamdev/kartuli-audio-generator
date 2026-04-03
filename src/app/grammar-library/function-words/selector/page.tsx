@@ -13,7 +13,12 @@ export default async function FunctionWordsSelectorPage() {
   );
 
   return (
-    <CardGridPageShell title="Choose a function words topic" icon="🧩">
+    <CardGridPageShell
+      title="Choose a function words topic"
+      icon="🧩"
+      showBackButton
+      backHref="/grammar-library/selector"
+    >
       <section className="space-y-4">
         <CardGrid>
           {fileNames.map((fileName, index) => (

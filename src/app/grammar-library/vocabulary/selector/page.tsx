@@ -11,7 +11,12 @@ export default async function VocabularySelectorPage() {
   const fileNames = await getNamesOfFolderDataFiles(DATA_FOLDERS.VOCABULARY);
 
   return (
-    <CardGridPageShell title="Choose a vocabulary topic" icon="🧠">
+    <CardGridPageShell
+      title="Choose a vocabulary topic"
+      icon="🧠"
+      showBackButton
+      backHref="/grammar-library/selector"
+    >
       <section className="space-y-4">
         <CardGrid>
           {fileNames.map((fileName, index) => (
