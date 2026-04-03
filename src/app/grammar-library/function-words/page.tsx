@@ -5,16 +5,10 @@ import type {
   SearchParamsPageProps,
 } from "@/types/searchParams";
 import { extractVocabularyEntriesFromDataFile } from "@/utils/extractVocabularyEntriesFromDataFile";
-import { DATA_FOLDERS } from "@/utils/constants";
+import { DATA_FOLDERS, CARD_SURFACES } from "@/utils/constants";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 import { getNamesOfFolderDataFiles } from "@/utils/getDataFoldersAndFiles";
 import { getSingleSearchParam } from "@/utils/getSingleSearchParam";
-
-const CARD_SURFACES = [
-  "bg-[linear-gradient(135deg,rgba(168,85,247,0.26),rgba(244,114,182,0.16))]",
-  "bg-[linear-gradient(135deg,rgba(217,70,239,0.24),rgba(251,113,133,0.16))]",
-  "bg-[linear-gradient(135deg,rgba(126,34,206,0.22),rgba(236,72,153,0.14))]",
-] as const;
 
 export default async function FunctionWordsPage({
   searchParams,

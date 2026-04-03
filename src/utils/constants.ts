@@ -16,3 +16,9 @@ export const DATA_FOLDERS = {
   FUNCTION_WORDS: "function-words",
   VERBS: "verbs",
 };
+
+export const CARD_SURFACES = [
+  "bg-[linear-gradient(135deg,rgba(168,85,247,0.26),rgba(244,114,182,0.16))]",
+  "bg-[linear-gradient(135deg,rgba(217,70,239,0.24),rgba(251,113,133,0.16))]",
+  "bg-[linear-gradient(135deg,rgba(126,34,206,0.22),rgba(236,72,153,0.14))]",
+] as const;
