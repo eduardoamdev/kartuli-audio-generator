@@ -180,6 +180,11 @@ export default function AudioGeneratorPage() {
     console.log(nextSavedBrief);
   };
 
+  const handleGenerate = () => {
+    const generationPayload = buildSavedBrief(formState, foldersWithFiles);
+    console.log(generationPayload);
+  };
+
   const handleClear = () => {
     setFormState({
       ...defaultFormState,
@@ -348,6 +353,16 @@ export default function AudioGeneratorPage() {
                 className="disabled:cursor-not-allowed disabled:opacity-60"
               >
                 Save brief
+              </Button>
+              <Button
+                type="button"
+                variant="blue"
+                fullWidth={false}
+                disabled={isLoadingOptions || Boolean(loadError)}
+                className="disabled:cursor-not-allowed disabled:opacity-60"
+                onClick={handleGenerate}
+              >
+                Generate
               </Button>
               <Button
                 type="button"
