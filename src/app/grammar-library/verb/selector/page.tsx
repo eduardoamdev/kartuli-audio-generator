@@ -17,7 +17,7 @@ export default async function VerbsSelectorPage() {
             <Button
               key={fileName}
               type="button"
-              disabled
+              href={`/grammar-library/verb?name=${fileName}`}
               variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
               icon={String(index + 1).padStart(2, "0")}
               eyebrow="Data file"
