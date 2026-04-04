@@ -32,6 +32,7 @@ type AudioGeneratorResponse = {
 };
 
 const LEVEL_OPTIONS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+
 const SPEECH_TYPE_OPTIONS = Object.values(SPEECH_TYPES);
 
 const buildEmptySelections = (
@@ -41,34 +42,15 @@ const buildEmptySelections = (
     foldersWithFiles.map(({ folderName }) => [folderName, []]),
   );
 
-const sanitizeSelections = (
-  foldersWithFiles: FolderWithFiles[],
-  selectedFilesByFolder: Record<string, string[]>,
-): Record<string, string[]> =>
-  Object.fromEntries(
-    foldersWithFiles.map(({ folderName, fileNames }) => [
-      folderName,
-      (selectedFilesByFolder[folderName] ?? []).filter((fileName) =>
-        fileNames.includes(fileName),
-      ),
-    ]),
-  );
-
 const buildGenerationPayload = (
   formState: AudioGeneratorFormState,
-  foldersWithFiles: FolderWithFiles[],
 ): AudioGeneratorFormState => {
-  const selectedFilesByFolder = sanitizeSelections(
-    foldersWithFiles,
-    formState.selectedFilesByFolder,
-  );
-
   return {
     age: formState.age,
     level: formState.level,
     typeOfSpeech: formState.typeOfSpeech,
     details: formState.details,
-    selectedFilesByFolder,
+    selectedFilesByFolder: formState.selectedFilesByFolder,
   };
 };
 
@@ -117,15 +99,15 @@ export default function AudioGeneratorPage() {
         }
 
         setFoldersWithFiles(data.foldersWithFiles);
+
         setFormState((current) => ({
           ...current,
-          selectedFilesByFolder: sanitizeSelections(
-            data.foldersWithFiles,
+          selectedFilesByFolder:
             Object.keys(current.selectedFilesByFolder).length > 0
               ? current.selectedFilesByFolder
               : buildEmptySelections(data.foldersWithFiles),
-          ),
         }));
+
         setLoadError(null);
       } catch (error) {
         if (isCancelled) {
@@ -195,6 +177,7 @@ export default function AudioGeneratorPage() {
   ) => {
     setFormState((current) => {
       const selectedFileNames = current.selectedFilesByFolder[folderName] ?? [];
+
       const nextSelectedFileNames = new Set(selectedFileNames);
 
       if (isSelected) {
@@ -213,7 +196,9 @@ export default function AudioGeneratorPage() {
         },
       };
     });
+
     setGenerationError(null);
+
     setGenerationMessage(null);
   };
 
@@ -221,14 +206,14 @@ export default function AudioGeneratorPage() {
     event.preventDefault();
 
     setIsGenerating(true);
+
     setGenerationError(null);
+
     setGenerationMessage(null);
 
     try {
-      const generationPayload = buildGenerationPayload(
-        formState,
-        foldersWithFiles,
-      );
+      const generationPayload = buildGenerationPayload(formState);
+
       const response = await fetch("/api/audio/generator", {
         method: "POST",
         headers: {
@@ -268,7 +253,9 @@ export default function AudioGeneratorPage() {
       ...defaultFormState,
       selectedFilesByFolder: buildEmptySelections(foldersWithFiles),
     });
+
     setGenerationError(null);
+
     setGenerationMessage(null);
   };
 
@@ -519,7 +506,7 @@ export default function AudioGeneratorPage() {
               disabled={isLoadingOptions || Boolean(loadError) || isGenerating}
               className="disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isGenerating ? "Sending..." : "Generate"}
+              {isGenerating ? "generating..." : "Generate"}
             </Button>
             <Button
               type="button"
