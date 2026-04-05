@@ -203,7 +203,9 @@ export default function AudioGeneratorPage() {
     setGenerationMessage(null);
   };
 
-  const handleGenerate = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleGenerateText = async (
+    event: React.SubmitEvent<HTMLFormElement>,
+  ) => {
     event.preventDefault();
 
     setIsGenerating(true);
@@ -283,15 +285,14 @@ export default function AudioGeneratorPage() {
       backHref="/"
     >
       <section className="rounded-[1.8rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(33,6,27,0.5)] p-5 shadow-[0_24px_70px_rgba(24,2,19,0.36)] backdrop-blur-xl sm:p-6">
-        <form className="space-y-6" onSubmit={handleGenerate}>
+        <form className="space-y-6" onSubmit={handleGenerateText}>
           <div className="space-y-2">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
               Conversation setup
             </p>
             <p className="max-w-2xl text-sm leading-6 text-[rgba(255,232,245,0.82)]">
               Add learner details, describe the scenario, and choose the data
-              files that should feed the generated conversation. Generate sends
-              the current payload directly to the route handler.
+              files that should feed the generated conversation.
             </p>
           </div>
 
@@ -507,7 +508,7 @@ export default function AudioGeneratorPage() {
               disabled={isLoadingOptions || Boolean(loadError) || isGenerating}
               className="disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isGenerating ? "Generating..." : "Generate"}
+              {isGenerating ? "Generating text..." : "Generate text"}
             </Button>
             <Button
               type="button"

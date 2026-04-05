@@ -1,0 +1,52 @@
+[
+  { "ka": "სიყვარული", "la": "siqvaruli", "en": "love" },
+  { "ka": "მიყვარხარ", "la": "miqvarkhar", "en": "I love you" },
+  { "ka": "მომწონხარ", "la": "momtsonkhar", "en": "I like you" },
+  { "ka": "გული", "la": "guli", "en": "heart" },
+  { "ka": "ჩემო სიყვარულო", "la": "chemo siqvarulo", "en": "my love" },
+  { "ka": "საყვარელი", "la": "saqvareli", "en": "beloved / darling" },
+  { "ka": "ლამაზი", "la": "lamazi", "en": "beautiful" },
+  { "ka": "მომხიბვლელი", "la": "momkhivleli", "en": "charming" },
+  { "ka": "კოცნა", "la": "kotsna", "en": "kiss" },
+  { "ka": "გაკოცო", "la": "gakotso", "en": "let me kiss you" },
+  { "ka": "ჩახუტება", "la": "chakhuteba", "en": "hug" },
+  { "ka": "ჩაგეხუტო", "la": "chagekhuto", "en": "let me hug you" },
+  { "ka": "მომენატრე", "la": "momenatre", "en": "I miss you" },
+  {
+    "ka": "ძალიან მომენატრე",
+    "la": "dzalian momenatre",
+    "en": "I miss you very much"
+  },
+  {
+    "ka": "მინდა შენთან ყოფნა",
+    "la": "minda shentan qopna",
+    "en": "I want to be with you"
+  },
+  {
+    "ka": "შენ ხარ ჩემი ყველაფერი",
+    "la": "shen khar chemi qvelaperi",
+    "en": "you are my everything"
+  },
+  { "ka": "ჩემო სიცოცხლე", "la": "chemo sitsotskhle", "en": "my life" },
+  { "ka": "ჩემო სიხარულო", "la": "chemo sikharulo", "en": "my joy" },
+  { "ka": "მონატრება", "la": "monatreba", "en": "longing / missing someone" },
+  { "ka": "ვნებები", "la": "vnebebi", "en": "passion" },
+  { "ka": "შეყვარებული", "la": "sheqvarebuli", "en": "lover / in love" },
+  { "ka": "ქორწილი", "la": "qortsili", "en": "wedding" },
+  { "ka": "პაემანი", "la": "paemani", "en": "date (romantic)" },
+  { "ka": "სიურპრიზი", "la": "siurprizi", "en": "surprise" },
+  { "ka": "ყვავილები", "la": "qvavilebi", "en": "flowers" },
+  { "ka": "ვარდი", "la": "vardi", "en": "rose" },
+  { "ka": "შენზე ვფიქრობ", "la": "shenze vpikrob", "en": "I think about you" },
+  {
+    "ka": "ჩემთვის განსაკუთრებული ხარ",
+    "la": "chemTvis gansakutrebuli khar",
+    "en": "you are special to me"
+  },
+  {
+    "ka": "სულ შენთან მინდა",
+    "la": "sul shentan minda",
+    "en": "I always want to be with you"
+  },
+  { "ka": "გპირდები", "la": "gpirdebi", "en": "I promise you" }
+]
