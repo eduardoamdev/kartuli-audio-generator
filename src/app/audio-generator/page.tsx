@@ -29,6 +29,7 @@ type AudioGeneratorOptionsResponse = {
 type AudioGeneratorResponse = {
   success: boolean;
   message?: string;
+  words?: string;
 };
 
 const LEVEL_OPTIONS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
@@ -525,7 +526,7 @@ export default function AudioGeneratorPage() {
           ) : null}
 
           {generationMessage ? (
-            <div className="rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm leading-6 text-[#d9fff2]">
+            <div className="whitespace-pre-wrap rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm leading-6 text-[#d9fff2]">
               {generationMessage}
             </div>
           ) : null}

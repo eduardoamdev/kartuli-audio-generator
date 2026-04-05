@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
+import { buildSelectedWordsString } from "../../../../utils/buildSelectedWordsString";
 
 export async function POST(request: Request) {
   try {
@@ -10,15 +11,15 @@ export async function POST(request: Request) {
       body.selectedFilesByFolder ?? {},
     );
 
-    console.log(
-      "Selected files content by folder:",
+    const selectedKaWordsString = buildSelectedWordsString(
       selectedFilesContentByFolder,
     );
+
+    console.log("Selected ka words string:", selectedKaWordsString);
 
     return NextResponse.json(
       {
         success: true,
-        info: body,
       },
       { status: 200 },
     );

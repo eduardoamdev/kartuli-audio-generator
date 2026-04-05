@@ -6,11 +6,13 @@ export const buildPrompt = (
   typeOfSpeech: "dialogue" | "monologue",
 ) =>
   `You are a Georgian language teacher and a native speaker. Generate a conversation in Georgian using the words provided in this document.
-- Only use the words provided. 
+- Use the words provided. 
 - Create a natural coversation. 
 - The Georgian must include Latin transcription. 
 - Include English translation for each message.
 - The output must be strictly in JSON format.
+- If the speech is a dialogue, each speaker should alternate naturally.
+- Keep messages realistic (for listening repetition).
 
 Variables provided:
 
@@ -67,10 +69,4 @@ If monologue:
       "en": "<English translation>"
     }
   }
-}
-
-Constraints:
-- Each speaker in dialogue should alternate naturally.
-- Keep messages short and realistic (for listening repetition).
-- Do not add any content outside the JSON structure.
-- Use only the words from the provided WORDS JSON, but you can combine them to make natural sentences.`;
+}`;
