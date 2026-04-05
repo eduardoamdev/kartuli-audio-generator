@@ -13,10 +13,65 @@ type AudioGeneratorRequestBody = {
   selectedFilesByFolder?: Record<string, string[]>;
 };
 
+type GeneratedMessage = {
+  ka?: string;
+  la?: string;
+  en?: string;
+};
+
+type GeneratedDialogueEntry = {
+  message?: GeneratedMessage;
+};
+
+type GeneratedTextResult = {
+  conversation?: GeneratedDialogueEntry[];
+  monologue?: {
+    message?: GeneratedMessage;
+  };
+};
+
 const isValidSpeechType = (
   typeOfSpeech: string | undefined,
 ): typeOfSpeech is "dialogue" | "monologue" =>
   typeOfSpeech === "dialogue" || typeOfSpeech === "monologue";
+
+const isObject = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null;
+
+const formatGeneratedMessage = (
+  message: GeneratedMessage | undefined,
+): string => {
+  if (!message) {
+    return "";
+  }
+
+  return [message.ka, message.la, message.en]
+    .filter(
+      (value): value is string => typeof value === "string" && value.length > 0,
+    )
+    .join("\n\n");
+};
+
+const formatGeneratedTextResult = (result: unknown): string => {
+  if (!isObject(result)) {
+    return "";
+  }
+
+  const generatedResult = result as GeneratedTextResult;
+
+  if (Array.isArray(generatedResult.conversation)) {
+    return generatedResult.conversation
+      .map((entry) => formatGeneratedMessage(entry.message))
+      .filter((entry) => entry.length > 0)
+      .join("\n\n\n");
+  }
+
+  if (isObject(generatedResult.monologue)) {
+    return formatGeneratedMessage(generatedResult.monologue.message);
+  }
+
+  return "";
+};
 
 export async function POST(request: Request) {
   try {
@@ -59,11 +114,12 @@ export async function POST(request: Request) {
     );
 
     const result = await callLLM(prompt);
+    const formattedText = formatGeneratedTextResult(result);
 
     return NextResponse.json(
       {
         success: true,
-        message: JSON.stringify(result, null, 2),
+        message: formattedText || "Text generated successfully.",
         result,
       },
       { status: 200 },
