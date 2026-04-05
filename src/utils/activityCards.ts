@@ -14,16 +14,6 @@ export type ActivityCards = ActivityCard[];
 
 export const activityCards: ActivityCards = [
   {
-    id: "audio-library",
-    href: "/",
-    variant: "blue",
-    icon: "🔊",
-    eyebrow: "Improve your listening",
-    title: "Audio Library",
-    description:
-      "Daily life conversations, read aloud by native speakers and organized by topic and level.",
-  },
-  {
     id: "audio-generator",
     href: "/audio-generator",
     variant: "purple",

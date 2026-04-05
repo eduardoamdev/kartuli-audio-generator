@@ -29,7 +29,7 @@ type AudioGeneratorOptionsResponse = {
 type AudioGeneratorResponse = {
   success: boolean;
   message?: string;
-  words?: string;
+  result?: unknown;
 };
 
 const LEVEL_OPTIONS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
@@ -215,7 +215,7 @@ export default function AudioGeneratorPage() {
     try {
       const generationPayload = buildGenerationPayload(formState);
 
-      const response = await fetch("/api/audio/generator", {
+      const response = await fetch("/api/audio/generator/text", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -507,7 +507,7 @@ export default function AudioGeneratorPage() {
               disabled={isLoadingOptions || Boolean(loadError) || isGenerating}
               className="disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isGenerating ? "generating..." : "Generate"}
+              {isGenerating ? "Generating..." : "Generate"}
             </Button>
             <Button
               type="button"
