@@ -77,6 +77,7 @@ export default function AudioGeneratorPage() {
   const [generationMessage, setGenerationMessage] = useState<string | null>(
     null,
   );
+  const [hasSuccessfulResponse, setHasSuccessfulResponse] = useState(false);
 
   useEffect(() => {
     setHasMounted(true);
@@ -141,6 +142,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setHasSuccessfulResponse(false);
   };
 
   const handleLevelChange = (value: string) => {
@@ -150,6 +152,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setHasSuccessfulResponse(false);
   };
 
   const handleTypeOfSpeechChange = (value: SpeechType | "") => {
@@ -159,6 +162,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setHasSuccessfulResponse(false);
   };
 
   const handleDetailsChange = (value: string) => {
@@ -168,6 +172,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setHasSuccessfulResponse(false);
   };
 
   const handleFolderFileToggle = (
@@ -201,6 +206,16 @@ export default function AudioGeneratorPage() {
     setGenerationError(null);
 
     setGenerationMessage(null);
+
+    setHasSuccessfulResponse(false);
+  };
+
+  const handleDownloadMp3 = () => {
+    console.log("Download MP3 clicked");
+  };
+
+  const handleDownloadPdf = () => {
+    console.log("Download PDF clicked");
   };
 
   const handleGenerateText = async (
@@ -213,6 +228,8 @@ export default function AudioGeneratorPage() {
     setGenerationError(null);
 
     setGenerationMessage(null);
+
+    setHasSuccessfulResponse(false);
 
     try {
       const generationPayload = buildGenerationPayload(formState);
@@ -240,12 +257,14 @@ export default function AudioGeneratorPage() {
       }
 
       setGenerationMessage(data.message || "Audio generation request sent.");
+      setHasSuccessfulResponse(true);
     } catch (error) {
       setGenerationError(
         error instanceof Error
           ? error.message
           : "Failed to send audio generation request.",
       );
+      setHasSuccessfulResponse(false);
     } finally {
       setIsGenerating(false);
     }
@@ -260,6 +279,8 @@ export default function AudioGeneratorPage() {
     setGenerationError(null);
 
     setGenerationMessage(null);
+
+    setHasSuccessfulResponse(false);
   };
 
   if (!hasMounted) {
@@ -529,6 +550,27 @@ export default function AudioGeneratorPage() {
           {generationMessage ? (
             <div className="whitespace-pre-wrap rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm leading-6 text-[#d9fff2]">
               {generationMessage}
+            </div>
+          ) : null}
+
+          {hasSuccessfulResponse ? (
+            <div className="flex flex-wrap gap-3">
+              <Button
+                type="button"
+                variant="teal"
+                fullWidth={false}
+                onClick={handleDownloadMp3}
+              >
+                Download MP3
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                fullWidth={false}
+                onClick={handleDownloadPdf}
+              >
+                Download PDF
+              </Button>
             </div>
           ) : null}
         </form>
