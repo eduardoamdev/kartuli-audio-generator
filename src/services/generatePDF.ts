@@ -75,9 +75,11 @@ const buildStructuredMarkup = (
     const lines = getMessageLines(result.monologue.message);
 
     if (lines.length > 0) {
-      return lines
+      const monologueMarkup = lines
         .map((line) => `<p class="line">${escapeHtml(line)}</p>`)
         .join("");
+
+      return `<div class="monologue">${monologueMarkup}</div>`;
     }
   }
 
@@ -137,6 +139,11 @@ const buildPdfHtml = (
 					.conversation {
 						display: grid;
 						gap: 18px;
+					}
+
+					.monologue {
+						display: grid;
+						gap: 14px;
 					}
 
 					.entry {
