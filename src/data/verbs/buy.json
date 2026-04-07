@@ -1,0 +1,133 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ყიდვა",
+      "la": "qidva",
+      "en": "to buy"
+    },
+    "conjugation": {}
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვყიდულობ", "la": "vq'idulob", "en": "I buy" },
+      "2sg": { "ka": "ყიდულობ", "la": "q'idulob", "en": "you buy" },
+      "3sg": { "ka": "ყიდულობს", "la": "q'idulobs", "en": "he/she/it buys" },
+      "1pl": { "ka": "ვყიდულობთ", "la": "vq'idulobt", "en": "we buy" },
+      "2pl": {
+        "ka": "ყიდულობთ",
+        "la": "q'idulobt",
+        "en": "you buy (plural/formal)"
+      },
+      "3pl": { "ka": "ყიდულობენ", "la": "q'iduloben", "en": "they buy" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "ვიყიდე", "la": "viq'ide", "en": "I bought" },
+      "2sg": { "ka": "იყიდე", "la": "iq'ide", "en": "you bought" },
+      "3sg": { "ka": "იყიდა", "la": "iq'ida", "en": "he/she/it bought" },
+      "1pl": { "ka": "ვიყიდეთ", "la": "viq'idet", "en": "we bought" },
+      "2pl": {
+        "ka": "იყიდეთ",
+        "la": "iq'idet",
+        "en": "you bought (plural/formal)"
+      },
+      "3pl": { "ka": "იყიდეს", "la": "iq'ides", "en": "they bought" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "ვიყიდი", "la": "viq'idi", "en": "I will buy" },
+      "2sg": { "ka": "იყიდი", "la": "iq'idi", "en": "you will buy" },
+      "3sg": { "ka": "იყიდის", "la": "iq'idis", "en": "he/she/it will buy" },
+      "1pl": { "ka": "ვიყიდით", "la": "viq'idit", "en": "we will buy" },
+      "2pl": {
+        "ka": "იყიდით",
+        "la": "iq'idit",
+        "en": "you will buy (plural/formal)"
+      },
+      "3pl": { "ka": "იყიდიან", "la": "iq'idian", "en": "they will buy" }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვყიდულობ",
+        "la": "me akhla vq'idulob",
+        "en": "I am buying now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ყიდულობ",
+        "la": "shen akhla q'idulob",
+        "en": "You are buying now"
+      },
+      "3sg": {
+        "ka": "ის ახლა ყიდულობს",
+        "la": "is akhla q'idulobs",
+        "en": "He/she is buying now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვყიდულობთ",
+        "la": "chven akhla vq'idulobt",
+        "en": "We are buying now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა ყიდულობთ",
+        "la": "tkven akhla q'idulobt",
+        "en": "You are buying now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა ყიდულობენ",
+        "la": "isini akhla q'iduloben",
+        "en": "They are buying now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე ვიყიდე",
+        "la": "me ukve viq'ide",
+        "en": "I have already bought"
+      },
+      "2sg": {
+        "ka": "შენ უკვე იყიდე",
+        "la": "shen ukve iq'ide",
+        "en": "You have already bought"
+      },
+      "3sg": {
+        "ka": "ის უკვე იყიდა",
+        "la": "is ukve iq'ida",
+        "en": "He/she has already bought"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე ვიყიდეთ",
+        "la": "chven ukve viq'idet",
+        "en": "We have already bought"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე იყიდეთ",
+        "la": "tkven ukve iq'idet",
+        "en": "You have already bought (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე იყიდეს",
+        "la": "isini ukve iq'ides",
+        "en": "They have already bought"
+      }
+    }
+  }
+}

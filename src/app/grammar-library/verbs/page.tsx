@@ -58,7 +58,7 @@ export default async function VerbPage({ searchParams }: VerbPageProps) {
       title={title.toUpperCase()}
       icon="📖"
       showBackButton={true}
-      backHref="/grammar-library/verb/selector"
+      backHref="/grammar-library/verbs/selector"
       backLabel="Back to selector"
     >
       <div className="space-y-12 pb-8">
