@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
 import CardGridPageShell from "@/components/features/CardGridPageShell";
+import type { GeneratedTextResult } from "@/types/audioGenerator";
 import { SPEECH_TYPES } from "@/utils/constants";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 
@@ -29,7 +30,7 @@ type AudioGeneratorOptionsResponse = {
 type AudioGeneratorResponse = {
   success: boolean;
   message?: string;
-  result?: unknown;
+  result?: GeneratedTextResult;
 };
 
 type AudioGeneratorPdfResponse = {
@@ -77,12 +78,15 @@ export default function AudioGeneratorPage() {
     useState<AudioGeneratorFormState>(defaultFormState);
   const [isLoadingOptions, setIsLoadingOptions] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isDownloadingMp3, setIsDownloadingMp3] = useState(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [generationError, setGenerationError] = useState<string | null>(null);
   const [generationMessage, setGenerationMessage] = useState<string | null>(
     null,
   );
+  const [generatedResult, setGeneratedResult] =
+    useState<GeneratedTextResult | null>(null);
   const [hasSuccessfulResponse, setHasSuccessfulResponse] = useState(false);
 
   useEffect(() => {
@@ -148,6 +152,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setGeneratedResult(null);
     setHasSuccessfulResponse(false);
   };
 
@@ -158,6 +163,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setGeneratedResult(null);
     setHasSuccessfulResponse(false);
   };
 
@@ -168,6 +174,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setGeneratedResult(null);
     setHasSuccessfulResponse(false);
   };
 
@@ -178,6 +185,7 @@ export default function AudioGeneratorPage() {
     }));
     setGenerationError(null);
     setGenerationMessage(null);
+    setGeneratedResult(null);
     setHasSuccessfulResponse(false);
   };
 
@@ -213,11 +221,54 @@ export default function AudioGeneratorPage() {
 
     setGenerationMessage(null);
 
+    setGeneratedResult(null);
+
     setHasSuccessfulResponse(false);
   };
 
-  const handleDownloadMp3 = () => {
-    console.log("Download MP3 clicked");
+  const handleDownloadMp3 = async () => {
+    if (!generatedResult) {
+      setGenerationError("No generated text is available for MP3 generation.");
+      return;
+    }
+
+    setGenerationError(null);
+    setIsDownloadingMp3(true);
+
+    try {
+      const response = await fetch("/api/audio/generator/mp3", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          result: generatedResult,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json()) as AudioGeneratorPdfResponse;
+
+        throw new Error(data.message || "Failed to generate MP3.");
+      }
+
+      const mp3Blob = await response.blob();
+      const mp3Url = window.URL.createObjectURL(mp3Blob);
+      const downloadLink = document.createElement("a");
+
+      downloadLink.href = mp3Url;
+      downloadLink.download = "audio-generator.mp3";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+      window.URL.revokeObjectURL(mp3Url);
+    } catch (error) {
+      setGenerationError(
+        error instanceof Error ? error.message : "Failed to generate MP3.",
+      );
+    } finally {
+      setIsDownloadingMp3(false);
+    }
   };
 
   const handleDownloadPdf = async () => {
@@ -276,6 +327,8 @@ export default function AudioGeneratorPage() {
 
     setGenerationMessage(null);
 
+    setGeneratedResult(null);
+
     setHasSuccessfulResponse(false);
 
     try {
@@ -304,6 +357,7 @@ export default function AudioGeneratorPage() {
       }
 
       setGenerationMessage(data.message || "Audio generation request sent.");
+      setGeneratedResult(data.result ?? null);
       setHasSuccessfulResponse(true);
     } catch (error) {
       setGenerationError(
@@ -326,6 +380,8 @@ export default function AudioGeneratorPage() {
     setGenerationError(null);
 
     setGenerationMessage(null);
+
+    setGeneratedResult(null);
 
     setHasSuccessfulResponse(false);
   };
@@ -357,10 +413,6 @@ export default function AudioGeneratorPage() {
           <div className="space-y-2">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
               Conversation setup
-            </p>
-            <p className="max-w-2xl text-sm leading-6 text-[rgba(255,232,245,0.82)]">
-              Add learner details, describe the scenario, and choose the data
-              files that should feed the generated conversation.
             </p>
           </div>
 
@@ -475,14 +527,14 @@ export default function AudioGeneratorPage() {
 
           <label className="flex flex-col gap-5">
             <span className="text-sm font-medium text-[#fff0fb]">
-              Open information about the conversation
+              Open information about the material
             </span>
             <textarea
               name="details"
               value={formState.details}
               onChange={(event) => handleDetailsChange(event.target.value)}
               rows={5}
-              placeholder="Describe the situation, tone, goal, speakers, or any constraints for the generated conversation."
+              placeholder="Describe the situation, tone, goal, speakers, or any constraints."
               className="min-h-36 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base leading-6 text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
             />
           </label>
@@ -607,8 +659,9 @@ export default function AudioGeneratorPage() {
                 variant="teal"
                 fullWidth={false}
                 onClick={handleDownloadMp3}
+                disabled={isDownloadingMp3 || !generatedResult}
               >
-                Download MP3
+                {isDownloadingMp3 ? "Downloading MP3..." : "Download MP3"}
               </Button>
               <Button
                 type="button"

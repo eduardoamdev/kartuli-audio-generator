@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 
 import { buildPrompt } from "@/prompts/audio";
 import { callLLM } from "@/services/callLLM";
+import type {
+  GeneratedMessage,
+  GeneratedTextResult,
+} from "@/types/audioGenerator";
 import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
 import { buildSelectedWordsString } from "../../../../../utils/buildSelectedWordsString";
 
@@ -11,23 +15,6 @@ type AudioGeneratorRequestBody = {
   details?: string;
   typeOfSpeech?: string;
   selectedFilesByFolder?: Record<string, string[]>;
-};
-
-type GeneratedMessage = {
-  ka?: string;
-  la?: string;
-  en?: string;
-};
-
-type GeneratedDialogueEntry = {
-  message?: GeneratedMessage;
-};
-
-type GeneratedTextResult = {
-  conversation?: GeneratedDialogueEntry[];
-  monologue?: {
-    message?: GeneratedMessage;
-  };
 };
 
 const isValidSpeechType = (
