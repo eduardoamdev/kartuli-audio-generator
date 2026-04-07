@@ -32,6 +32,11 @@ type AudioGeneratorResponse = {
   result?: unknown;
 };
 
+type AudioGeneratorPdfResponse = {
+  success: boolean;
+  message?: string;
+};
+
 const LEVEL_OPTIONS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
 const SPEECH_TYPE_OPTIONS = Object.values(SPEECH_TYPES);
@@ -72,6 +77,7 @@ export default function AudioGeneratorPage() {
     useState<AudioGeneratorFormState>(defaultFormState);
   const [isLoadingOptions, setIsLoadingOptions] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [generationError, setGenerationError] = useState<string | null>(null);
   const [generationMessage, setGenerationMessage] = useState<string | null>(
@@ -214,8 +220,49 @@ export default function AudioGeneratorPage() {
     console.log("Download MP3 clicked");
   };
 
-  const handleDownloadPdf = () => {
-    console.log("Download PDF clicked");
+  const handleDownloadPdf = async () => {
+    if (!generationMessage) {
+      setGenerationError("No generated text is available for PDF generation.");
+      return;
+    }
+
+    setGenerationError(null);
+    setIsDownloadingPdf(true);
+
+    try {
+      const response = await fetch("/api/audio/generator/pdf", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formattedText: generationMessage,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json()) as AudioGeneratorPdfResponse;
+
+        throw new Error(data.message || "Failed to generate PDF.");
+      }
+
+      const pdfBlob = await response.blob();
+      const pdfUrl = window.URL.createObjectURL(pdfBlob);
+      const downloadLink = document.createElement("a");
+
+      downloadLink.href = pdfUrl;
+      downloadLink.download = "audio-generator.pdf";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+      window.URL.revokeObjectURL(pdfUrl);
+    } catch (error) {
+      setGenerationError(
+        error instanceof Error ? error.message : "Failed to generate PDF.",
+      );
+    } finally {
+      setIsDownloadingPdf(false);
+    }
   };
 
   const handleGenerateText = async (
@@ -568,8 +615,9 @@ export default function AudioGeneratorPage() {
                 variant="outline"
                 fullWidth={false}
                 onClick={handleDownloadPdf}
+                disabled={isDownloadingPdf}
               >
-                Download PDF
+                {isDownloadingPdf ? "Downloading PDF..." : "Download PDF"}
               </Button>
             </div>
           ) : null}

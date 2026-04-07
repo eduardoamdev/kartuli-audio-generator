@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { buildPrompt } from "@/prompts/audio";
-import { callLLM } from "@/services/llm";
+import { callLLM } from "@/services/callLLM";
 import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
 import { buildSelectedWordsString } from "../../../../../utils/buildSelectedWordsString";
 
