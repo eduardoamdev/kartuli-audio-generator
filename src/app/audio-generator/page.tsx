@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
 import CardGridPageShell from "@/components/features/CardGridPageShell";
-import type { GeneratedTextResult } from "@/types/audioGenerator";
+import type {
+  GeneratedDialogueEntry,
+  GeneratedMessage,
+  GeneratedTextResult,
+} from "@/types/audioGenerator";
 import { SPEECH_TYPES } from "@/utils/constants";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 
@@ -67,6 +71,58 @@ const defaultFormState: AudioGeneratorFormState = {
   typeOfSpeech: "",
   details: "",
   selectedFilesByFolder: {},
+};
+
+const formatGeneratedMessage = (
+  message: GeneratedMessage | undefined,
+): string => {
+  return [message?.ka, message?.la, message?.en]
+    .filter(
+      (value): value is string =>
+        typeof value === "string" && value.trim().length > 0,
+    )
+    .join("\n\n");
+};
+
+const formatSpeakerLabel = (speaker: string | undefined): string => {
+  const normalizedSpeaker = speaker?.trim();
+
+  if (!normalizedSpeaker) {
+    return "Speaker";
+  }
+
+  if (/^speaker\b/iu.test(normalizedSpeaker)) {
+    return normalizedSpeaker;
+  }
+
+  return `Speaker ${normalizedSpeaker}`;
+};
+
+const formatDialogueEntry = (entry: GeneratedDialogueEntry): string => {
+  const formattedMessage = formatGeneratedMessage(entry.message);
+
+  if (!formattedMessage) {
+    return "";
+  }
+
+  return `${formatSpeakerLabel(entry.speaker)}\n\n${formattedMessage}`;
+};
+
+const formatGeneratedResultForDisplay = (
+  result: GeneratedTextResult | null | undefined,
+): string => {
+  if (Array.isArray(result?.conversation)) {
+    return result.conversation
+      .map(formatDialogueEntry)
+      .filter((entry) => entry.length > 0)
+      .join("\n\n\n");
+  }
+
+  if (result?.monologue) {
+    return formatGeneratedMessage(result.monologue.message);
+  }
+
+  return "";
 };
 
 export default function AudioGeneratorPage() {
@@ -356,9 +412,12 @@ export default function AudioGeneratorPage() {
           data.message || "Failed to send audio generation request.",
         );
       }
-
-      setGenerationMessage(data.message || "Audio generation request sent.");
       setGeneratedResult(data.result ?? null);
+      setGenerationMessage(
+        formatGeneratedResultForDisplay(data.result) ||
+          data.message ||
+          "Audio generation request sent.",
+      );
       setHasSuccessfulResponse(true);
     } catch (error) {
       setGenerationError(
