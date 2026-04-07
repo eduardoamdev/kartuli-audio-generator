@@ -1,33 +1,43 @@
 import { NextResponse } from "next/server";
 
 import { generatePDF } from "@/services/generatePDF";
+import type { GeneratedTextResult } from "@/types/audioGenerator";
 
 export const runtime = "nodejs";
 
 type AudioGeneratorPdfRequestBody = {
   formattedText?: string;
+  result?: GeneratedTextResult;
+};
+
+const hasValidResultShape = (
+  result: GeneratedTextResult | undefined,
+): result is GeneratedTextResult => {
+  return Boolean(
+    result &&
+    ((Array.isArray(result.conversation) && result.conversation.length > 0) ||
+      result.monologue),
+  );
 };
 
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as AudioGeneratorPdfRequestBody;
 
-    if (typeof body.formattedText !== "string" || !body.formattedText.trim()) {
+    if (
+      (typeof body.formattedText !== "string" || !body.formattedText.trim()) &&
+      !hasValidResultShape(body.result)
+    ) {
       return NextResponse.json(
         {
           success: false,
-          message: "formattedText is required.",
+          message: "formattedText or a generated result is required.",
         },
         { status: 400 },
       );
     }
 
-    console.log(
-      "Received formattedText for PDF generation.",
-      body.formattedText,
-    );
-
-    const pdfFile = await generatePDF(body.formattedText);
+    const pdfFile = await generatePDF(body.formattedText ?? "", body.result);
     const pdfArrayBuffer = new ArrayBuffer(pdfFile.byteLength);
 
     new Uint8Array(pdfArrayBuffer).set(pdfFile);

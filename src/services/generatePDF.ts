@@ -1,5 +1,11 @@
 import puppeteer from "puppeteer";
 
+import type {
+  GeneratedDialogueEntry,
+  GeneratedMessage,
+  GeneratedTextResult,
+} from "@/types/audioGenerator";
+
 const escapeHtml = (value: string): string =>
   value
     .replaceAll("&", "&amp;")
@@ -8,8 +14,81 @@ const escapeHtml = (value: string): string =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 
-const buildPdfHtml = (formattedText: string): string => {
-  const content = escapeHtml(formattedText).replaceAll("\n", "<br />");
+const getMessageLines = (message: GeneratedMessage | undefined): string[] =>
+  [message?.ka, message?.la, message?.en].filter(
+    (value): value is string =>
+      typeof value === "string" && value.trim().length > 0,
+  );
+
+const buildPlainTextMarkup = (formattedText: string): string =>
+  escapeHtml(formattedText).replaceAll("\n", "<br />");
+
+const formatSpeakerLabel = (speaker: string | undefined): string => {
+  const normalizedSpeaker = speaker?.trim();
+
+  if (!normalizedSpeaker) {
+    return "Speaker";
+  }
+
+  if (/^speaker\b/iu.test(normalizedSpeaker)) {
+    return normalizedSpeaker;
+  }
+
+  return `Speaker ${normalizedSpeaker}`;
+};
+
+const buildDialogueEntryMarkup = (entry: GeneratedDialogueEntry): string => {
+  const lines = getMessageLines(entry.message);
+
+  if (lines.length === 0) {
+    return "";
+  }
+
+  const speaker = formatSpeakerLabel(entry.speaker);
+
+  return `
+					<article class="entry">
+						<p class="speaker">${escapeHtml(speaker)}</p>
+						<div class="turn">
+							${lines.map((line) => `<p class="line">${escapeHtml(line)}</p>`).join("")}
+						</div>
+					</article>
+				`;
+};
+
+const buildStructuredMarkup = (
+  formattedText: string,
+  result: GeneratedTextResult | undefined,
+): string => {
+  if (Array.isArray(result?.conversation)) {
+    const entriesMarkup = result.conversation
+      .map(buildDialogueEntryMarkup)
+      .filter((entryMarkup) => entryMarkup.length > 0)
+      .join("");
+
+    if (entriesMarkup) {
+      return `<div class="conversation">${entriesMarkup}</div>`;
+    }
+  }
+
+  if (result?.monologue?.message) {
+    const lines = getMessageLines(result.monologue.message);
+
+    if (lines.length > 0) {
+      return lines
+        .map((line) => `<p class="line">${escapeHtml(line)}</p>`)
+        .join("");
+    }
+  }
+
+  return buildPlainTextMarkup(formattedText);
+};
+
+const buildPdfHtml = (
+  formattedText: string,
+  result: GeneratedTextResult | undefined,
+): string => {
+  const content = buildStructuredMarkup(formattedText, result);
 
   return `
 		<!DOCTYPE html>
@@ -54,6 +133,39 @@ const buildPdfHtml = (formattedText: string): string => {
 						white-space: normal;
 						word-break: break-word;
 					}
+
+					.conversation {
+						display: grid;
+						gap: 18px;
+					}
+
+					.entry {
+						padding-bottom: 18px;
+						border-bottom: 1px solid #f1e5e9;
+					}
+
+					.entry:last-child {
+						padding-bottom: 0;
+						border-bottom: 0;
+					}
+
+					.speaker {
+						margin: 0 0 8px;
+						font-size: 12px;
+						font-weight: 700;
+						letter-spacing: 0.08em;
+						text-transform: uppercase;
+						color: #8b3f63;
+					}
+
+					.turn {
+						display: grid;
+						gap: 6px;
+					}
+
+					.line {
+						margin: 0;
+					}
 				</style>
 			</head>
 			<body>
@@ -65,7 +177,10 @@ const buildPdfHtml = (formattedText: string): string => {
 	`;
 };
 
-export async function generatePDF(formattedText: string): Promise<Uint8Array> {
+export async function generatePDF(
+  formattedText: string,
+  result?: GeneratedTextResult,
+): Promise<Uint8Array> {
   const browser = await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -74,7 +189,7 @@ export async function generatePDF(formattedText: string): Promise<Uint8Array> {
   try {
     const page = await browser.newPage();
 
-    await page.setContent(buildPdfHtml(formattedText), {
+    await page.setContent(buildPdfHtml(formattedText, result), {
       waitUntil: "networkidle0",
     });
 

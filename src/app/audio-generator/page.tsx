@@ -272,7 +272,7 @@ export default function AudioGeneratorPage() {
   };
 
   const handleDownloadPdf = async () => {
-    if (!generationMessage) {
+    if (!generationMessage && !generatedResult) {
       setGenerationError("No generated text is available for PDF generation.");
       return;
     }
@@ -288,6 +288,7 @@ export default function AudioGeneratorPage() {
         },
         body: JSON.stringify({
           formattedText: generationMessage,
+          result: generatedResult,
         }),
       });
 
