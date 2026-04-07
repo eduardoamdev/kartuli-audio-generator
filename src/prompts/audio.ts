@@ -16,6 +16,7 @@ export const buildPrompt = (
 - Keep messages realistic (for listening repetition).
 - If there is a contradiction between the conversation description and the information provided in  words, age, level or type of speech, prioritize the conversation description.
 - If there is a contradiction between the conversation description and the rest of the instrucitions in this prompt not included in the previous point, prioritize the instructions.
+- It the type of speech is a monologue, please, include paragraph endings in the message to make it easier to transcribe.
 
 Variables provided:
 

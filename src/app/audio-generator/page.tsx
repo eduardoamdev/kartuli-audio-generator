@@ -84,6 +84,15 @@ const formatGeneratedMessage = (
     .join("\n\n");
 };
 
+const getGeneratedMessageSections = (
+  message: GeneratedMessage | undefined,
+): string[] => {
+  return [message?.ka, message?.la, message?.en].filter(
+    (value): value is string =>
+      typeof value === "string" && value.trim().length > 0,
+  );
+};
+
 const formatSpeakerLabel = (speaker: string | undefined): string => {
   const normalizedSpeaker = speaker?.trim();
 
@@ -144,6 +153,9 @@ export default function AudioGeneratorPage() {
   const [generatedResult, setGeneratedResult] =
     useState<GeneratedTextResult | null>(null);
   const [hasSuccessfulResponse, setHasSuccessfulResponse] = useState(false);
+  const monologueMessageSections = getGeneratedMessageSections(
+    generatedResult?.monologue?.message,
+  );
 
   useEffect(() => {
     setHasMounted(true);
@@ -707,9 +719,25 @@ export default function AudioGeneratorPage() {
           ) : null}
 
           {generationMessage ? (
-            <div className="whitespace-pre-wrap rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm leading-6 text-[#d9fff2]">
-              {generationMessage}
-            </div>
+            generatedResult?.monologue &&
+            monologueMessageSections.length > 0 ? (
+              <div className="rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm text-[#d9fff2]">
+                <div className="grid gap-12">
+                  {monologueMessageSections.map((section, index) => (
+                    <div
+                      key={`${index}-${section}`}
+                      className="whitespace-pre-wrap leading-6"
+                    >
+                      {section}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="whitespace-pre-wrap rounded-[1.4rem] border border-[rgba(140,234,202,0.28)] bg-[rgba(16,67,54,0.3)] p-4 text-sm leading-6 text-[#d9fff2]">
+                {generationMessage}
+              </div>
+            )
           ) : null}
 
           {hasSuccessfulResponse ? (

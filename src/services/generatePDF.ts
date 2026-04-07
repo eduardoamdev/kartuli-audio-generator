@@ -20,6 +20,20 @@ const getMessageLines = (message: GeneratedMessage | undefined): string[] =>
       typeof value === "string" && value.trim().length > 0,
   );
 
+const splitIntoParagraphs = (value: string | undefined): string[] => {
+  if (typeof value !== "string") {
+    return [];
+  }
+
+  return value
+    .split(/\n\s*\n/u)
+    .map((paragraph) => paragraph.trim())
+    .filter((paragraph) => paragraph.length > 0);
+};
+
+const formatParagraphText = (value: string): string =>
+  escapeHtml(value).replaceAll("\n", "<br />");
+
 const buildPlainTextMarkup = (formattedText: string): string =>
   escapeHtml(formattedText).replaceAll("\n", "<br />");
 
@@ -56,6 +70,28 @@ const buildDialogueEntryMarkup = (entry: GeneratedDialogueEntry): string => {
 				`;
 };
 
+const buildMonologueLanguageMarkup = (value: string | undefined): string => {
+  const paragraphsMarkup = splitIntoParagraphs(value)
+    .map(
+      (paragraph) =>
+        `<p class="line monologue-paragraph">${formatParagraphText(paragraph)}</p>`,
+    )
+    .join("");
+
+  if (!paragraphsMarkup) {
+    return "";
+  }
+
+  return `<section class="monologue-language">${paragraphsMarkup}</section>`;
+};
+
+const buildMonologueMarkup = (message: GeneratedMessage): string => {
+  return [message.ka, message.la, message.en]
+    .map(buildMonologueLanguageMarkup)
+    .filter((sectionMarkup) => sectionMarkup.length > 0)
+    .join("");
+};
+
 const buildStructuredMarkup = (
   formattedText: string,
   result: GeneratedTextResult | undefined,
@@ -72,13 +108,9 @@ const buildStructuredMarkup = (
   }
 
   if (result?.monologue?.message) {
-    const lines = getMessageLines(result.monologue.message);
+    const monologueMarkup = buildMonologueMarkup(result.monologue.message);
 
-    if (lines.length > 0) {
-      const monologueMarkup = lines
-        .map((line) => `<p class="line">${escapeHtml(line)}</p>`)
-        .join("");
-
+    if (monologueMarkup) {
       return `<div class="monologue">${monologueMarkup}</div>`;
     }
   }
@@ -142,6 +174,11 @@ const buildPdfHtml = (
 					}
 
 					.monologue {
+						display: grid;
+            gap: 40px;
+					}
+
+					.monologue-language {
 						display: grid;
 						gap: 14px;
 					}
