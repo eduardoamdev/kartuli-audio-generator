@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 import type { ReactNode } from "react";
 
-type CardGridPageShellProps = {
+type ButtonGridPageShellProps = {
   title: string;
   icon: ReactNode;
   children: ReactNode;
@@ -11,14 +11,14 @@ type CardGridPageShellProps = {
   backLabel?: string;
 };
 
-export default function CardGridPageShell({
+export default function ButtonGridPageShell({
   title,
   icon,
   children,
   showBackButton = false,
   backHref = "/grammar-library/selector",
   backLabel = "Back",
-}: CardGridPageShellProps) {
+}: ButtonGridPageShellProps) {
   return (
     <main className="relative flex flex-1 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(244,114,182,0.34),_transparent_34%),radial-gradient(circle_at_82%_16%,_rgba(196,132,252,0.28),_transparent_30%),radial-gradient(circle_at_bottom,_rgba(217,70,239,0.24),_transparent_38%)]" />

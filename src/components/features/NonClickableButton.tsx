@@ -1,20 +1,22 @@
 import type { DataTextInfo } from "@/types/data";
-import { NON_CLICKABLE_CARD_SURFACES } from "@/utils/constants";
+import { NON_CLICKABLE_BUTTON_SURFACES } from "@/utils/constants";
 
-type NonClickableCardProps = {
+type NonClickableButtonProps = {
   entry: DataTextInfo;
   index: number;
 };
 
-export default function NonClickableCard({
+export default function NonClickableButton({
   entry,
   index,
-}: NonClickableCardProps) {
+}: NonClickableButtonProps) {
   return (
     <article
       className={[
         "min-h-[168px] rounded-[1.4rem] border border-[rgba(255,196,232,0.2)] p-5 shadow-[0_24px_62px_-26px_rgba(36,4,28,0.94)] backdrop-blur-[18px]",
-        NON_CLICKABLE_CARD_SURFACES[index % NON_CLICKABLE_CARD_SURFACES.length],
+        NON_CLICKABLE_BUTTON_SURFACES[
+          index % NON_CLICKABLE_BUTTON_SURFACES.length
+        ],
       ].join(" ")}
     >
       <div className="space-y-3 text-left">

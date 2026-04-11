@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
-import CardGridPageShell from "@/components/features/CardGridPageShell";
+import ButtonGridPageShell from "@/components/features/ButtonGridPageShell";
 import type {
   GeneratedDialogueEntry,
   GeneratedMessage,
@@ -460,7 +460,7 @@ export default function AudioGeneratorPage() {
 
   if (!hasMounted) {
     return (
-      <CardGridPageShell
+      <ButtonGridPageShell
         title="Build an audio generation brief"
         icon="🤖"
         showBackButton
@@ -469,12 +469,12 @@ export default function AudioGeneratorPage() {
         <div className="rounded-[1.8rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(33,6,27,0.5)] p-6 text-sm leading-6 text-[rgba(255,232,245,0.82)] shadow-[0_24px_70px_rgba(24,2,19,0.36)] backdrop-blur-xl sm:p-8">
           Loading audio generator...
         </div>
-      </CardGridPageShell>
+      </ButtonGridPageShell>
     );
   }
 
   return (
-    <CardGridPageShell
+    <ButtonGridPageShell
       title="Build an audio generation brief"
       icon="🤖"
       showBackButton
@@ -764,6 +764,6 @@ export default function AudioGeneratorPage() {
           ) : null}
         </form>
       </section>
-    </CardGridPageShell>
+    </ButtonGridPageShell>
   );
 }

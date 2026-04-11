@@ -1,6 +1,6 @@
-import CardGridPageShell from "@/components/features/CardGridPageShell";
-import NonClickableCard from "@/components/features/NonClickableCard";
-import CardGrid from "@/components/ui/CardGrid";
+import ButtonGridPageShell from "@/components/features/ButtonGridPageShell";
+import NonClickableButton from "@/components/features/NonClickableButton";
+import ButtonGrid from "@/components/ui/ButtonGrid";
 import type {
   FilenameSearchParams,
   SearchParamsPageProps,
@@ -21,7 +21,7 @@ export default async function FunctionWordsPage({
   const pageTitle = composePageTitle(selectedFileName);
 
   return (
-    <CardGridPageShell
+    <ButtonGridPageShell
       title={pageTitle}
       icon="🧩"
       showBackButton
@@ -29,17 +29,17 @@ export default async function FunctionWordsPage({
     >
       {selectedFileName ? (
         <section className="space-y-4">
-          <CardGrid>
+          <ButtonGrid>
             {functionWordEntries.map((entry, index) => (
-              <NonClickableCard
+              <NonClickableButton
                 key={`${selectedFileName}-${entry.ka}-${index}`}
                 entry={entry}
                 index={index}
               />
             ))}
-          </CardGrid>
+          </ButtonGrid>
         </section>
       ) : null}
-    </CardGridPageShell>
+    </ButtonGridPageShell>
   );
 }

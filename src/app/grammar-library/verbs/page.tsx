@@ -1,7 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { DATA_DIRECTORY } from "@/utils/constants";
-import CardGridPageShell from "@/components/features/CardGridPageShell";
+import ButtonGridPageShell from "@/components/features/ButtonGridPageShell";
 import { notFound } from "next/navigation";
 
 type LocalizedString = {
@@ -54,7 +54,7 @@ export default async function VerbPage({ searchParams }: VerbPageProps) {
   const title = infinitiveEn ? `Verb: ${infinitiveEn}` : `Verb: ${verbName}`;
 
   return (
-    <CardGridPageShell
+    <ButtonGridPageShell
       title={title.toUpperCase()}
       icon="📖"
       showBackButton={true}
@@ -131,6 +131,6 @@ export default async function VerbPage({ searchParams }: VerbPageProps) {
           );
         })}
       </div>
-    </CardGridPageShell>
+    </ButtonGridPageShell>
   );
 }

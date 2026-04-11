@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import { activityCards } from "@/utils/activityCards";
+import { activityButtons } from "@/utils/activityButtons";
 
 /**
  * The landing page of the application.
@@ -44,7 +44,7 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                {activityCards.map((activity) => (
+                {activityButtons.map((activity) => (
                   <Button
                     key={activity.id}
                     href={activity.href}

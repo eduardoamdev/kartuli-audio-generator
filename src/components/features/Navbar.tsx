@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { activityCards } from "@/utils/activityCards";
+import { activityButtons } from "@/utils/activityButtons";
 
 type NavbarProps = {
   siteTitle: string;
@@ -73,7 +73,7 @@ export default function Navbar({ siteTitle }: NavbarProps) {
           >
             <div className="overflow-hidden rounded-[1.5rem] border border-[rgba(255,220,240,0.16)] bg-[rgba(43,8,34,0.9)] p-2 shadow-[0_24px_80px_rgba(24,2,17,0.56)] backdrop-blur-xl">
               <div className="flex flex-col gap-2">
-                {activityCards.map((activity) => (
+                {activityButtons.map((activity) => (
                   <Link
                     key={activity.id}
                     href={activity.href}

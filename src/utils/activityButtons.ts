@@ -1,18 +1,18 @@
-export type ActivityCardVariant = "blue" | "purple" | "teal";
+export type ActivityButtonVariant = "blue" | "purple" | "teal";
 
-export type ActivityCard = {
+export type ActivityButton = {
   id: string;
   href: string;
-  variant: ActivityCardVariant;
+  variant: ActivityButtonVariant;
   icon: string;
   eyebrow: string;
   title: string;
   description: string;
 };
 
-export type ActivityCards = ActivityCard[];
+export type ActivityButtons = ActivityButton[];
 
-export const activityCards: ActivityCards = [
+export const activityButtons: ActivityButtons = [
   {
     id: "audio-generator",
     href: "/audio-generator",
