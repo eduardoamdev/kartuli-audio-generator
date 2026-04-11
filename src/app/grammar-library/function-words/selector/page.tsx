@@ -24,7 +24,6 @@ export default async function FunctionWordsSelectorPage() {
               key={fileName}
               href={`/grammar-library/function-words?filename=${encodeURIComponent(fileName)}`}
               variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
-              icon={String(index + 1).padStart(2, "0")}
               description={fileName}
               className="h-full min-h-[148px] items-start"
             >
