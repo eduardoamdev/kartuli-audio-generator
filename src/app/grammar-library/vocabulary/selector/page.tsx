@@ -23,7 +23,6 @@ export default async function VocabularySelectorPage() {
               key={fileName}
               href={`/grammar-library/vocabulary?filename=${encodeURIComponent(fileName)}`}
               variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
-              icon={String(index + 1).padStart(2, "0")}
               description={fileName}
               className="h-full min-h-[148px] items-start"
             >

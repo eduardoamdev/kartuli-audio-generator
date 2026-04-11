@@ -22,7 +22,6 @@ export default async function GrammarSelectorPage() {
             key={folderName}
             href={getFolderHref(folderName)}
             variant={CARD_VARIANTS[index % CARD_VARIANTS.length]}
-            icon={String(index + 1).padStart(2, "0")}
             description="Open this section and continue with the available cards."
             className="h-full min-h-[148px] items-start"
           >
