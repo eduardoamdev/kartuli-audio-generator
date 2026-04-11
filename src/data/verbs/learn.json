@@ -1,0 +1,169 @@
+{
+  "infinitive": {
+    "name": { "ka": "სწავლა", "la": "stsavla", "en": "to study" },
+    "conjugation": {}
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვსწავლობ", "la": "vstsavlob", "en": "I study" },
+      "2sg": { "ka": "სწავლობ", "la": "stsavlob", "en": "you study" },
+      "3sg": { "ka": "სწავლობს", "la": "stsavlobs", "en": "he/she studies" },
+      "1pl": { "ka": "ვსწავლობთ", "la": "vstsavlobt", "en": "we study" },
+      "2pl": {
+        "ka": "სწავლობთ",
+        "la": "stsavlobt",
+        "en": "you study (plural/formal)"
+      },
+      "3pl": { "ka": "სწავლობენ", "la": "stsavloben", "en": "they study" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვსწავლობდი",
+        "la": "vstsavlobdi",
+        "en": "I was studying / I studied"
+      },
+      "2sg": {
+        "ka": "სწავლობდი",
+        "la": "stsavlobdi",
+        "en": "you were studying / you studied"
+      },
+      "3sg": {
+        "ka": "სწავლობდა",
+        "la": "stsavlobda",
+        "en": "he/she was studying / studied"
+      },
+      "1pl": {
+        "ka": "ვსწავლობდით",
+        "la": "vstsavlobdit",
+        "en": "we were studying / studied"
+      },
+      "2pl": {
+        "ka": "სწავლობდით",
+        "la": "stsavlobdit",
+        "en": "you were studying / studied (plural/formal)"
+      },
+      "3pl": {
+        "ka": "სწავლობდნენ",
+        "la": "stsavlobdnen",
+        "en": "they were studying / studied"
+      }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვისწავლი",
+        "la": "vistsavli",
+        "en": "I will study"
+      },
+      "2sg": {
+        "ka": "ისწავლი",
+        "la": "istsavli",
+        "en": "you will study"
+      },
+      "3sg": {
+        "ka": "ისწავლის",
+        "la": "istsavlis",
+        "en": "he/she will study"
+      },
+      "1pl": {
+        "ka": "ვისწავლით",
+        "la": "vistsavlit",
+        "en": "we will study"
+      },
+      "2pl": {
+        "ka": "ისწავლით",
+        "la": "istsavlit",
+        "en": "you will study (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისწავლიან",
+        "la": "istsavlian",
+        "en": "they will study"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ახლა ვსწავლობ",
+        "la": "akhla vstsavlob",
+        "en": "I am studying now"
+      },
+      "2sg": {
+        "ka": "ახლა სწავლობ",
+        "la": "akhla stsavlob",
+        "en": "you are studying now"
+      },
+      "3sg": {
+        "ka": "ახლა სწავლობს",
+        "la": "akhla stsavlobs",
+        "en": "he/she is studying now"
+      },
+      "1pl": {
+        "ka": "ახლა ვსწავლობთ",
+        "la": "akhla vstsavlobt",
+        "en": "we are studying now"
+      },
+      "2pl": {
+        "ka": "ახლა სწავლობთ",
+        "la": "akhla stsavlobt",
+        "en": "you are studying now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ახლა სწავლობენ",
+        "la": "akhla stsavloben",
+        "en": "they are studying now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მისწავლია",
+        "la": "mistsavlia",
+        "en": "I have studied"
+      },
+      "2sg": {
+        "ka": "გისწავლია",
+        "la": "gistsavlia",
+        "en": "you have studied"
+      },
+      "3sg": {
+        "ka": "უსწავლია",
+        "la": "ustsavlia",
+        "en": "he/she has studied"
+      },
+      "1pl": {
+        "ka": "გვესწავლია",
+        "la": "gvestsavlia",
+        "en": "we have studied"
+      },
+      "2pl": {
+        "ka": "გისწავლიათ",
+        "la": "gistsavliat",
+        "en": "you have studied (plural/formal)"
+      },
+      "3pl": {
+        "ka": "უსწავლიათ",
+        "la": "ustsavliat",
+        "en": "they have studied"
+      }
+    }
+  }
+}
