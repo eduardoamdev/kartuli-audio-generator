@@ -15,6 +15,8 @@ export default async function GrammarSelectorPage() {
     <CardGridPageShell
       title="Choose a data section to browse the grammar library."
       icon="🔊"
+      showBackButton
+      backHref="/"
     >
       <CardGrid>
         {folderNames.map((folderName, index) => (

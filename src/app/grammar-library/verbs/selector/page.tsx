@@ -10,7 +10,12 @@ export default async function VerbsSelectorPage() {
   const fileNames = await getNamesOfFolderDataFiles(DATA_FOLDERS.VERBS);
 
   return (
-    <CardGridPageShell title="Choose a verbs topic" icon="🗣️">
+    <CardGridPageShell
+      title="Choose a verbs topic"
+      icon="🗣️"
+      showBackButton
+      backHref="/grammar-library/selector"
+    >
       <section className="space-y-4">
         <CardGrid>
           {fileNames.map((fileName, index) => (
