@@ -76,7 +76,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           success: false,
-          message: "No Georgian words were extracted from the selected files.",
+          message: "No Georgian words found to generate the text.",
         },
         { status: 400 },
       );
@@ -91,6 +91,7 @@ export async function POST(request: Request) {
     );
 
     const result = await callLLM(prompt);
+
     const formattedText = formatGeneratedTextResult(result);
 
     return NextResponse.json(
