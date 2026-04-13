@@ -7,20 +7,8 @@ import type {
   GeneratedTextResult,
 } from "@/types/audioGenerator";
 import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
+import { audioGeneratorTextValidator } from "@/utils/validators/audioGeneratorText";
 import { buildSelectedWordsString } from "../../../../../utils/buildSelectedWordsString";
-
-type AudioGeneratorRequestBody = {
-  age?: string;
-  level?: string;
-  details?: string;
-  typeOfSpeech?: string;
-  selectedFilesByFolder?: Record<string, string[]>;
-};
-
-const isValidSpeechType = (
-  typeOfSpeech: string | undefined,
-): typeOfSpeech is "dialogue" | "monologue" =>
-  typeOfSpeech === "dialogue" || typeOfSpeech === "monologue";
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null;
@@ -62,17 +50,19 @@ const formatGeneratedTextResult = (result: unknown): string => {
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as AudioGeneratorRequestBody;
+    const parsedBody = audioGeneratorTextValidator(await request.json());
 
-    if (!isValidSpeechType(body.typeOfSpeech)) {
+    if (!parsedBody.success) {
       return NextResponse.json(
         {
           success: false,
-          message: "A valid type of speech is required.",
+          message: "Invalid information provided for text generation.",
         },
         { status: 400 },
       );
     }
+
+    const body = parsedBody.data;
 
     const selectedFilesContentByFolder = await getSelectedFilesContentByFolder(
       body.selectedFilesByFolder ?? {},
