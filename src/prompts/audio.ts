@@ -44,7 +44,7 @@ If dialogue:
       "speaker": "A",
       "gender": "female",
       "message": {
-        "ka": "<text in Georgian>",
+        "ka": "<Text in Georgian>",
         "la": "<Latin transcription>",
         "en": "<English translation>"
       }
@@ -53,7 +53,7 @@ If dialogue:
       "speaker": "B",
       "gender": "male",
       "message": {
-        "ka": "<text in Georgian>",
+        "ka": "<Text in Georgian>",
         "la": "<Latin transcription>",
         "en": "<English translation>"
       }
@@ -68,7 +68,7 @@ If monologue:
     "speaker": "A",
     "gender": "female",
     "message": {
-      "ka": "<text in Georgian>",
+      "ka": "<Text in Georgian>",
       "la": "<Latin transcription>",
       "en": "<English translation>"
     }
