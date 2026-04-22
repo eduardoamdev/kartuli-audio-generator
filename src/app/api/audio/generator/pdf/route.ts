@@ -3,8 +3,6 @@ import { NextResponse } from "next/server";
 import { generatePDF } from "@/services/generatePDF";
 import type { GeneratedTextResult } from "@/types/audioGenerator";
 
-export const runtime = "nodejs";
-
 type AudioGeneratorPdfRequestBody = {
   formattedText?: string;
   result?: GeneratedTextResult;
