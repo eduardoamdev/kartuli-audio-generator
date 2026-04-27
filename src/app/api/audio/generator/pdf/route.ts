@@ -1,31 +1,16 @@
 import { NextResponse } from "next/server";
 
 import { generatePDF } from "@/services/generatePDF";
-import type { GeneratedTextResult } from "@/types/audioGenerator";
-
-type AudioGeneratorPdfRequestBody = {
-  formattedText?: string;
-  result?: GeneratedTextResult;
-};
-
-const hasValidResultShape = (
-  result: GeneratedTextResult | undefined,
-): result is GeneratedTextResult => {
-  return Boolean(
-    result &&
-    ((Array.isArray(result.conversation) && result.conversation.length > 0) ||
-      result.monologue),
-  );
-};
+import {
+  audioGeneratorPdfValidator,
+  type AudioGeneratorPdfRequestBody,
+} from "@/utils/validators/audioGenerator/pdf";
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as AudioGeneratorPdfRequestBody;
+    const parsedBody = audioGeneratorPdfValidator(await request.json());
 
-    if (
-      (typeof body.formattedText !== "string" || !body.formattedText.trim()) &&
-      !hasValidResultShape(body.result)
-    ) {
+    if (!parsedBody.success) {
       return NextResponse.json(
         {
           success: false,
@@ -35,12 +20,11 @@ export async function POST(request: Request) {
       );
     }
 
+    const body: AudioGeneratorPdfRequestBody = parsedBody.data;
+
     const pdfFile = await generatePDF(body.formattedText ?? "", body.result);
-    const pdfArrayBuffer = new ArrayBuffer(pdfFile.byteLength);
 
-    new Uint8Array(pdfArrayBuffer).set(pdfFile);
-
-    return new NextResponse(pdfArrayBuffer, {
+    return new NextResponse(pdfFile, {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",

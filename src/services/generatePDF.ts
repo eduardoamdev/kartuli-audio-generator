@@ -224,7 +224,7 @@ const buildPdfHtml = (
 export async function generatePDF(
   formattedText: string,
   result?: GeneratedTextResult,
-): Promise<Uint8Array> {
+): Promise<Uint8Array<ArrayBuffer>> {
   const browser = await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -239,16 +239,18 @@ export async function generatePDF(
 
     await page.emulateMediaType("screen");
 
-    return await page.pdf({
-      format: "A4",
-      printBackground: true,
-      margin: {
-        top: "20mm",
-        right: "14mm",
-        bottom: "20mm",
-        left: "14mm",
-      },
-    });
+    return Uint8Array.from(
+      await page.pdf({
+        format: "A4",
+        printBackground: true,
+        margin: {
+          top: "20mm",
+          right: "14mm",
+          bottom: "20mm",
+          left: "14mm",
+        },
+      }),
+    );
   } finally {
     await browser.close();
   }

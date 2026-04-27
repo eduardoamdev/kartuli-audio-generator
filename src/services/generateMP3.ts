@@ -120,7 +120,7 @@ const readErrorMessage = async (response: Response): Promise<string> => {
 const requestStreamingMp3 = async (
   script: string,
   apiKey: string,
-): Promise<Uint8Array> => {
+): Promise<Uint8Array<ArrayBuffer>> => {
   const response = await fetch(NARAKEET_MP3_ENDPOINT, {
     method: "POST",
     headers: {
@@ -192,7 +192,7 @@ const waitForPollingResult = async (statusUrl: string): Promise<string> => {
 
 const downloadPollingResult = async (
   resultUrl: string,
-): Promise<Uint8Array> => {
+): Promise<Uint8Array<ArrayBuffer>> => {
   const response = await fetch(resultUrl);
 
   if (!response.ok) {
@@ -204,7 +204,7 @@ const downloadPollingResult = async (
 
 export async function generateMP3(
   result: GeneratedTextResult,
-): Promise<Uint8Array> {
+): Promise<Uint8Array<ArrayBuffer>> {
   const script = buildNarakeetScript(result);
   const apiKey = getApiKey();
   const scriptSize = new TextEncoder().encode(script).byteLength;
