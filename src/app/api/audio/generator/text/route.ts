@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { buildPrompt } from "@/prompts/audio";
 import { callLLM } from "@/services/callLLM";
 import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
-import { audioGeneratorTextValidator } from "@/utils/validators/audioGeneratorText";
+import { audioGeneratorTextValidator } from "@/utils/validators/audioGenerator/text";
 import { buildSelectedWordsString } from "../../../../../utils/buildSelectedWordsString";
 
 export async function POST(request: Request) {
