@@ -14,7 +14,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           success: false,
-          message: "formattedText or a generated result is required.",
+          message: "Invalid information provided for PDF generation.",
         },
         { status: 400 },
       );
