@@ -1,9 +1,11 @@
+import type { SpeechType } from "@/utils/constants";
+
 export const buildPrompt = (
   words: string,
   age: string,
   level: string,
   conversationDescription: string,
-  typeOfSpeech: "dialogue" | "monologue",
+  typeOfSpeech: SpeechType,
 ) =>
   `You are a Georgian language teacher and a native speaker. Generate a conversation in Georgian using the words provided in this document.
 - Use the words provided. You are going to receive a big set of words but due to the size of the conversation you are not going to be able to use all of them, so choose the most common ones and make sure to use them in a natural way. 
@@ -17,6 +19,7 @@ export const buildPrompt = (
 - If there is a contradiction between the conversation description and the information provided in  words, age, level or type of speech, prioritize the conversation description.
 - If there is a contradiction between the conversation description and the rest of the instrucitions in this prompt not included in the previous point, prioritize the instructions.
 - It the type of speech is a monologue, please, include paragraph endings in the message to make it easier to transcribe.
+- If the type of speech is textual conversation, there will be two people involved and each message will be preceded by a line. You will not see the name of the speaker but it is obvious that there will be an alternation between two speakers. The output must be in JSON format and the structure of the output must be the same as we had with the previous options. In this case we should not pay attentions to any words provided, in case there will be, because it will be textual conversation and the content will be provided in the description.
 
 Variables provided:
 

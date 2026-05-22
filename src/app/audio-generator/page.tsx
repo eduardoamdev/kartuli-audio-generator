@@ -8,15 +8,13 @@ import type {
   GeneratedMessage,
   GeneratedTextResult,
 } from "@/types/audioGenerator";
-import { SPEECH_TYPES } from "@/utils/constants";
+import { SPEECH_TYPES, type SpeechType } from "@/utils/constants";
 import { formatFolderOrFileName } from "@/utils/formatFolderOrFileName";
 
 type FolderWithFiles = {
   folderName: string;
   fileNames: string[];
 };
-
-type SpeechType = (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES];
 
 type AudioGeneratorFormState = {
   age: string;
@@ -572,7 +570,9 @@ export default function AudioGeneratorPage() {
                     >
                       {speechType === SPEECH_TYPES.dialogue
                         ? "Dialogue"
-                        : "Monologue"}
+                        : speechType === SPEECH_TYPES.monologue
+                          ? "Monologue"
+                          : "Textual conversation"}
                     </option>
                   ))}
                 </select>

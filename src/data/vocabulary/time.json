@@ -1,0 +1,47 @@
+[
+  { "ka": "დღე", "la": "dghe", "en": "day" },
+  { "ka": "დღეს", "la": "dghes", "en": "today" },
+  { "ka": "გუშინ", "la": "gushin", "en": "yesterday" },
+  { "ka": "ხვალ", "la": "khval", "en": "tomorrow" },
+  { "ka": "გუშინწინ", "la": "gushintsin", "en": "the day before yesterday" },
+  { "ka": "ზეგ", "la": "zeg", "en": "the day after tomorrow" },
+
+  { "ka": "კვირა", "la": "kvira", "en": "week" },
+  { "ka": "თვე", "la": "tve", "en": "month" },
+  { "ka": "წელი", "la": "tseli", "en": "year" },
+
+  { "ka": "ორშაბათი", "la": "orshabati", "en": "Monday" },
+  { "ka": "სამშაბათი", "la": "samshabati", "en": "Tuesday" },
+  { "ka": "ოთხშაბათი", "la": "otkhshabati", "en": "Wednesday" },
+  { "ka": "ხუთშაბათი", "la": "khutshabati", "en": "Thursday" },
+  { "ka": "პარასკევი", "la": "paraskevi", "en": "Friday" },
+  { "ka": "შაბათი", "la": "shabati", "en": "Saturday" },
+  { "ka": "კვირა", "la": "kvira", "en": "Sunday" },
+
+  { "ka": "იანვარი", "la": "ianvari", "en": "January" },
+  { "ka": "თებერვალი", "la": "tebervali", "en": "February" },
+  { "ka": "მარტი", "la": "marti", "en": "March" },
+  { "ka": "აპრილი", "la": "aprili", "en": "April" },
+  { "ka": "მაისი", "la": "maisi", "en": "May" },
+  { "ka": "ივნისი", "la": "ivnisi", "en": "June" },
+  { "ka": "ივლისი", "la": "ivlisi", "en": "July" },
+  { "ka": "აგვისტო", "la": "agvisto", "en": "August" },
+  { "ka": "სექტემბერი", "la": "seqtemberi", "en": "September" },
+  { "ka": "ოქტომბერი", "la": "oqtomberi", "en": "October" },
+  { "ka": "ნოემბერი", "la": "noemberi", "en": "November" },
+  { "ka": "დეკემბერი", "la": "dekemberi", "en": "December" },
+
+  { "ka": "დილა", "la": "dila", "en": "morning" },
+  { "ka": "შუადღე", "la": "shuadghe", "en": "afternoon / noon" },
+  { "ka": "საღამო", "la": "saghamo", "en": "evening" },
+  { "ka": "ღამე", "la": "ghame", "en": "night" },
+
+  { "ka": "საათი", "la": "saati", "en": "hour / clock" },
+  { "ka": "წუთი", "la": "tsuti", "en": "minute" },
+  { "ka": "წამი", "la": "tsami", "en": "second" },
+
+  { "ka": "ახლა", "la": "akhla", "en": "now" },
+  { "ka": "მერე", "la": "mere", "en": "later / then" },
+  { "ka": "ადრე", "la": "adre", "en": "before / earlier" },
+  { "ka": "ყოველდღე", "la": "qoveldghe", "en": "every day" }
+]

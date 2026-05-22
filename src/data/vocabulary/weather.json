@@ -1,0 +1,44 @@
+[
+  { "ka": "ამინდი", "la": "amindi", "en": "weather" },
+
+  { "ka": "მზე", "la": "mze", "en": "sun" },
+  { "ka": "მზიანი", "la": "mziani", "en": "sunny" },
+  { "ka": "ცხელი", "la": "tskheli", "en": "hot" },
+  { "ka": "თბილი", "la": "tbili", "en": "warm" },
+  { "ka": "ცივი", "la": "tsivi", "en": "cold" },
+  { "ka": "გრილი", "la": "grili", "en": "cool" },
+
+  { "ka": "წვიმა", "la": "tsvima", "en": "rain" },
+  { "ka": "წვიმიანი", "la": "tsvimiani", "en": "rainy" },
+
+  { "ka": "თოვლი", "la": "tovli", "en": "snow" },
+  { "ka": "თოვლიანი", "la": "tovliani", "en": "snowy" },
+
+  { "ka": "ქარი", "la": "kari", "en": "wind" },
+  { "ka": "ქარიანი", "la": "kariani", "en": "windy" },
+
+  { "ka": "ღრუბელი", "la": "ghrubeli", "en": "cloud" },
+  { "ka": "მოღრუბლული", "la": "moghrubluli", "en": "cloudy" },
+
+  { "ka": "ქუხილი", "la": "qukhili", "en": "thunder" },
+  { "ka": "ელვა", "la": "elva", "en": "lightning" },
+  { "ka": "ქარიშხალი", "la": "qarishkhali", "en": "storm" },
+
+  { "ka": "ნისლი", "la": "nisli", "en": "fog" },
+  { "ka": "ტალახი", "la": "talakhi", "en": "mud" },
+  { "ka": "ყინული", "la": "qinuli", "en": "ice" },
+
+  { "ka": "ტემპერატურა", "la": "temperatura", "en": "temperature" },
+  { "ka": "გრადუსი", "la": "gradusi", "en": "degree" },
+
+  { "ka": "გაზაფხული", "la": "gazapkhuli", "en": "spring" },
+  { "ka": "ზაფხული", "la": "zapkuli", "en": "summer" },
+  { "ka": "შემოდგომა", "la": "shemodgoma", "en": "autumn / fall" },
+  { "ka": "ზამთარი", "la": "zamtari", "en": "winter" },
+
+  { "ka": "ცა", "la": "tsa", "en": "sky" },
+  { "ka": "ცისარტყელა", "la": "tsisartqela", "en": "rainbow" },
+
+  { "ka": "ტენიანობა", "la": "tenianoba", "en": "humidity" },
+  { "ka": "ჰაერი", "la": "haeri", "en": "air" }
+]

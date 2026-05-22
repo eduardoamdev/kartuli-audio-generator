@@ -33,16 +33,6 @@ export async function POST(request: Request) {
       selectedFilesContentByFolder,
     );
 
-    if (!selectedWordsString) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "No Georgian words found to generate the text.",
-        },
-        { status: 400 },
-      );
-    }
-
     const prompt = buildPrompt(
       selectedWordsString,
       body.age ?? "",

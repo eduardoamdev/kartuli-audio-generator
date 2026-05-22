@@ -3,11 +3,12 @@ import path from "node:path";
 export const SPEECH_TYPES = {
   dialogue: "dialogue",
   monologue: "monologue",
+  textualConversation: "textual conversation",
 } as const;
 
-export const SPEECH_TYPE_VALUES = Object.values(
-  SPEECH_TYPES,
-) as (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES][];
+export type SpeechType = (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES];
+
+export const SPEECH_TYPE_VALUES = Object.values(SPEECH_TYPES) as SpeechType[];
 
 export const DATA_DIRECTORY = path.join(process.cwd(), "src", "data");
 
