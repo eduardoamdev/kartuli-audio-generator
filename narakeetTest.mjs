@@ -11,12 +11,10 @@ const projectDir = dirname(fileURLToPath(import.meta.url));
 loadEnvConfig(projectDir);
 
 const main = async () => {
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.NARAKEET_API_KEY;
 
   if (!apiKey) {
-    throw new Error(
-      "Missing NARAKEET_API_KEY or API_KEY in your .env.local file.",
-    );
+    throw new Error("Missing NARAKEET_API_KEY in your .env.local file.");
   }
 
   const voice = "tornike";

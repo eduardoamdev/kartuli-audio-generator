@@ -1,7 +1,17 @@
 {
   "infinitive": {
-    "name": { "ka": "სწავლა", "la": "stsavla", "en": "to study" },
-    "conjugation": {}
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "npinit'ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "სწავლა",
+        "la": "stsavla",
+        "en": "to study"
+      }
+    }
   },
   "present": {
     "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },

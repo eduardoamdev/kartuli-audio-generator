@@ -482,7 +482,8 @@ export default function AudioGeneratorPage() {
         <form className="space-y-6" onSubmit={handleGenerateText}>
           <div className="space-y-2">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ffbde4]">
-              Conversation setup
+              Audio setup (in case of textual input, introduce only type of
+              speech and open information)
             </p>
           </div>
 
@@ -568,11 +569,7 @@ export default function AudioGeneratorPage() {
                       value={speechType}
                       className="bg-[#411134] text-[#fff7fd]"
                     >
-                      {speechType === SPEECH_TYPES.dialogue
-                        ? "Dialogue"
-                        : speechType === SPEECH_TYPES.monologue
-                          ? "Monologue"
-                          : "Textual conversation"}
+                      {speechType}
                     </option>
                   ))}
                 </select>
@@ -606,7 +603,7 @@ export default function AudioGeneratorPage() {
               value={formState.details}
               onChange={(event) => handleDetailsChange(event.target.value)}
               rows={5}
-              placeholder="Describe the situation, tone, goal, speakers, or any constraints."
+              placeholder="In the case of a non textual input, describe the situation, tone, goal, speakers, or any constraints. In the case of a textual conversation, provide the conversation with each speech preceeded by the word man or woman (conversation should be between one man and one woman). In the case of a textual monologue, provide the text directly. For textual inputs, no situational description is needed."
               className="min-h-36 w-full rounded-[1rem] border border-[rgba(255,196,232,0.24)] bg-[rgba(255,232,245,0.08)] px-4 py-3 text-base leading-6 text-[#fff7fd] outline-none transition focus:border-[rgba(255,215,239,0.46)] focus:bg-[rgba(255,232,245,0.12)]"
             />
           </label>

@@ -1,11 +1,17 @@
 {
   "infinitive": {
     "name": {
-      "ka": "ყიდვა",
-      "la": "qidva",
-      "en": "to buy"
+      "ka": "ინფინიტივი",
+      "la": "npinit'ivi",
+      "en": "infinitive"
     },
-    "conjugation": {}
+    "conjugation": {
+      "infinitive": {
+        "ka": "ყიდვა",
+        "la": "qidva",
+        "en": "to buy"
+      }
+    }
   },
   "present": {
     "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },

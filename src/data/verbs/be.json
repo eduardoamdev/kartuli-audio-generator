@@ -1,11 +1,17 @@
 {
   "infinitive": {
     "name": {
-      "ka": "ყოფნა",
-      "la": "qopna",
-      "en": "to be"
+      "ka": "ინფინიტივი",
+      "la": "npinit’ivi",
+      "en": "infinitive"
     },
-    "conjugation": {}
+    "conjugation": {
+      "infinitive": {
+        "ka": "ყოფნა",
+        "la": "qopna",
+        "en": "to be"
+      }
+    }
   },
   "present": {
     "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },

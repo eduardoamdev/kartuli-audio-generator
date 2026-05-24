@@ -49,7 +49,7 @@ export default async function VerbPage({ searchParams }: VerbPageProps) {
 
   const verbData: VerbData = JSON.parse(fileContent);
 
-  const infinitiveEn = verbData["infinitive"]?.name?.en;
+  const infinitiveEn = verbData["infinitive"]?.conjugation?.infinitive?.en;
 
   const title = infinitiveEn ? `Verb: ${infinitiveEn}` : `Verb: ${verbName}`;
 
@@ -63,13 +63,6 @@ export default async function VerbPage({ searchParams }: VerbPageProps) {
     >
       <div className="space-y-12 pb-8">
         {Object.entries(verbData).map(([tenseKey, tenseObj]) => {
-          if (
-            !tenseObj.conjugation ||
-            Object.keys(tenseObj.conjugation).length === 0
-          ) {
-            return null; // Skip non-conjugated entries like infinitive
-          }
-
           return (
             <section key={tenseKey} className="space-y-5">
               <div className="space-y-1">

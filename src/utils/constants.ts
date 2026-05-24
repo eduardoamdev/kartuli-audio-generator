@@ -1,9 +1,10 @@
 import path from "node:path";
 
 export const SPEECH_TYPES = {
-  dialogue: "dialogue",
-  monologue: "monologue",
-  textualConversation: "textual conversation",
+  dialogue: "Dialogue",
+  monologue: "Monologue",
+  textualConversation: "Textual Conversation",
+  textualMonologue: "Textual Monologue",
 } as const;
 
 export type SpeechType = (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES];
