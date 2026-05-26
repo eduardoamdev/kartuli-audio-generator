@@ -64,32 +64,32 @@
       "1sg": {
         "ka": "მე ახლა ვარ",
         "la": "me akhla var",
-        "en": "I am at home now"
+        "en": "I am now"
       },
       "2sg": {
         "ka": "შენ ახლა ხარ",
         "la": "shen akhla khar",
-        "en": "You are at home now"
+        "en": "You are now"
       },
       "3sg": {
         "ka": "ის ახლა არის",
         "la": "is akhla aris",
-        "en": "He/she is at home now"
+        "en": "He/she is now"
       },
       "1pl": {
         "ka": "ჩვენ ახლა ვართ",
         "la": "chven akhla vart",
-        "en": "We are at home now"
+        "en": "We are now"
       },
       "2pl": {
         "ka": "თქვენ ახლა ხართ",
         "la": "tkven akhla khart",
-        "en": "You are at home now (plural/formal)"
+        "en": "You are now (plural/formal)"
       },
       "3pl": {
         "ka": "ისინი ახლა არიან",
         "la": "isini akhla arian",
-        "en": "They are at home now"
+        "en": "They are now"
       }
     }
   },
