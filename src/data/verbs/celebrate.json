@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit'ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "აღნიშვნა",
+        "la": "aghnishvna",
+        "en": "to celebrate"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "აღვნიშნავ",
+        "la": "aghvnishnav",
+        "en": "I celebrate"
+      },
+      "2sg": {
+        "ka": "აღნიშნავ",
+        "la": "aghnishnav",
+        "en": "you celebrate"
+      },
+      "3sg": {
+        "ka": "აღნიშნავს",
+        "la": "aghnishnavs",
+        "en": "he/she celebrates"
+      },
+      "1pl": {
+        "ka": "აღვნიშნავთ",
+        "la": "aghvnishnavt",
+        "en": "we celebrate"
+      },
+      "2pl": {
+        "ka": "აღნიშნავთ",
+        "la": "aghnishnavt",
+        "en": "you celebrate (plural/formal)"
+      },
+      "3pl": {
+        "ka": "აღნიშნავენ",
+        "la": "aghnishnaven",
+        "en": "they celebrate"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "აღვნიშნე",
+        "la": "aghvnishne",
+        "en": "I celebrated"
+      },
+      "2sg": {
+        "ka": "აღნიშნე",
+        "la": "aghnishne",
+        "en": "you celebrated"
+      },
+      "3sg": {
+        "ka": "აღნიშნა",
+        "la": "aghnishna",
+        "en": "he/she celebrated"
+      },
+      "1pl": {
+        "ka": "აღვნიშნეთ",
+        "la": "aghvnishnet",
+        "en": "we celebrated"
+      },
+      "2pl": {
+        "ka": "აღნიშნეთ",
+        "la": "aghnishnet",
+        "en": "you celebrated (plural/formal)"
+      },
+      "3pl": {
+        "ka": "აღნიშნეს",
+        "la": "aghnishnes",
+        "en": "they celebrated"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "აღვნიშნავ",
+        "la": "aghvnishnav",
+        "en": "I will celebrate"
+      },
+      "2sg": {
+        "ka": "აღნიშნავ",
+        "la": "aghnishnav",
+        "en": "you will celebrate"
+      },
+      "3sg": {
+        "ka": "აღნიშნავს",
+        "la": "aghnishnavs",
+        "en": "he/she will celebrate"
+      },
+      "1pl": {
+        "ka": "აღვნიშნავთ",
+        "la": "aghvnishnavt",
+        "en": "we will celebrate"
+      },
+      "2pl": {
+        "ka": "აღნიშნავთ",
+        "la": "aghnishnavt",
+        "en": "you will celebrate (plural/formal)"
+      },
+      "3pl": {
+        "ka": "აღნიშნავენ",
+        "la": "aghnishnaven",
+        "en": "they will celebrate"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა აღვნიშნავ",
+        "la": "me akhla aghvnishnav",
+        "en": "I am celebrating now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა აღნიშნავ",
+        "la": "shen akhla aghnishnav",
+        "en": "You are celebrating now"
+      },
+      "3sg": {
+        "ka": "ის ახლა აღნიშნავს",
+        "la": "is akhla aghnishnavs",
+        "en": "He/she is celebrating now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა აღვნიშნავთ",
+        "la": "chven akhla aghvnishnavt",
+        "en": "We are celebrating now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა აღნიშნავთ",
+        "la": "tkven akhla aghnishnavt",
+        "en": "You are celebrating now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა აღნიშნავენ",
+        "la": "isini akhla aghnishnaven",
+        "en": "They are celebrating now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე აღვნიშნე",
+        "la": "me ukve aghvnishne",
+        "en": "I have already celebrated"
+      },
+      "2sg": {
+        "ka": "შენ უკვე აღნიშნე",
+        "la": "shen ukve aghnishne",
+        "en": "You have already celebrated"
+      },
+      "3sg": {
+        "ka": "ის უკვე აღნიშნა",
+        "la": "is ukve aghnishna",
+        "en": "He/she has already celebrated"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე აღვნიშნეთ",
+        "la": "chven ukve aghvnishnet",
+        "en": "We have already celebrated"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე აღნიშნეთ",
+        "la": "tkven ukve aghnishnet",
+        "en": "You have already celebrated (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე აღნიშნეს",
+        "la": "isini ukve aghnishnes",
+        "en": "They have already celebrated"
+      }
+    }
+  }
+}

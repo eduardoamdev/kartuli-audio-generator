@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit'ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "დახმარება",
+        "la": "dakhmareba",
+        "en": "to help"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვეხმარები",
+        "la": "vekhmarebi",
+        "en": "I help"
+      },
+      "2sg": {
+        "ka": "ეხმარები",
+        "la": "ekhmarebi",
+        "en": "you help"
+      },
+      "3sg": {
+        "ka": "ეხმარება",
+        "la": "ekhmareba",
+        "en": "he/she helps"
+      },
+      "1pl": {
+        "ka": "ვეხმარებით",
+        "la": "vekhmarebit",
+        "en": "we help"
+      },
+      "2pl": {
+        "ka": "ეხმარებით",
+        "la": "ekhmarebit",
+        "en": "you help (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ეხმარებიან",
+        "la": "ekhmarebian",
+        "en": "they help"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავეხმარე",
+        "la": "davekhmare",
+        "en": "I helped"
+      },
+      "2sg": {
+        "ka": "დაეხმარე",
+        "la": "daekhmare",
+        "en": "you helped"
+      },
+      "3sg": {
+        "ka": "დაეხმარა",
+        "la": "daekhmara",
+        "en": "he/she helped"
+      },
+      "1pl": {
+        "ka": "დავეხმარეთ",
+        "la": "davekhmaret",
+        "en": "we helped"
+      },
+      "2pl": {
+        "ka": "დაეხმარეთ",
+        "la": "daekhmaret",
+        "en": "you helped (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დაეხმარნენ",
+        "la": "daekhmarnen",
+        "en": "they helped"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავეხმარები",
+        "la": "davekhmarebi",
+        "en": "I will help"
+      },
+      "2sg": {
+        "ka": "დაეხმარები",
+        "la": "daekhmarebi",
+        "en": "you will help"
+      },
+      "3sg": {
+        "ka": "დაეხმარება",
+        "la": "daekhmareba",
+        "en": "he/she will help"
+      },
+      "1pl": {
+        "ka": "დავეხმარებით",
+        "la": "davekhmarebit",
+        "en": "we will help"
+      },
+      "2pl": {
+        "ka": "დაეხმარებით",
+        "la": "daekhmarebit",
+        "en": "you will help (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დაეხმარებიან",
+        "la": "daekhmarebian",
+        "en": "they will help"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვეხმარები",
+        "la": "me akhla vekhmarebi",
+        "en": "I am helping now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ეხმარები",
+        "la": "shen akhla ekhmarebi",
+        "en": "you are helping now"
+      },
+      "3sg": {
+        "ka": "ის ახლა ეხმარება",
+        "la": "is akhla ekhmareba",
+        "en": "he/she is helping now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვეხმარებით",
+        "la": "chven akhla vekhmarebit",
+        "en": "we are helping now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა ეხმარებით",
+        "la": "tkven akhla ekhmarebit",
+        "en": "you are helping now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა ეხმარებიან",
+        "la": "isini akhla ekhmarebian",
+        "en": "they are helping now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე დავეხმარე",
+        "la": "me ukve davekhmare",
+        "en": "I have already helped"
+      },
+      "2sg": {
+        "ka": "შენ უკვე დაეხმარე",
+        "la": "shen ukve daekhmare",
+        "en": "you have already helped"
+      },
+      "3sg": {
+        "ka": "ის უკვე დაეხმარა",
+        "la": "is ukve daekhmara",
+        "en": "he/she has already helped"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე დავეხმარეთ",
+        "la": "chven ukve davekhmaret",
+        "en": "we have already helped"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე დაეხმარეთ",
+        "la": "tkven ukve daekhmaret",
+        "en": "you have already helped (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე დაეხმარნენ",
+        "la": "isini ukve daekhmarnen",
+        "en": "they have already helped"
+      }
+    }
+  }
+}
