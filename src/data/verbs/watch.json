@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "ყურება",
+        "la": "qureba",
+        "en": "to watch"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვუყურებ",
+        "la": "vuqureb",
+        "en": "I watch"
+      },
+      "2sg": {
+        "ka": "უყურებ",
+        "la": "uqureb",
+        "en": "you watch"
+      },
+      "3sg": {
+        "ka": "უყურებს",
+        "la": "uqurebs",
+        "en": "he/she/it watches"
+      },
+      "1pl": {
+        "ka": "ვუყურებთ",
+        "la": "vuqurebt",
+        "en": "we watch"
+      },
+      "2pl": {
+        "ka": "უყურებთ",
+        "la": "uqurebt",
+        "en": "you watch (plural/formal)"
+      },
+      "3pl": {
+        "ka": "უყურებენ",
+        "la": "uqureben",
+        "en": "they watch"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვუყურე",
+        "la": "vuqure",
+        "en": "I watched"
+      },
+      "2sg": {
+        "ka": "უყურე",
+        "la": "uqure",
+        "en": "you watched"
+      },
+      "3sg": {
+        "ka": "უყურა",
+        "la": "uqura",
+        "en": "he/she/it watched"
+      },
+      "1pl": {
+        "ka": "ვუყურეთ",
+        "la": "vuquret",
+        "en": "we watched"
+      },
+      "2pl": {
+        "ka": "უყურეთ",
+        "la": "uquret",
+        "en": "you watched (plural/formal)"
+      },
+      "3pl": {
+        "ka": "უყურეს",
+        "la": "uqures",
+        "en": "they watched"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვუყურებ",
+        "la": "vuqureb",
+        "en": "I will watch"
+      },
+      "2sg": {
+        "ka": "უყურებ",
+        "la": "uqureb",
+        "en": "you will watch"
+      },
+      "3sg": {
+        "ka": "უყურებს",
+        "la": "uqurebs",
+        "en": "he/she/it will watch"
+      },
+      "1pl": {
+        "ka": "ვუყურებთ",
+        "la": "vuqurebt",
+        "en": "we will watch"
+      },
+      "2pl": {
+        "ka": "უყურებთ",
+        "la": "uqurebt",
+        "en": "you will watch (plural/formal)"
+      },
+      "3pl": {
+        "ka": "უყურებენ",
+        "la": "uqureben",
+        "en": "they will watch"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვუყურებ",
+        "la": "me akhla vuqureb",
+        "en": "I am watching now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა უყურებ",
+        "la": "shen akhla uqureb",
+        "en": "You are watching now"
+      },
+      "3sg": {
+        "ka": "ის ახლა უყურებს",
+        "la": "is akhla uqurebs",
+        "en": "He/she is watching now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვუყურებთ",
+        "la": "chven akhla vuqurebt",
+        "en": "We are watching now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა უყურებთ",
+        "la": "tkven akhla uqurebt",
+        "en": "You are watching now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა უყურებენ",
+        "la": "isini akhla uqureben",
+        "en": "They are watching now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე ვუყურე",
+        "la": "me ukve vuqure",
+        "en": "I have already watched"
+      },
+      "2sg": {
+        "ka": "შენ უკვე უყურე",
+        "la": "shen ukve uqure",
+        "en": "You have already watched"
+      },
+      "3sg": {
+        "ka": "ის უკვე უყურა",
+        "la": "is ukve uqura",
+        "en": "He/she has already watched"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე ვუყურეთ",
+        "la": "chven ukve vuquret",
+        "en": "We have already watched"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე უყურეთ",
+        "la": "tkven ukve uquret",
+        "en": "You have already watched (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე უყურეს",
+        "la": "isini ukve uqures",
+        "en": "They have already watched"
+      }
+    }
+  }
+}

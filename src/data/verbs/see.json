@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "ნახვა",
+        "la": "nakhva",
+        "en": "to see"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვხედავ",
+        "la": "vkhedav",
+        "en": "I see"
+      },
+      "2sg": {
+        "ka": "ხედავ",
+        "la": "khedav",
+        "en": "you see"
+      },
+      "3sg": {
+        "ka": "ხედავს",
+        "la": "khedavs",
+        "en": "he/she/it sees"
+      },
+      "1pl": {
+        "ka": "ვხედავთ",
+        "la": "vkhedavt",
+        "en": "we see"
+      },
+      "2pl": {
+        "ka": "ხედავთ",
+        "la": "khedavt",
+        "en": "you see (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ხედავენ",
+        "la": "khedaven",
+        "en": "they see"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვნახე",
+        "la": "vinakhe",
+        "en": "I saw"
+      },
+      "2sg": {
+        "ka": "ნახე",
+        "la": "nakhe",
+        "en": "you saw"
+      },
+      "3sg": {
+        "ka": "ნახა",
+        "la": "nakha",
+        "en": "he/she/it saw"
+      },
+      "1pl": {
+        "ka": "ვნახეთ",
+        "la": "vinakhet",
+        "en": "we saw"
+      },
+      "2pl": {
+        "ka": "ნახეთ",
+        "la": "nakhet",
+        "en": "you saw (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ნახეს",
+        "la": "nakhes",
+        "en": "they saw"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვნახავ",
+        "la": "vinakhav",
+        "en": "I will see"
+      },
+      "2sg": {
+        "ka": "ნახავ",
+        "la": "nakhav",
+        "en": "you will see"
+      },
+      "3sg": {
+        "ka": "ნახავს",
+        "la": "nakhavs",
+        "en": "he/she/it will see"
+      },
+      "1pl": {
+        "ka": "ვნახავთ",
+        "la": "vinakhavt",
+        "en": "we will see"
+      },
+      "2pl": {
+        "ka": "ნახავთ",
+        "la": "nakhavt",
+        "en": "you will see (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ნახავენ",
+        "la": "nakhaven",
+        "en": "they will see"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვხედავ",
+        "la": "me akhla vkhedav",
+        "en": "I am seeing now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ხედავ",
+        "la": "shen akhla khedav",
+        "en": "You are seeing now"
+      },
+      "3sg": {
+        "ka": "ის ახლა ხედავს",
+        "la": "is akhla khedavs",
+        "en": "He/she is seeing now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვხედავთ",
+        "la": "chven akhla vkhedavt",
+        "en": "We are seeing now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა ხედავთ",
+        "la": "tkven akhla khedavt",
+        "en": "You are seeing now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა ხედავენ",
+        "la": "isini akhla khedaven",
+        "en": "They are seeing now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე ვნახე",
+        "la": "me ukve vinakhe",
+        "en": "I have already seen"
+      },
+      "2sg": {
+        "ka": "შენ უკვე ნახე",
+        "la": "shen ukve nakhe",
+        "en": "You have already seen"
+      },
+      "3sg": {
+        "ka": "ის უკვე ნახა",
+        "la": "is ukve nakha",
+        "en": "He/she has already seen"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე ვნახეთ",
+        "la": "chven ukve vinakhet",
+        "en": "We have already seen"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე ნახეთ",
+        "la": "tkven ukve nakhet",
+        "en": "You have already seen (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე ნახეს",
+        "la": "isini ukve nakhes",
+        "en": "They have already seen"
+      }
+    }
+  }
+}

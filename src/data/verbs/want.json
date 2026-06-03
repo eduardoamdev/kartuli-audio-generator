@@ -2,13 +2,13 @@
   "infinitive": {
     "name": {
       "ka": "ინფინიტივი",
-      "la": "npinit'ivi",
+      "la": "npinit’ivi",
       "en": "infinitive"
     },
     "conjugation": {
       "infinitive": {
-        "ka": "მოწონა",
-        "la": "mochona",
+        "ka": "ნდომა",
+        "la": "ndoma",
         "en": "to want"
       }
     }
@@ -17,23 +17,27 @@
     "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
     "conjugation": {
       "1sg": { "ka": "მინდა", "la": "minda", "en": "I want" },
-      "2sg": { "ka": "ინდა", "la": "inda", "en": "you want" },
-      "3sg": { "ka": "უნდა", "la": "unda", "en": "he/she wants" },
-      "1pl": { "ka": "ვმინდა", "la": "vminda", "en": "we want" },
-      "2pl": { "ka": "ინდეთ", "la": "indet", "en": "you want (plural/formal)" },
-      "3pl": { "ka": "უნდიან", "la": "undian", "en": "they want" }
+      "2sg": { "ka": "გინდა", "la": "ginda", "en": "you want" },
+      "3sg": { "ka": "უნდა", "la": "unda", "en": "he/she/it wants" },
+      "1pl": { "ka": "გვინდა", "la": "gvinda", "en": "we want" },
+      "2pl": {
+        "ka": "გინდათ",
+        "la": "gindat",
+        "en": "you want (plural/formal)"
+      },
+      "3pl": { "ka": "უნდათ", "la": "undat", "en": "they want" }
     }
   },
   "past": {
     "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
     "conjugation": {
       "1sg": { "ka": "მინდოდა", "la": "mindoda", "en": "I wanted" },
-      "2sg": { "ka": "ინდოდა", "la": "indoda", "en": "you wanted" },
-      "3sg": { "ka": "უნდოდა", "la": "undoda", "en": "he/she wanted" },
-      "1pl": { "ka": "მინდოდით", "la": "mindodit", "en": "we wanted" },
+      "2sg": { "ka": "გინდოდა", "la": "gindoda", "en": "you wanted" },
+      "3sg": { "ka": "უნდოდა", "la": "undoda", "en": "he/she/it wanted" },
+      "1pl": { "ka": "გვინდოდა", "la": "gvindoda", "en": "we wanted" },
       "2pl": {
-        "ka": "ინდოდით",
-        "la": "indodit",
+        "ka": "გინდოდათ",
+        "la": "gindodat",
         "en": "you wanted (plural/formal)"
       },
       "3pl": { "ka": "უნდოდათ", "la": "undodat", "en": "they wanted" }
@@ -42,36 +46,16 @@
   "future": {
     "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
     "conjugation": {
-      "1sg": {
-        "ka": "მინდა ვიქნები",
-        "la": "minda viqnebi",
-        "en": "I will want"
-      },
-      "2sg": {
-        "ka": "ინდა იქნები",
-        "la": "inda iqnebi",
-        "en": "you will want"
-      },
-      "3sg": {
-        "ka": "უნდა იქნება",
-        "la": "unda iqneba",
-        "en": "he/she will want"
-      },
-      "1pl": {
-        "ka": "ვმინდა ვიქნებით",
-        "la": "vminda viqnebit",
-        "en": "we will want"
-      },
+      "1sg": { "ka": "მინდა", "la": "minda", "en": "I will want" },
+      "2sg": { "ka": "გინდა", "la": "ginda", "en": "you will want" },
+      "3sg": { "ka": "უნდა", "la": "unda", "en": "he/she/it will want" },
+      "1pl": { "ka": "გვინდა", "la": "gvinda", "en": "we will want" },
       "2pl": {
-        "ka": "ინდეთ იქნებით",
-        "la": "indet iqnebit",
+        "ka": "გინდათ",
+        "la": "gindat",
         "en": "you will want (plural/formal)"
       },
-      "3pl": {
-        "ka": "უნდიან იქნებიან",
-        "la": "undian iqnebian",
-        "en": "they will want"
-      }
+      "3pl": { "ka": "უნდათ", "la": "undat", "en": "they will want" }
     }
   },
   "present_continuous": {
@@ -87,8 +71,8 @@
         "en": "I am wanting now"
       },
       "2sg": {
-        "ka": "შენ ახლაინდა",
-        "la": "shen akhla inda",
+        "ka": "შენ ახლა გინდა",
+        "la": "shen akhla ginda",
         "en": "You are wanting now"
       },
       "3sg": {
@@ -97,18 +81,18 @@
         "en": "He/she is wanting now"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა ვმინდა",
-        "la": "chven akhla vminda",
+        "ka": "ჩვენ ახლა გვინდა",
+        "la": "chven akhla gvinda",
         "en": "We are wanting now"
       },
       "2pl": {
-        "ka": "თქვენ ახლაინდეთ",
-        "la": "tkven akhla indet",
+        "ka": "თქვენ ახლა გინდათ",
+        "la": "tkven akhla gindat",
         "en": "You are wanting now (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი ახლაუნდიან",
-        "la": "isini akhla undian",
+        "ka": "ისინი ახლა უნდათ",
+        "la": "isini akhla undat",
         "en": "They are wanting now"
       }
     }
@@ -126,27 +110,27 @@
         "en": "I have already wanted"
       },
       "2sg": {
-        "ka": "შენ უკვეინდოდა",
-        "la": "shen ukve indoda",
+        "ka": "შენ უკვე გინდოდა",
+        "la": "shen ukve gindoda",
         "en": "You have already wanted"
       },
       "3sg": {
-        "ka": "ის უკვეუნდოდა",
+        "ka": "ის უკვე უნდოდა",
         "la": "is ukve undoda",
         "en": "He/she has already wanted"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე მინდოდით",
-        "la": "chven ukve mindodit",
+        "ka": "ჩვენ უკვე გვინდოდა",
+        "la": "chven ukve gvindoda",
         "en": "We have already wanted"
       },
       "2pl": {
-        "ka": "თქვენ უკვეინდოდით",
-        "la": "tkven ukve indodit",
+        "ka": "თქვენ უკვე გინდოდათ",
+        "la": "tkven ukve gindodat",
         "en": "You have already wanted (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვეუნდოდათ",
+        "ka": "ისინი უკვე უნდოდათ",
         "la": "isini ukve undodat",
         "en": "They have already wanted"
       }
