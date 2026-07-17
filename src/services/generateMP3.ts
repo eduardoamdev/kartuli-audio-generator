@@ -27,10 +27,12 @@ const sleep = async (milliseconds: number) =>
   });
 
 const getApiKey = (): string => {
-  const apiKey = process.env.NARAKEET_API_KEY;
+  const apiKey = process.env.MP3_GENERATOR_API_KEY;
 
   if (!apiKey) {
-    throw new Error("Missing NARAKEET_API_KEY or API_KEY in your environment.");
+    throw new Error(
+      "Missing MP3_GENERATOR_API_KEY or API_KEY in your environment.",
+    );
   }
 
   return apiKey;
