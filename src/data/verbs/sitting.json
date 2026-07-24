@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "ჯდომა",
+        "la": "jdoma",
+        "en": "to sit"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვზივარ",
+        "la": "vzi̇var",
+        "en": "I sit / I am sitting"
+      },
+      "2sg": {
+        "ka": "ზიხარ",
+        "la": "zikhar",
+        "en": "you sit / you are sitting"
+      },
+      "3sg": {
+        "ka": "ზის",
+        "la": "zis",
+        "en": "he/she/it sits / is sitting"
+      },
+      "1pl": {
+        "ka": "ვსხედვართ",
+        "la": "vskhedvart",
+        "en": "we sit / we are sitting"
+      },
+      "2pl": {
+        "ka": "სხედხართ",
+        "la": "skhedkhart",
+        "en": "you sit (plural/formal)"
+      },
+      "3pl": {
+        "ka": "სხედან",
+        "la": "skhedan",
+        "en": "they sit / are sitting"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვიჯექი",
+        "la": "vijeqi",
+        "en": "I sat / I was sitting"
+      },
+      "2sg": {
+        "ka": "იჯექი",
+        "la": "ijeqi",
+        "en": "you sat / you were sitting"
+      },
+      "3sg": {
+        "ka": "იჯდა",
+        "la": "ijda",
+        "en": "he/she/it sat / was sitting"
+      },
+      "1pl": {
+        "ka": "ვისხედით",
+        "la": "viskhedit",
+        "en": "we sat / were sitting"
+      },
+      "2pl": {
+        "ka": "ისხედით",
+        "la": "iskhedit",
+        "en": "you sat (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისხდნენ",
+        "la": "iskhdnen",
+        "en": "they sat / were sitting"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავჯდები",
+        "la": "davjdebi",
+        "en": "I will sit down"
+      },
+      "2sg": {
+        "ka": "დაჯდები",
+        "la": "dajdebi",
+        "en": "you will sit down"
+      },
+      "3sg": {
+        "ka": "დაჯდება",
+        "la": "dajdeba",
+        "en": "he/she/it will sit down"
+      },
+      "1pl": {
+        "ka": "დავსხდებით",
+        "la": "davskhdebit",
+        "en": "we will sit down"
+      },
+      "2pl": {
+        "ka": "დაჯდებით",
+        "la": "dajdebit",
+        "en": "you will sit down (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დასხდებიან",
+        "la": "das khdebian",
+        "en": "they will sit down"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვზივარ",
+        "la": "me akhla vzi̇var",
+        "en": "I am sitting now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ზიხარ",
+        "la": "shen akhla zikhar",
+        "en": "You are sitting now"
+      },
+      "3sg": {
+        "ka": "ის ახლა ზის",
+        "la": "is akhla zis",
+        "en": "He/she is sitting now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვსხედვართ",
+        "la": "chven akhla vskhedvart",
+        "en": "We are sitting now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა სხედხართ",
+        "la": "tkven akhla skhedkhart",
+        "en": "You are sitting now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა სხედან",
+        "la": "isini akhla skhedan",
+        "en": "They are sitting now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე მჯდომია",
+        "la": "me mjdomia",
+        "en": "I have sat / I have been sitting"
+      },
+      "2sg": {
+        "ka": "შენ მჯდარხარ",
+        "la": "shen mjdarkhar",
+        "en": "You have sat / been sitting"
+      },
+      "3sg": {
+        "ka": "მას მჯდარა",
+        "la": "mas mjdara",
+        "en": "He/she has sat / been sitting"
+      },
+      "1pl": {
+        "ka": "ჩვენ მსხდარვართ",
+        "la": "chven mskhdarvart",
+        "en": "We have sat / been sitting"
+      },
+      "2pl": {
+        "ka": "თქვენ მსხდარხართ",
+        "la": "tkven mskhdarkhart",
+        "en": "You have sat (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მათ მსხდარან",
+        "la": "mat mskhdaran",
+        "en": "They have sat / been sitting"
+      }
+    }
+  }
+}

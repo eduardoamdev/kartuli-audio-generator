@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "ცხოვრება",
+        "la": "tskhovreba",
+        "en": "to live"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვცხოვრობ",
+        "la": "vtskhovrob",
+        "en": "I live"
+      },
+      "2sg": {
+        "ka": "ცხოვრობ",
+        "la": "tskhovrob",
+        "en": "you live"
+      },
+      "3sg": {
+        "ka": "ცხოვრობს",
+        "la": "tskhovrobs",
+        "en": "he/she/it lives"
+      },
+      "1pl": {
+        "ka": "ვცხოვრობთ",
+        "la": "vtskhovrobt",
+        "en": "we live"
+      },
+      "2pl": {
+        "ka": "ცხოვრობთ",
+        "la": "tskhovrobt",
+        "en": "you live (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ცხოვრობენ",
+        "la": "tskhovroben",
+        "en": "they live"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვცხოვრობდი",
+        "la": "vtskhovrobdi",
+        "en": "I lived"
+      },
+      "2sg": {
+        "ka": "ცხოვრობდი",
+        "la": "tskhovrobdi",
+        "en": "you lived"
+      },
+      "3sg": {
+        "ka": "ცხოვრობდა",
+        "la": "tskhovrobda",
+        "en": "he/she/it lived"
+      },
+      "1pl": {
+        "ka": "ვცხოვრობდით",
+        "la": "vtskhovrobdith",
+        "en": "we lived"
+      },
+      "2pl": {
+        "ka": "ცხოვრობდით",
+        "la": "tskhovrobdith",
+        "en": "you lived (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ცხოვრობდნენ",
+        "la": "tskhovrobdnen",
+        "en": "they lived"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვიცხოვრებ",
+        "la": "vitskhovreb",
+        "en": "I will live"
+      },
+      "2sg": {
+        "ka": "იცხოვრებ",
+        "la": "itskhovreb",
+        "en": "you will live"
+      },
+      "3sg": {
+        "ka": "იცხოვრებს",
+        "la": "itskhovrebs",
+        "en": "he/she/it will live"
+      },
+      "1pl": {
+        "ka": "ვიცხოვრებთ",
+        "la": "vitskhovrebt",
+        "en": "we will live"
+      },
+      "2pl": {
+        "ka": "იცხოვრებთ",
+        "la": "itskhovrebt",
+        "en": "you will live (plural/formal)"
+      },
+      "3pl": {
+        "ka": "იცხოვრებენ",
+        "la": "itskhovreben",
+        "en": "they will live"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვცხოვრობ",
+        "la": "me akhla vtskhovrob",
+        "en": "I am living now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ცხოვრობ",
+        "la": "shen akhla tskhovrob",
+        "en": "You are living now"
+      },
+      "3sg": {
+        "ka": "ის ახლა ცხოვრობს",
+        "la": "is akhla tskhovrobs",
+        "en": "He/she is living now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვცხოვრობთ",
+        "la": "chven akhla vtskhovrobt",
+        "en": "We are living now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა ცხოვრობთ",
+        "la": "tkven akhla tskhovrobt",
+        "en": "You are living now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა ცხოვრობენ",
+        "la": "isini akhla tskhovroben",
+        "en": "They are living now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე მიცხოვრია",
+        "la": "me mitskhovria",
+        "en": "I have lived"
+      },
+      "2sg": {
+        "ka": "შენ გიცხოვრია",
+        "la": "shen gitskhovria",
+        "en": "You have lived"
+      },
+      "3sg": {
+        "ka": "მას უცხოვრია",
+        "la": "mas utskhovria",
+        "en": "He/she has lived"
+      },
+      "1pl": {
+        "ka": "ჩვენ გვიცხოვრია",
+        "la": "chven gvitskhovria",
+        "en": "We have lived"
+      },
+      "2pl": {
+        "ka": "თქვენ გიცხოვრიათ",
+        "la": "tkven gitskhovriat",
+        "en": "You have lived (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მათ უცხოვრიათ",
+        "la": "mat utskhovriat",
+        "en": "They have lived"
+      }
+    }
+  }
+}

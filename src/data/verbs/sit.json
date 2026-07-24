@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "დაჯდომა",
+        "la": "dajdoma",
+        "en": "to sit down"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვჯდები",
+        "la": "vjdebi",
+        "en": "I sit down"
+      },
+      "2sg": {
+        "ka": "ჯდები",
+        "la": "jdebi",
+        "en": "you sit down"
+      },
+      "3sg": {
+        "ka": "ჯდება",
+        "la": "jdeba",
+        "en": "he/she/it sits down"
+      },
+      "1pl": {
+        "ka": "ვსხდებით",
+        "la": "vskhdebit",
+        "en": "we sit down"
+      },
+      "2pl": {
+        "ka": "სხდებით",
+        "la": "skhdebit",
+        "en": "you sit down (plural/formal)"
+      },
+      "3pl": {
+        "ka": "სხდებიან",
+        "la": "skhdebian",
+        "en": "they sit down"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავჯექი",
+        "la": "davjeqi",
+        "en": "I sat down"
+      },
+      "2sg": {
+        "ka": "დაჯექი",
+        "la": "dajeqi",
+        "en": "you sat down"
+      },
+      "3sg": {
+        "ka": "დაჯდა",
+        "la": "dajda",
+        "en": "he/she/it sat down"
+      },
+      "1pl": {
+        "ka": "დავსხედით",
+        "la": "davskhedit",
+        "en": "we sat down"
+      },
+      "2pl": {
+        "ka": "დაჯექით",
+        "la": "dajekit",
+        "en": "you sat down (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დასხდნენ",
+        "la": "daskhdnen",
+        "en": "they sat down"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავჯდები",
+        "la": "davjdebi",
+        "en": "I will sit down"
+      },
+      "2sg": {
+        "ka": "დაჯდები",
+        "la": "dajdebi",
+        "en": "you will sit down"
+      },
+      "3sg": {
+        "ka": "დაჯდება",
+        "la": "dajdeba",
+        "en": "he/she/it will sit down"
+      },
+      "1pl": {
+        "ka": "დავსხდებით",
+        "la": "davskhdebit",
+        "en": "we will sit down"
+      },
+      "2pl": {
+        "ka": "დაჯდებით",
+        "la": "dajdebit",
+        "en": "you will sit down (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დასხდებიან",
+        "la": "daskhdebian",
+        "en": "they will sit down"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვჯდები",
+        "la": "me akhla vjdebi",
+        "en": "I am sitting down now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა ჯდები",
+        "la": "shen akhla jdebi",
+        "en": "You are sitting down now"
+      },
+      "3sg": {
+        "ka": "ის ახლა ჯდება",
+        "la": "is akhla jdeba",
+        "en": "He/she is sitting down now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვსხდებით",
+        "la": "chven akhla vskhdebit",
+        "en": "We are sitting down now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა სხდებით",
+        "la": "tkven akhla skhdebit",
+        "en": "You are sitting down now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა სხდებიან",
+        "la": "isini akhla skhdebian",
+        "en": "They are sitting down now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე დავმჯდარვარ",
+        "la": "me davmjdarvar",
+        "en": "I have sat down"
+      },
+      "2sg": {
+        "ka": "შენ დამჯდარხარ",
+        "la": "shen damjdarkhar",
+        "en": "You have sat down"
+      },
+      "3sg": {
+        "ka": "ის დამჯდარა",
+        "la": "is damjdara",
+        "en": "He/she has sat down"
+      },
+      "1pl": {
+        "ka": "ჩვენ დავსხდარვართ",
+        "la": "chven davskhdarvart",
+        "en": "We have sat down"
+      },
+      "2pl": {
+        "ka": "თქვენ დამსხდარხართ",
+        "la": "tkven damskhdarkhart",
+        "en": "You have sat down (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი დამსხდარან",
+        "la": "isini damskhdaran",
+        "en": "They have sat down"
+      }
+    }
+  }
+}
