@@ -6,13 +6,9 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    console.log("Received audio generation request with payload:", body);
-
     const prompt = buildPrompt(body ?? "");
 
     const result = await callLLM(prompt);
-
-    console.log("LLM response for text generation:", result);
 
     return NextResponse.json(
       {

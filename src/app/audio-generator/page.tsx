@@ -39,30 +39,6 @@ const getGeneratedMessageSections = (
   );
 };
 
-const formatSpeakerLabel = (speaker: string | undefined): string => {
-  const normalizedSpeaker = speaker?.trim();
-
-  if (!normalizedSpeaker) {
-    return "Speaker";
-  }
-
-  if (/^speaker\b/iu.test(normalizedSpeaker)) {
-    return normalizedSpeaker;
-  }
-
-  return `Speaker ${normalizedSpeaker}`;
-};
-
-const formatDialogueEntry = (entry: GeneratedTextEntry): string => {
-  const formattedMessage = formatGeneratedMessage(entry.message);
-
-  if (!formattedMessage) {
-    return "";
-  }
-
-  return `${formatSpeakerLabel(entry.speaker)}\n\n${formattedMessage}`;
-};
-
 const formatGeneratedResultForDisplay = (
   result: GeneratedTextEntry | null | undefined,
 ): string => {
@@ -209,18 +185,12 @@ export default function AudioGeneratorPage() {
 
       const data = (await response.json()) as AudioGeneratorResponse;
 
-      console.log("Audio generator route response", {
-        status: response.status,
-        ok: response.ok,
-        data,
-      });
-
       if (!response.ok || !data.success) {
         throw new Error(
           data.message || "Failed to send audio generation request.",
         );
       }
-      console.log("Audio generator route successful response", data);
+
       setGeneratedResult(data.result ?? null);
       setGenerationMessage(
         formatGeneratedResultForDisplay(data.result) ||

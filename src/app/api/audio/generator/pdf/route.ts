@@ -1,15 +1,9 @@
 import { NextResponse } from "next/server";
 import { generatePDF } from "@/services/generatePDF";
-import {
-  audioGeneratorPdfValidator,
-  type AudioGeneratorPdfRequestBody,
-} from "@/utils/validators/audioGenerator/pdf";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-
-    console.log("Received PDF generation request:", body);
 
     const pdfFile = await generatePDF(body);
 

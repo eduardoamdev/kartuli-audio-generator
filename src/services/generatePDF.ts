@@ -13,12 +13,6 @@ const escapeHtml = (value: string): string =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 
-const getMessageLines = (message: GeneratedMessage | undefined): string[] =>
-  [message?.ka, message?.la, message?.en].filter(
-    (value): value is string =>
-      typeof value === "string" && value.trim().length > 0,
-  );
-
 const splitIntoParagraphs = (value: string | undefined): string[] => {
   if (typeof value !== "string") {
     return [];
@@ -36,21 +30,7 @@ const formatParagraphText = (value: string): string =>
 const buildPlainTextMarkup = (formattedText: string): string =>
   escapeHtml(formattedText).replaceAll("\n", "<br />");
 
-const formatSpeakerLabel = (speaker: string | undefined): string => {
-  const normalizedSpeaker = speaker?.trim();
-
-  if (!normalizedSpeaker) {
-    return "Speaker";
-  }
-
-  if (/^speaker\b/iu.test(normalizedSpeaker)) {
-    return normalizedSpeaker;
-  }
-
-  return `Speaker ${normalizedSpeaker}`;
-};
-
-const buildMonologueLanguageMarkup = (value: string | undefined): string => {
+const buildTextLanguageMarkup = (value: string | undefined): string => {
   const paragraphsMarkup = splitIntoParagraphs(value)
     .map(
       (paragraph) =>
@@ -67,7 +47,7 @@ const buildMonologueLanguageMarkup = (value: string | undefined): string => {
 
 const buildTextMarkup = (message: GeneratedMessage): string => {
   return [message.ka, message.la, message.en]
-    .map(buildMonologueLanguageMarkup)
+    .map(buildTextLanguageMarkup)
     .filter((sectionMarkup) => sectionMarkup.length > 0)
     .join("");
 };
@@ -88,8 +68,8 @@ const buildStructuredMarkup = (
   return buildPlainTextMarkup("");
 };
 
-const buildPdfHtml = (texts: GeneratedTextEntry | undefined): string => {
-  const content = buildStructuredMarkup(texts);
+const buildPdfHtml = (text: GeneratedTextEntry | undefined): string => {
+  const content = buildStructuredMarkup(text);
 
   return `
 		<!DOCTYPE html>
