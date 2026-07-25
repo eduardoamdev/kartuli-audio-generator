@@ -46,7 +46,6 @@ export default function ButtonGridPageShell({
               </Button>
             ) : null}
           </div>
-
           {children}
         </div>
       </div>

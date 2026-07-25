@@ -1,45 +1,14 @@
 import { NextResponse } from "next/server";
-
 import { buildPrompt } from "@/prompts/audio";
 import { callLLM } from "@/services/callLLM";
-import { getSelectedFilesContentByFolder } from "@/utils/getSelectedFilesContentByFolder";
-import {
-  audioGeneratorTextValidator,
-  type AudioGeneratorTextRequestBody,
-} from "@/utils/validators/audioGenerator/text";
-import { buildSelectedWordsString } from "../../../../../utils/buildSelectedWordsString";
 
 export async function POST(request: Request) {
   try {
-    const parsedBody = audioGeneratorTextValidator(await request.json());
+    const body = await request.json();
 
-    if (!parsedBody.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Invalid information provided for text generation.",
-        },
-        { status: 400 },
-      );
-    }
+    console.log("Received audio generation request with payload:", body);
 
-    const body: AudioGeneratorTextRequestBody = parsedBody.data;
-
-    const selectedFilesContentByFolder = await getSelectedFilesContentByFolder(
-      body.selectedFilesByFolder ?? {},
-    );
-
-    const selectedWordsString = buildSelectedWordsString(
-      selectedFilesContentByFolder,
-    );
-
-    const prompt = buildPrompt(
-      selectedWordsString,
-      body.age ?? "",
-      body.level ?? "",
-      body.details ?? "",
-      body.typeOfSpeech,
-    );
+    const prompt = buildPrompt(body ?? "");
 
     const result = await callLLM(prompt);
 

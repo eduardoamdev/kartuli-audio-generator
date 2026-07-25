@@ -6,19 +6,8 @@ export type GeneratedMessage = {
 
 export type GeneratedGender = "male" | "female" | "masculine" | "feminine";
 
-export type GeneratedDialogueEntry = {
+export type GeneratedTextEntry = {
   speaker?: string;
   gender?: GeneratedGender | string;
   message?: GeneratedMessage;
-};
-
-export type GeneratedMonologueEntry = {
-  speaker?: string;
-  gender?: GeneratedGender | string;
-  message?: GeneratedMessage;
-};
-
-export type GeneratedTextResult = {
-  conversation?: GeneratedDialogueEntry[];
-  monologue?: GeneratedMonologueEntry;
 };

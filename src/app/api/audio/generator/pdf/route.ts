@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-
 import { generatePDF } from "@/services/generatePDF";
 import {
   audioGeneratorPdfValidator,
@@ -8,21 +7,11 @@ import {
 
 export async function POST(request: Request) {
   try {
-    const parsedBody = audioGeneratorPdfValidator(await request.json());
+    const body = await request.json();
 
-    if (!parsedBody.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Invalid information provided for PDF generation.",
-        },
-        { status: 400 },
-      );
-    }
+    console.log("Received PDF generation request:", body);
 
-    const body: AudioGeneratorPdfRequestBody = parsedBody.data;
-
-    const pdfFile = await generatePDF(body.formattedText ?? "", body.result);
+    const pdfFile = await generatePDF(body);
 
     return new NextResponse(pdfFile, {
       status: 200,

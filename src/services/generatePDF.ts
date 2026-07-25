@@ -1,9 +1,8 @@
 import puppeteer from "puppeteer";
 
 import type {
-  GeneratedDialogueEntry,
   GeneratedMessage,
-  GeneratedTextResult,
+  GeneratedTextEntry,
 } from "@/types/audioGenerator";
 
 const escapeHtml = (value: string): string =>
@@ -51,30 +50,11 @@ const formatSpeakerLabel = (speaker: string | undefined): string => {
   return `Speaker ${normalizedSpeaker}`;
 };
 
-const buildDialogueEntryMarkup = (entry: GeneratedDialogueEntry): string => {
-  const lines = getMessageLines(entry.message);
-
-  if (lines.length === 0) {
-    return "";
-  }
-
-  const speaker = formatSpeakerLabel(entry.speaker);
-
-  return `
-					<article class="entry">
-						<p class="speaker">${escapeHtml(speaker)}</p>
-						<div class="turn">
-							${lines.map((line) => `<p class="line">${escapeHtml(line)}</p>`).join("")}
-						</div>
-					</article>
-				`;
-};
-
 const buildMonologueLanguageMarkup = (value: string | undefined): string => {
   const paragraphsMarkup = splitIntoParagraphs(value)
     .map(
       (paragraph) =>
-        `<p class="line monologue-paragraph">${formatParagraphText(paragraph)}</p>`,
+        `<p class="line text-paragraph">${formatParagraphText(paragraph)}</p>`,
     )
     .join("");
 
@@ -82,10 +62,10 @@ const buildMonologueLanguageMarkup = (value: string | undefined): string => {
     return "";
   }
 
-  return `<section class="monologue-language">${paragraphsMarkup}</section>`;
+  return `<section class="text-language">${paragraphsMarkup}</section>`;
 };
 
-const buildMonologueMarkup = (message: GeneratedMessage): string => {
+const buildTextMarkup = (message: GeneratedMessage): string => {
   return [message.ka, message.la, message.en]
     .map(buildMonologueLanguageMarkup)
     .filter((sectionMarkup) => sectionMarkup.length > 0)
@@ -93,36 +73,23 @@ const buildMonologueMarkup = (message: GeneratedMessage): string => {
 };
 
 const buildStructuredMarkup = (
-  formattedText: string,
-  result: GeneratedTextResult | undefined,
+  result: GeneratedTextEntry | undefined,
 ): string => {
-  if (Array.isArray(result?.conversation)) {
-    const entriesMarkup = result.conversation
-      .map(buildDialogueEntryMarkup)
-      .filter((entryMarkup) => entryMarkup.length > 0)
-      .join("");
+  if (result && result.message) {
+    const textMarkup = buildTextMarkup(result.message);
 
-    if (entriesMarkup) {
-      return `<div class="conversation">${entriesMarkup}</div>`;
+    if (textMarkup) {
+      return `<div class="text">${textMarkup}</div>`;
     }
+
+    return buildPlainTextMarkup("");
   }
 
-  if (result?.monologue?.message) {
-    const monologueMarkup = buildMonologueMarkup(result.monologue.message);
-
-    if (monologueMarkup) {
-      return `<div class="monologue">${monologueMarkup}</div>`;
-    }
-  }
-
-  return buildPlainTextMarkup(formattedText);
+  return buildPlainTextMarkup("");
 };
 
-const buildPdfHtml = (
-  formattedText: string,
-  result: GeneratedTextResult | undefined,
-): string => {
-  const content = buildStructuredMarkup(formattedText, result);
+const buildPdfHtml = (texts: GeneratedTextEntry | undefined): string => {
+  const content = buildStructuredMarkup(texts);
 
   return `
 		<!DOCTYPE html>
@@ -130,7 +97,7 @@ const buildPdfHtml = (
 			<head>
 				<meta charset="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>Generated Audio Text</title>
+				<title>Generated Text</title>
 				<style>
 					:root {
 						color-scheme: light;
@@ -173,12 +140,12 @@ const buildPdfHtml = (
 						gap: 18px;
 					}
 
-					.monologue {
+					.text {
 						display: grid;
             gap: 40px;
 					}
 
-					.monologue-language {
+					.text-language {
 						display: grid;
 						gap: 14px;
 					}
@@ -222,8 +189,7 @@ const buildPdfHtml = (
 };
 
 export async function generatePDF(
-  formattedText: string,
-  result?: GeneratedTextResult,
+  texts?: GeneratedTextEntry,
 ): Promise<Uint8Array<ArrayBuffer>> {
   const browser = await puppeteer.launch({
     headless: true,
@@ -233,8 +199,8 @@ export async function generatePDF(
   try {
     const page = await browser.newPage();
 
-    await page.setContent(buildPdfHtml(formattedText, result), {
-      waitUntil: "networkidle0",
+    await page.setContent(buildPdfHtml(texts), {
+      waitUntil: "load",
     });
 
     await page.emulateMediaType("screen");

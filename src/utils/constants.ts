@@ -1,16 +1,5 @@
 import path from "node:path";
 
-export const SPEECH_TYPES = {
-  dialogue: "Dialogue",
-  monologue: "Monologue",
-  textualConversation: "Textual Conversation",
-  textualMonologue: "Textual Monologue",
-} as const;
-
-export type SpeechType = (typeof SPEECH_TYPES)[keyof typeof SPEECH_TYPES];
-
-export const SPEECH_TYPE_VALUES = Object.values(SPEECH_TYPES) as SpeechType[];
-
 export const DATA_DIRECTORY = path.join(process.cwd(), "src", "data");
 
 export const TEXT_FILE_ENCODING = "utf-8";
