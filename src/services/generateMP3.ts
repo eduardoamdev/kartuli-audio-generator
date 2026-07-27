@@ -1,10 +1,7 @@
-import type {
-  GeneratedDialogueEntry,
-  GeneratedMonologueEntry,
-  GeneratedTextResult,
-} from "@/types/audioGenerator";
+import type { GeneratedMessage } from "@/types/audioGenerator";
 
 const NARAKEET_MP3_ENDPOINT = "https://api.narakeet.com/text-to-speech/mp3";
+const DEFAULT_NARAKEET_VOICE = "tornike";
 const STREAMING_API_MAX_BYTES = 1024;
 const POLL_INTERVAL_MS = 3000;
 const MAX_POLL_ATTEMPTS = 60;
@@ -38,71 +35,47 @@ const getApiKey = (): string => {
   return apiKey;
 };
 
+const getMp3Endpoint = (): string => {
+  const configuredEndpoint = process.env.MP3_GENERATOR_ENDPOINT?.trim();
+  const configuredVoice = process.env.MP3_GENERATOR_VOICE?.trim();
+  const endpoint = configuredEndpoint || NARAKEET_MP3_ENDPOINT;
+
+  let url: URL;
+
+  try {
+    url = new URL(endpoint);
+  } catch {
+    throw new Error(
+      "MP3_GENERATOR_ENDPOINT is not a valid URL. Check your environment configuration.",
+    );
+  }
+
+  if (!url.searchParams.has("voice")) {
+    url.searchParams.set("voice", configuredVoice || DEFAULT_NARAKEET_VOICE);
+  }
+
+  return url.toString();
+};
+
 const normalizeNarrationText = (value: string | undefined): string =>
   (value ?? "").replace(/\s+/gu, " ").trim();
 
-const getVoiceByGender = (gender: string | undefined): "tornike" | "nino" => {
-  const normalizedGender = gender?.trim().toLowerCase();
+const buildTextScript = (message: GeneratedMessage): string => {
+  const messageKa = normalizeNarrationText(message.ka);
 
-  if (normalizedGender === "female" || normalizedGender === "feminine") {
-    return "nino";
-  }
-
-  return "tornike";
-};
-
-const buildMonologueScript = (monologue: GeneratedMonologueEntry): string => {
-  const message = normalizeNarrationText(monologue.message?.ka);
-
-  if (!message) {
+  if (!messageKa) {
     throw new Error("The monologue does not contain Georgian narration.");
   }
 
-  const voice = getVoiceByGender(monologue.gender);
+  const voice = "male";
 
   return [
     `---`,
     `voice: ${voice}`,
     `voice-volume: normalized`,
     `---`,
-    message,
+    messageKa,
   ].join("\n");
-};
-
-const buildDialogueScript = (
-  conversation: GeneratedDialogueEntry[],
-): string => {
-  const dialogueParagraphs = conversation.flatMap((entry) => {
-    const message = normalizeNarrationText(entry.message?.ka);
-
-    if (!message) {
-      return [];
-    }
-
-    return [`(voice: ${getVoiceByGender(entry.gender)})`, message];
-  });
-
-  if (dialogueParagraphs.length === 0) {
-    throw new Error("The dialogue does not contain Georgian narration.");
-  }
-
-  return [`---\nvoice-volume: normalized\n---`, ...dialogueParagraphs].join(
-    "\n\n",
-  );
-};
-
-const buildNarakeetScript = (result: GeneratedTextResult): string => {
-  if (Array.isArray(result.conversation) && result.conversation.length > 0) {
-    return buildDialogueScript(result.conversation);
-  }
-
-  if (result.monologue) {
-    return buildMonologueScript(result.monologue);
-  }
-
-  throw new Error(
-    "No dialogue or monologue content is available for MP3 generation.",
-  );
 };
 
 const readErrorMessage = async (response: Response): Promise<string> => {
@@ -123,7 +96,9 @@ const requestStreamingMp3 = async (
   script: string,
   apiKey: string,
 ): Promise<Uint8Array<ArrayBuffer>> => {
-  const response = await fetch(NARAKEET_MP3_ENDPOINT, {
+  const endpoint = getMp3Endpoint();
+  console.log("Requesting polling job for script:", script);
+  const response = await fetch(endpoint, {
     method: "POST",
     headers: {
       Accept: "application/octet-stream",
@@ -132,6 +107,8 @@ const requestStreamingMp3 = async (
     },
     body: script,
   });
+
+  console.log("Streaming MP3 request response status:", response);
 
   if (!response.ok) {
     throw new Error(await readErrorMessage(response));
@@ -144,7 +121,8 @@ const requestPollingJob = async (
   script: string,
   apiKey: string,
 ): Promise<string> => {
-  const response = await fetch(NARAKEET_MP3_ENDPOINT, {
+  const endpoint = getMp3Endpoint();
+  const response = await fetch(endpoint, {
     method: "POST",
     headers: {
       "Content-Type": "text/plain",
@@ -205,9 +183,9 @@ const downloadPollingResult = async (
 };
 
 export async function generateMP3(
-  result: GeneratedTextResult,
+  message: GeneratedMessage,
 ): Promise<Uint8Array<ArrayBuffer>> {
-  const script = buildNarakeetScript(result);
+  const script = buildTextScript(message);
   const apiKey = getApiKey();
   const scriptSize = new TextEncoder().encode(script).byteLength;
 

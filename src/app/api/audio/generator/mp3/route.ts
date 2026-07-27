@@ -1,29 +1,12 @@
 import { NextResponse } from "next/server";
 
 import { generateMP3 } from "@/services/generateMP3";
-import {
-  audioGeneratorMp3Validator,
-  type AudioGeneratorMp3RequestBody,
-} from "@/utils/validators/audioGenerator/mp3";
 
 export async function POST(request: Request) {
   try {
-    const parsedBody = audioGeneratorMp3Validator(await request.json());
+    const parsedBody = await request.json();
 
-    if (!parsedBody.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          message:
-            "A generated dialogue or monologue result with Georgian narration is required.",
-        },
-        { status: 400 },
-      );
-    }
-
-    const body: AudioGeneratorMp3RequestBody = parsedBody.data;
-
-    const mp3File = await generateMP3(body.result);
+    const mp3File = await generateMP3(parsedBody.result.message);
 
     return new NextResponse(mp3File, {
       status: 200,
