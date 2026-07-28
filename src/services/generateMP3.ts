@@ -64,7 +64,7 @@ const buildTextScript = (message: GeneratedMessage): string => {
   const messageKa = normalizeNarrationText(message.ka);
 
   if (!messageKa) {
-    throw new Error("The monologue does not contain Georgian narration.");
+    throw new Error("The text does not contain Georgian narration.");
   }
 
   const voice = "male";
@@ -97,7 +97,7 @@ const requestStreamingMp3 = async (
   apiKey: string,
 ): Promise<Uint8Array<ArrayBuffer>> => {
   const endpoint = getMp3Endpoint();
-  console.log("Requesting polling job for script:", script);
+
   const response = await fetch(endpoint, {
     method: "POST",
     headers: {
@@ -107,8 +107,6 @@ const requestStreamingMp3 = async (
     },
     body: script,
   });
-
-  console.log("Streaming MP3 request response status:", response);
 
   if (!response.ok) {
     throw new Error(await readErrorMessage(response));

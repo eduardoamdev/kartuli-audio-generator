@@ -3,7 +3,6 @@ export const buildPrompt = (text: string) =>
 - The Georgian must include Latin transcription. 
 - Include English translation for each message.
 - The output must be strictly in JSON format.
-- Include paragraph endings in the message to make it easier to transcribe.
 
 Variables provided:
 
