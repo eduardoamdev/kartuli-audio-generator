@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "წასვლა",
+        "la": "ts'asvla",
+        "en": "to go"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "ats'mq'o",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მივდივარ",
+        "la": "mivdivar",
+        "en": "I go / I am going"
+      },
+      "2sg": {
+        "ka": "მიდიხარ",
+        "la": "midikhar",
+        "en": "you go"
+      },
+      "3sg": {
+        "ka": "მიდის",
+        "la": "midis",
+        "en": "he/she goes"
+      },
+      "1pl": {
+        "ka": "მივდივართ",
+        "la": "mivdivart",
+        "en": "we go"
+      },
+      "2pl": {
+        "ka": "მიდიხართ",
+        "la": "midikhart",
+        "en": "you go (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მიდიან",
+        "la": "midian",
+        "en": "they go"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "ts'arsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "წავედი",
+        "la": "ts'avedi",
+        "en": "I went"
+      },
+      "2sg": {
+        "ka": "წახვედი",
+        "la": "ts'akhvedi",
+        "en": "you went"
+      },
+      "3sg": {
+        "ka": "წავიდა",
+        "la": "ts'avida",
+        "en": "he/she went"
+      },
+      "1pl": {
+        "ka": "წავედით",
+        "la": "ts'avedit",
+        "en": "we went"
+      },
+      "2pl": {
+        "ka": "წახვედით",
+        "la": "ts'akhvedit",
+        "en": "you went (plural/formal)"
+      },
+      "3pl": {
+        "ka": "წავიდნენ",
+        "la": "ts'avidnen",
+        "en": "they went"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "წავალ",
+        "la": "ts'aval",
+        "en": "I will go"
+      },
+      "2sg": {
+        "ka": "წახვალ",
+        "la": "ts'akhval",
+        "en": "you will go"
+      },
+      "3sg": {
+        "ka": "წავა",
+        "la": "ts'ava",
+        "en": "he/she will go"
+      },
+      "1pl": {
+        "ka": "წავალთ",
+        "la": "ts'avalt",
+        "en": "we will go"
+      },
+      "2pl": {
+        "ka": "წახვალთ",
+        "la": "ts'akhvalt",
+        "en": "you will go (plural/formal)"
+      },
+      "3pl": {
+        "ka": "წავლენ",
+        "la": "ts'avlen",
+        "en": "they will go"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "ats'mq'o mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა მივდივარ",
+        "la": "me akhla mivdivar",
+        "en": "I am going now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა მიდიხარ",
+        "la": "shen akhla midikhar",
+        "en": "You are going now"
+      },
+      "3sg": {
+        "ka": "ის ახლა მიდის",
+        "la": "is akhla midis",
+        "en": "He/she is going now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა მივდივართ",
+        "la": "chven akhla mivdivart",
+        "en": "We are going now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა მიდიხართ",
+        "la": "tkven akhla midikhart",
+        "en": "You are going now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა მიდიან",
+        "la": "isini akhla midian",
+        "en": "They are going now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "ats'mq'o srulq'opili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე წავედი",
+        "la": "me ukve ts'avedi",
+        "en": "I have already gone"
+      },
+      "2sg": {
+        "ka": "შენ უკვე წახვედი",
+        "la": "shen ukve ts'akhvedi",
+        "en": "You have already gone"
+      },
+      "3sg": {
+        "ka": "ის უკვე წავიდა",
+        "la": "is ukve ts'avida",
+        "en": "He/she has already gone"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე წავედით",
+        "la": "chven ukve ts'avedit",
+        "en": "We have already gone"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე წახვედით",
+        "la": "tkven ukve ts'akhvedit",
+        "en": "You have already gone (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე წავიდნენ",
+        "la": "isini ukve ts'avidnen",
+        "en": "They have already gone"
+      }
+    }
+  }
+}
