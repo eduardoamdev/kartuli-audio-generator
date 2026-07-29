@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "სიამოვნება",
+        "la": "siamovneba",
+        "en": "to enjoy"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვსიამოვნობ",
+        "la": "vsiamovneb",
+        "en": "I enjoy"
+      },
+      "2sg": {
+        "ka": "სიამოვნობ",
+        "la": "siamovneb",
+        "en": "you enjoy"
+      },
+      "3sg": {
+        "ka": "სიამოვნობს",
+        "la": "siamovnebs",
+        "en": "he/she enjoys"
+      },
+      "1pl": {
+        "ka": "ვსიამოვნობთ",
+        "la": "vsiamovnebt",
+        "en": "we enjoy"
+      },
+      "2pl": {
+        "ka": "სიამოვნობთ",
+        "la": "siamovnebt",
+        "en": "you enjoy (plural/formal)"
+      },
+      "3pl": {
+        "ka": "სიამოვნობენ",
+        "la": "siamovneben",
+        "en": "they enjoy"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past (aorist)"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვისიამოვნე",
+        "la": "visiamovne",
+        "en": "I enjoyed"
+      },
+      "2sg": {
+        "ka": "ისიამოვნე",
+        "la": "isiamovne",
+        "en": "you enjoyed"
+      },
+      "3sg": {
+        "ka": "ისიამოვნა",
+        "la": "isiamovna",
+        "en": "he/she enjoyed"
+      },
+      "1pl": {
+        "ka": "ვისიამოვნეთ",
+        "la": "visiamovnet",
+        "en": "we enjoyed"
+      },
+      "2pl": {
+        "ka": "ისიამოვნეთ",
+        "la": "isiamovnet",
+        "en": "you enjoyed (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისიამოვნეს",
+        "la": "isiamovnes",
+        "en": "they enjoyed"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვისიამოვნებ",
+        "la": "visiamovneb",
+        "en": "I will enjoy"
+      },
+      "2sg": {
+        "ka": "ისიამოვნებ",
+        "la": "isiamovneb",
+        "en": "you will enjoy"
+      },
+      "3sg": {
+        "ka": "ისიამოვნებს",
+        "la": "isiamovnebs",
+        "en": "he/she will enjoy"
+      },
+      "1pl": {
+        "ka": "ვისიამოვნებთ",
+        "la": "visiamovnebt",
+        "en": "we will enjoy"
+      },
+      "2pl": {
+        "ka": "ისიამოვნებთ",
+        "la": "isiamovnebt",
+        "en": "you will enjoy (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისიამოვნებენ",
+        "la": "isiamovneben",
+        "en": "they will enjoy"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვსიამოვნობ",
+        "la": "me akhla vsiamovneb",
+        "en": "I am enjoying"
+      },
+      "2sg": {
+        "ka": "შენ ახლა სიამოვნობ",
+        "la": "shen akhla siamovneb",
+        "en": "you are enjoying"
+      },
+      "3sg": {
+        "ka": "ის ახლა სიამოვნობს",
+        "la": "is akhla siamovnebs",
+        "en": "he/she is enjoying"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვსიამოვნობთ",
+        "la": "chven akhla vsiamovnebt",
+        "en": "we are enjoying"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა სიამოვნობთ",
+        "la": "tkven akhla siamovnebt",
+        "en": "you are enjoying (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა სიამოვნობენ",
+        "la": "isini akhla siamovneben",
+        "en": "they are enjoying"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე ვისიამოვნე",
+        "la": "me ukve visiamovne",
+        "en": "I have enjoyed"
+      },
+      "2sg": {
+        "ka": "შენ უკვე ისიამოვნე",
+        "la": "shen ukve isiamovne",
+        "en": "you have enjoyed"
+      },
+      "3sg": {
+        "ka": "მან უკვე ისიამოვნა",
+        "la": "man ukve isiamovna",
+        "en": "he/she has enjoyed"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე ვისიამოვნეთ",
+        "la": "chven ukve visiamovnet",
+        "en": "we have enjoyed"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე ისიამოვნეთ",
+        "la": "tkven ukve isiamovnet",
+        "en": "you have enjoyed (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მათ უკვე ისიამოვნეს",
+        "la": "mat ukve isiamovnes",
+        "en": "they have enjoyed"
+      }
+    }
+  }
+}
