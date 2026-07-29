@@ -1,0 +1,86 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "წვიმა",
+        "la": "tsvima",
+        "en": "to rain"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "3sg": {
+        "ka": "წვიმს",
+        "la": "tsvims",
+        "en": "it rains"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "3sg": {
+        "ka": "წვიმდა",
+        "la": "tsvimda",
+        "en": "it rained"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "3sg": {
+        "ka": "იწვიმებს",
+        "la": "itsvimebs",
+        "en": "it will rain"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous"
+    },
+    "conjugation": {
+      "3sg": {
+        "ka": "ახლა წვიმს",
+        "la": "akhla tsvims",
+        "en": "it is raining"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect"
+    },
+    "conjugation": {
+      "3sg": {
+        "ka": "უკვე იწვიმა",
+        "la": "ukve itsvima",
+        "en": "it has rained"
+      }
+    }
+  }
+}

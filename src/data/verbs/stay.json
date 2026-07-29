@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "დარჩენა",
+        "la": "darchena",
+        "en": "to stay"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვრჩები",
+        "la": "vrchebi",
+        "en": "I stay"
+      },
+      "2sg": {
+        "ka": "რჩები",
+        "la": "rchebi",
+        "en": "you stay"
+      },
+      "3sg": {
+        "ka": "რჩება",
+        "la": "rcheba",
+        "en": "he/she stays"
+      },
+      "1pl": {
+        "ka": "ვრჩებით",
+        "la": "vrchebit",
+        "en": "we stay"
+      },
+      "2pl": {
+        "ka": "რჩებით",
+        "la": "rchebit",
+        "en": "you stay (plural/formal)"
+      },
+      "3pl": {
+        "ka": "რჩებიან",
+        "la": "rchebian",
+        "en": "they stay"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past (aorist)"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავრჩი",
+        "la": "davrchi",
+        "en": "I stayed"
+      },
+      "2sg": {
+        "ka": "დარჩი",
+        "la": "darchi",
+        "en": "you stayed"
+      },
+      "3sg": {
+        "ka": "დარჩა",
+        "la": "darcha",
+        "en": "he/she stayed"
+      },
+      "1pl": {
+        "ka": "დავრჩით",
+        "la": "davrchit",
+        "en": "we stayed"
+      },
+      "2pl": {
+        "ka": "დარჩით",
+        "la": "darchit",
+        "en": "you stayed (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დარჩნენ",
+        "la": "darchnen",
+        "en": "they stayed"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დავრჩები",
+        "la": "davrchebi",
+        "en": "I will stay"
+      },
+      "2sg": {
+        "ka": "დარჩები",
+        "la": "darchebi",
+        "en": "you will stay"
+      },
+      "3sg": {
+        "ka": "დარჩება",
+        "la": "darcheba",
+        "en": "he/she will stay"
+      },
+      "1pl": {
+        "ka": "დავრჩებით",
+        "la": "davrchebit",
+        "en": "we will stay"
+      },
+      "2pl": {
+        "ka": "დარჩებით",
+        "la": "darchebit",
+        "en": "you will stay (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დარჩებიან",
+        "la": "darchebian",
+        "en": "they will stay"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა ვრჩები",
+        "la": "me akhla vrchebi",
+        "en": "I am staying"
+      },
+      "2sg": {
+        "ka": "შენ ახლა რჩები",
+        "la": "shen akhla rchebi",
+        "en": "you are staying"
+      },
+      "3sg": {
+        "ka": "ის ახლა რჩება",
+        "la": "is akhla rcheba",
+        "en": "he/she is staying"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა ვრჩებით",
+        "la": "chven akhla vrchebit",
+        "en": "we are staying"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა რჩებით",
+        "la": "tkven akhla rchebit",
+        "en": "you are staying (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა რჩებიან",
+        "la": "isini akhla rchebian",
+        "en": "they are staying"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე დავრჩი",
+        "la": "me ukve davrchi",
+        "en": "I have stayed"
+      },
+      "2sg": {
+        "ka": "შენ უკვე დარჩი",
+        "la": "shen ukve darchi",
+        "en": "you have stayed"
+      },
+      "3sg": {
+        "ka": "ის უკვე დარჩა",
+        "la": "is ukve darcha",
+        "en": "he/she has stayed"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე დავრჩით",
+        "la": "chven ukve davrchit",
+        "en": "we have stayed"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე დარჩით",
+        "la": "tkven ukve darchit",
+        "en": "you have stayed (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე დარჩნენ",
+        "la": "isini ukve darchnen",
+        "en": "they have stayed"
+      }
+    }
+  }
+}
