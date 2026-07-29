@@ -53,7 +53,6 @@ export default function Button({
       <span className="btn-copy">
         {eyebrow && <span className="btn-eyebrow">{eyebrow}</span>}
         <span className="btn-label">{children}</span>
-        {description && <span className="btn-description">{description}</span>}
       </span>
     </>
   );
