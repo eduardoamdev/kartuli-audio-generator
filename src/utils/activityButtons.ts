@@ -1,6 +1,6 @@
-export type ActivityButtonVariant = "blue" | "purple" | "teal";
+type ActivityButtonVariant = "blue" | "purple" | "teal";
 
-export type ActivityButton = {
+type ActivityButton = {
   id: string;
   href: string;
   variant: ActivityButtonVariant;
