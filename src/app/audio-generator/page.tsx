@@ -81,7 +81,7 @@ export default function AudioGeneratorPage() {
     setIsDownloadingMp3(true);
 
     try {
-      const response = await fetch("/api/audio/generator/mp3", {
+      const response = await fetch("/api/audio-generator/mp3", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -126,7 +126,7 @@ export default function AudioGeneratorPage() {
     setIsDownloadingPdf(true);
 
     try {
-      const response = await fetch("/api/audio/generator/pdf", {
+      const response = await fetch("/api/audio-generator/pdf", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -175,7 +175,7 @@ export default function AudioGeneratorPage() {
     setHasSuccessfulResponse(false);
 
     try {
-      const response = await fetch("/api/audio/generator/text", {
+      const response = await fetch("/api/audio-generator/text", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
