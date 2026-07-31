@@ -23,7 +23,6 @@ export default async function VocabularySelectorPage() {
               key={fileName}
               href={`/grammar-library/vocabulary?filename=${encodeURIComponent(fileName)}`}
               variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]}
-              description={fileName}
               className="h-full min-h-[148px] items-start"
             >
               {formatFolderOrFileName(fileName)}

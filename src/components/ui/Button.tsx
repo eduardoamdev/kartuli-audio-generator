@@ -7,7 +7,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   icon?: ReactNode;
   eyebrow?: string;
-  description?: string;
   className?: string;
 }
 
@@ -23,7 +22,6 @@ export default function Button({
   href,
   icon,
   eyebrow,
-  description,
   className = "",
   children,
   style,

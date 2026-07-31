@@ -24,7 +24,6 @@ export default async function VerbsSelectorPage() {
               type="button"
               href={`/grammar-library/verbs?name=${fileName}`}
               variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]}
-              description={fileName}
               className="h-full min-h-[148px] items-start opacity-80"
             >
               {formatFolderOrFileName(fileName)}

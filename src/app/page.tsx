@@ -51,7 +51,6 @@ export default function Home() {
                     variant={activity.variant}
                     icon={activity.icon}
                     eyebrow={activity.eyebrow}
-                    description={activity.description}
                   >
                     {activity.title}
                   </Button>
