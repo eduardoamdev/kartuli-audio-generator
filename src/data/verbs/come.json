@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "მოსვლა",
+        "la": "mosvla",
+        "en": "to come"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მოვდივარ",
+        "la": "movdivar",
+        "en": "I come / I am coming"
+      },
+      "2sg": {
+        "ka": "მოდიხარ",
+        "la": "modikhar",
+        "en": "You come / You are coming"
+      },
+      "3sg": {
+        "ka": "მოდის",
+        "la": "modis",
+        "en": "He/she comes / He/she is coming"
+      },
+      "1pl": {
+        "ka": "მოვდივართ",
+        "la": "movdivart",
+        "en": "We come / We are coming"
+      },
+      "2pl": {
+        "ka": "მოდიხართ",
+        "la": "modikhart",
+        "en": "You come (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მოდიან",
+        "la": "modian",
+        "en": "They come / They are coming"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მოვედი",
+        "la": "movedi",
+        "en": "I came"
+      },
+      "2sg": {
+        "ka": "მოხვედი",
+        "la": "mokhvedi",
+        "en": "You came"
+      },
+      "3sg": {
+        "ka": "მოვიდა",
+        "la": "movida",
+        "en": "He/she came"
+      },
+      "1pl": {
+        "ka": "მოვედით",
+        "la": "movedit",
+        "en": "We came"
+      },
+      "2pl": {
+        "ka": "მოხვედით",
+        "la": "mokhvedit",
+        "en": "You came (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მოვიდნენ",
+        "la": "movidnen",
+        "en": "They came"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მოვალ",
+        "la": "moval",
+        "en": "I will come"
+      },
+      "2sg": {
+        "ka": "მოხვალ",
+        "la": "mokhval",
+        "en": "You will come"
+      },
+      "3sg": {
+        "ka": "მოვა",
+        "la": "mova",
+        "en": "He/she will come"
+      },
+      "1pl": {
+        "ka": "მოვალთ",
+        "la": "movalt",
+        "en": "We will come"
+      },
+      "2pl": {
+        "ka": "მოხვალთ",
+        "la": "mokhvalt",
+        "en": "You will come (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მოვლენ",
+        "la": "movlen",
+        "en": "They will come"
+      }
+    }
+  },
+  "present_continuous": {
+    "name": {
+      "ka": "აწმყო მიმდინარე",
+      "la": "atsmqo mimdinare",
+      "en": "present continuous context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე ახლა მოვდივარ",
+        "la": "me akhla movdivar",
+        "en": "I am coming now"
+      },
+      "2sg": {
+        "ka": "შენ ახლა მოდიხარ",
+        "la": "shen akhla modikhar",
+        "en": "You are coming now"
+      },
+      "3sg": {
+        "ka": "ის ახლა მოდის",
+        "la": "is akhla modis",
+        "en": "He/she is coming now"
+      },
+      "1pl": {
+        "ka": "ჩვენ ახლა მოვდივართ",
+        "la": "chven akhla movdivart",
+        "en": "We are coming now"
+      },
+      "2pl": {
+        "ka": "თქვენ ახლა მოდიხართ",
+        "la": "tkven akhla modikhart",
+        "en": "You are coming now (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი ახლა მოდიან",
+        "la": "isini akhla modian",
+        "en": "They are coming now"
+      }
+    }
+  },
+  "present_perfect": {
+    "name": {
+      "ka": "აწმყო სრულყოფილი",
+      "la": "atsmqo srulqopili",
+      "en": "present perfect context"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მე უკვე მოვედი",
+        "la": "me ukve movedi",
+        "en": "I have already come"
+      },
+      "2sg": {
+        "ka": "შენ უკვე მოხვედი",
+        "la": "shen ukve mokhvedi",
+        "en": "You have already come"
+      },
+      "3sg": {
+        "ka": "ის უკვე მოვიდა",
+        "la": "is ukve movida",
+        "en": "He/she has already come"
+      },
+      "1pl": {
+        "ka": "ჩვენ უკვე მოვედით",
+        "la": "chven ukve movedit",
+        "en": "We have already come"
+      },
+      "2pl": {
+        "ka": "თქვენ უკვე მოხვედით",
+        "la": "tkven ukve mokhvedit",
+        "en": "You have already come (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისინი უკვე მოვიდნენ",
+        "la": "isini ukve movidnen",
+        "en": "They have already come"
+      }
+    }
+  }
+}
