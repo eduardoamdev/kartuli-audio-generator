@@ -1,0 +1,211 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "inpinit'ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "სჭირდებოდეს",
+        "la": "sch'irdebodes",
+        "en": "to need"
+      }
+    }
+  },
+  "present": {
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მჭირდება",
+        "la": "mch'irdeba",
+        "en": "I need"
+      },
+      "2sg": {
+        "ka": "გჭირდება",
+        "la": "gch'irdeba",
+        "en": "you need"
+      },
+      "3sg": {
+        "ka": "სჭირდება",
+        "la": "sch'irdeba",
+        "en": "he/she needs"
+      },
+      "1pl": {
+        "ka": "გვჭირდება",
+        "la": "gvch'irdeba",
+        "en": "we need"
+      },
+      "2pl": {
+        "ka": "გჭირდებათ",
+        "la": "gch'irdebat",
+        "en": "you need (plural/formal)"
+      },
+      "3pl": {
+        "ka": "სჭირდებათ",
+        "la": "sch'irdebat",
+        "en": "they need"
+      }
+    }
+  },
+  "past": {
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "მჭირდებოდა",
+        "la": "mch'irdeboda",
+        "en": "I needed"
+      },
+      "2sg": {
+        "ka": "გჭირდებოდა",
+        "la": "gch'irdeboda",
+        "en": "you needed"
+      },
+      "3sg": {
+        "ka": "სჭირდებოდა",
+        "la": "sch'irdeboda",
+        "en": "he/she needed"
+      },
+      "1pl": {
+        "ka": "გვჭირდებოდა",
+        "la": "gvch'irdeboda",
+        "en": "we needed"
+      },
+      "2pl": {
+        "ka": "გჭირდებოდათ",
+        "la": "gch'irdebodat",
+        "en": "you needed (plural/formal)"
+      },
+      "3pl": {
+        "ka": "სჭირდებოდათ",
+        "la": "sch'irdebodat",
+        "en": "they needed"
+      }
+    }
+  },
+  "future": {
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დამჭირდება",
+        "la": "damch'irdeba",
+        "en": "I will need"
+      },
+      "2sg": {
+        "ka": "დაგჭირდება",
+        "la": "dagch'irdeba",
+        "en": "you will need"
+      },
+      "3sg": {
+        "ka": "დასჭირდება",
+        "la": "dasch'irdeba",
+        "en": "he/she will need"
+      },
+      "1pl": {
+        "ka": "დაგვჭირდება",
+        "la": "dagvch'irdeba",
+        "en": "we will need"
+      },
+      "2pl": {
+        "ka": "დაგჭირდებათ",
+        "la": "dagch'irdebat",
+        "en": "you will need (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დასჭირდებათ",
+        "la": "dasch'irdebat",
+        "en": "they will need"
+      }
+    }
+  },
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დამჭირვებოდა",
+        "la": "damch'irveboda",
+        "en": "I had needed"
+      },
+      "2sg": {
+        "ka": "დაგჭირვებოდა",
+        "la": "dagch'irveboda",
+        "en": "you had needed"
+      },
+      "3sg": {
+        "ka": "დასჭირვებოდა",
+        "la": "dasch'irveboda",
+        "en": "he/she had needed"
+      },
+      "1pl": {
+        "ka": "დაგვჭირვებოდა",
+        "la": "dagvch'irveboda",
+        "en": "we had needed"
+      },
+      "2pl": {
+        "ka": "დაგჭირვებოდათ",
+        "la": "dagch'irvebodat",
+        "en": "you had needed (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დასჭირვებოდათ",
+        "la": "dasch'irvebodat",
+        "en": "they had needed"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "დამჭირდებოდა",
+        "la": "damch'irdeboda",
+        "en": "I would need"
+      },
+      "2sg": {
+        "ka": "დაგჭირდებოდა",
+        "la": "dagch'irdeboda",
+        "en": "you would need"
+      },
+      "3sg": {
+        "ka": "დასჭირდებოდა",
+        "la": "dasch'irdeboda",
+        "en": "he/she would need"
+      },
+      "1pl": {
+        "ka": "დაგვჭირდებოდა",
+        "la": "dagvch'irdeboda",
+        "en": "we would need"
+      },
+      "2pl": {
+        "ka": "დაგჭირდებოდათ",
+        "la": "dagch'irdebodat",
+        "en": "you would need (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დასჭირდებოდათ",
+        "la": "dasch'irdebodat",
+        "en": "they would need"
+      }
+    }
+  }
+}
