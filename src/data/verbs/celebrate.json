@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა აღვნიშნავ",
-        "la": "me akhla aghvnishnav",
-        "en": "I am celebrating now"
+        "ka": "აღვნიშნავდი",
+        "la": "aghvnishnavdi",
+        "en": "I celebrated (if I celebrated)"
       },
       "2sg": {
-        "ka": "შენ ახლა აღნიშნავ",
-        "la": "shen akhla aghnishnav",
-        "en": "You are celebrating now"
+        "ka": "აღნიშნავდი",
+        "la": "aghnishnavdi",
+        "en": "you celebrated (if you celebrated)"
       },
       "3sg": {
-        "ka": "ის ახლა აღნიშნავს",
-        "la": "is akhla aghnishnavs",
-        "en": "He/she is celebrating now"
+        "ka": "აღნიშნავდა",
+        "la": "aghnishnavda",
+        "en": "he/she celebrated (if he/she celebrated)"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა აღვნიშნავთ",
-        "la": "chven akhla aghvnishnavt",
-        "en": "We are celebrating now"
+        "ka": "აღვნიშნავდით",
+        "la": "aghvnishnavdit",
+        "en": "we celebrated (if we celebrated)"
       },
       "2pl": {
-        "ka": "თქვენ ახლა აღნიშნავთ",
-        "la": "tkven akhla aghnishnavt",
-        "en": "You are celebrating now (plural/formal)"
+        "ka": "აღნიშნავდით",
+        "la": "aghnishnavdit",
+        "en": "you celebrated (plural/formal, if you celebrated)"
       },
       "3pl": {
-        "ka": "ისინი ახლა აღნიშნავენ",
-        "la": "isini akhla aghnishnaven",
-        "en": "They are celebrating now"
+        "ka": "აღნიშნავდნენ",
+        "la": "aghnishnavdnen",
+        "en": "they celebrated (if they celebrated)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე აღვნიშნე",
-        "la": "me ukve aghvnishne",
-        "en": "I have already celebrated"
+        "ka": "აღვნიშნავდი",
+        "la": "aghvnishnavdi",
+        "en": "I would celebrate"
       },
       "2sg": {
-        "ka": "შენ უკვე აღნიშნე",
-        "la": "shen ukve aghnishne",
-        "en": "You have already celebrated"
+        "ka": "აღნიშნავდი",
+        "la": "aghnishnavdi",
+        "en": "you would celebrate"
       },
       "3sg": {
-        "ka": "ის უკვე აღნიშნა",
-        "la": "is ukve aghnishna",
-        "en": "He/she has already celebrated"
+        "ka": "აღნიშნავდა",
+        "la": "aghnishnavda",
+        "en": "he/she would celebrate"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე აღვნიშნეთ",
-        "la": "chven ukve aghvnishnet",
-        "en": "We have already celebrated"
+        "ka": "აღვნიშნავდით",
+        "la": "aghvnishnavdit",
+        "en": "we would celebrate"
       },
       "2pl": {
-        "ka": "თქვენ უკვე აღნიშნეთ",
-        "la": "tkven ukve aghnishnet",
-        "en": "You have already celebrated (plural/formal)"
+        "ka": "აღნიშნავდით",
+        "la": "aghnishnavdit",
+        "en": "you would celebrate (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვე აღნიშნეს",
-        "la": "isini ukve aghnishnes",
-        "en": "They have already celebrated"
+        "ka": "აღნიშნავდნენ",
+        "la": "aghnishnavdnen",
+        "en": "they would celebrate"
       }
     }
   }

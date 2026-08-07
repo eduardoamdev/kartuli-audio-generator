@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "pirobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა ვხედავ",
-        "la": "me akhla vkhedav",
-        "en": "I am seeing now"
+        "ka": "ვნახავდე",
+        "la": "vinakhavde",
+        "en": "if I saw"
       },
       "2sg": {
-        "ka": "შენ ახლა ხედავ",
-        "la": "shen akhla khedav",
-        "en": "You are seeing now"
+        "ka": "ნახავდე",
+        "la": "nakhavde",
+        "en": "if you saw"
       },
       "3sg": {
-        "ka": "ის ახლა ხედავს",
-        "la": "is akhla khedavs",
-        "en": "He/she is seeing now"
+        "ka": "ნახავდეს",
+        "la": "nakhavdes",
+        "en": "if he/she/it saw"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა ვხედავთ",
-        "la": "chven akhla vkhedavt",
-        "en": "We are seeing now"
+        "ka": "ვნახავდეთ",
+        "la": "vinakhavdet",
+        "en": "if we saw"
       },
       "2pl": {
-        "ka": "თქვენ ახლა ხედავთ",
-        "la": "tkven akhla khedavt",
-        "en": "You are seeing now (plural/formal)"
+        "ka": "ნახავდეთ",
+        "la": "nakhavdet",
+        "en": "if you saw (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი ახლა ხედავენ",
-        "la": "isini akhla khedaven",
-        "en": "They are seeing now"
+        "ka": "ნახავდნენ",
+        "la": "nakhavdnen",
+        "en": "if they saw"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი ფორმა",
+      "la": "pirobiti porma",
+      "en": "conditional would form"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე ვნახე",
-        "la": "me ukve vinakhe",
-        "en": "I have already seen"
+        "ka": "ვნახავდი",
+        "la": "vinakhavdi",
+        "en": "I would see"
       },
       "2sg": {
-        "ka": "შენ უკვე ნახე",
-        "la": "shen ukve nakhe",
-        "en": "You have already seen"
+        "ka": "ნახავდი",
+        "la": "nakhavdi",
+        "en": "you would see"
       },
       "3sg": {
-        "ka": "ის უკვე ნახა",
-        "la": "is ukve nakha",
-        "en": "He/she has already seen"
+        "ka": "ნახავდა",
+        "la": "nakhavda",
+        "en": "he/she/it would see"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე ვნახეთ",
-        "la": "chven ukve vinakhet",
-        "en": "We have already seen"
+        "ka": "ვნახავდით",
+        "la": "vinakhavdit",
+        "en": "we would see"
       },
       "2pl": {
-        "ka": "თქვენ უკვე ნახეთ",
-        "la": "tkven ukve nakhet",
-        "en": "You have already seen (plural/formal)"
+        "ka": "ნახავდით",
+        "la": "nakhavdit",
+        "en": "you would see (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვე ნახეს",
-        "la": "isini ukve nakhes",
-        "en": "They have already seen"
+        "ka": "ნახავდნენ",
+        "la": "nakhavdnen",
+        "en": "they would see"
       }
     }
   }

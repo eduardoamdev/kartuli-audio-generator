@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა ვეხმარები",
-        "la": "me akhla vekhmarebi",
-        "en": "I am helping now"
+        "ka": "დავხმარებოდი",
+        "la": "davkhmarebodi",
+        "en": "I helped (if I helped)"
       },
       "2sg": {
-        "ka": "შენ ახლა ეხმარები",
-        "la": "shen akhla ekhmarebi",
-        "en": "you are helping now"
+        "ka": "დახმარებოდი",
+        "la": "dakhmarebodi",
+        "en": "you helped (if you helped)"
       },
       "3sg": {
-        "ka": "ის ახლა ეხმარება",
-        "la": "is akhla ekhmareba",
-        "en": "he/she is helping now"
+        "ka": "დახმარებოდა",
+        "la": "dakhmareboda",
+        "en": "he/she helped (if he/she helped)"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა ვეხმარებით",
-        "la": "chven akhla vekhmarebit",
-        "en": "we are helping now"
+        "ka": "დავხმარებოდით",
+        "la": "davkhmarebodit",
+        "en": "we helped (if we helped)"
       },
       "2pl": {
-        "ka": "თქვენ ახლა ეხმარებით",
-        "la": "tkven akhla ekhmarebit",
-        "en": "you are helping now (plural/formal)"
+        "ka": "დახმარებოდით",
+        "la": "dakhmarebodit",
+        "en": "you helped (plural/formal, if you helped)"
       },
       "3pl": {
-        "ka": "ისინი ახლა ეხმარებიან",
-        "la": "isini akhla ekhmarebian",
-        "en": "they are helping now"
+        "ka": "დახმარებოდნენ",
+        "la": "dakhmarebodnen",
+        "en": "they helped (if they helped)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე დავეხმარე",
-        "la": "me ukve davekhmare",
-        "en": "I have already helped"
+        "ka": "დავეხმარებოდი",
+        "la": "davekhmarebodi",
+        "en": "I would help"
       },
       "2sg": {
-        "ka": "შენ უკვე დაეხმარე",
-        "la": "shen ukve daekhmare",
-        "en": "you have already helped"
+        "ka": "დაეხმარებოდი",
+        "la": "daekhmarebodi",
+        "en": "you would help"
       },
       "3sg": {
-        "ka": "ის უკვე დაეხმარა",
-        "la": "is ukve daekhmara",
-        "en": "he/she has already helped"
+        "ka": "დაეხმარებოდა",
+        "la": "daekhmareboda",
+        "en": "he/she would help"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე დავეხმარეთ",
-        "la": "chven ukve davekhmaret",
-        "en": "we have already helped"
+        "ka": "დავეხმარებოდით",
+        "la": "davekhmarebodit",
+        "en": "we would help"
       },
       "2pl": {
-        "ka": "თქვენ უკვე დაეხმარეთ",
-        "la": "tkven ukve daekhmaret",
-        "en": "you have already helped (plural/formal)"
+        "ka": "დაეხმარებოდით",
+        "la": "daekhmarebodit",
+        "en": "you would help (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვე დაეხმარნენ",
-        "la": "isini ukve daekhmarnen",
-        "en": "they have already helped"
+        "ka": "დაეხმარებოდნენ",
+        "la": "daekhmarebodnen",
+        "en": "they would help"
       }
     }
   }

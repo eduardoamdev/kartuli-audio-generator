@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა მოვდივარ",
-        "la": "me akhla movdivar",
-        "en": "I am coming now"
+        "ka": "მოვსულიყავი",
+        "la": "movsuliqavi",
+        "en": "I came (if I came)"
       },
       "2sg": {
-        "ka": "შენ ახლა მოდიხარ",
-        "la": "shen akhla modikhar",
-        "en": "You are coming now"
+        "ka": "მოსულიყავი",
+        "la": "mosuliqavi",
+        "en": "you came (if you came)"
       },
       "3sg": {
-        "ka": "ის ახლა მოდის",
-        "la": "is akhla modis",
-        "en": "He/she is coming now"
+        "ka": "მოსულიყო",
+        "la": "mosuliqo",
+        "en": "he/she came (if he/she came)"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა მოვდივართ",
-        "la": "chven akhla movdivart",
-        "en": "We are coming now"
+        "ka": "მოვსულიყავით",
+        "la": "movsuliqavit",
+        "en": "we came (if we came)"
       },
       "2pl": {
-        "ka": "თქვენ ახლა მოდიხართ",
-        "la": "tkven akhla modikhart",
-        "en": "You are coming now (plural/formal)"
+        "ka": "მოსულიყავით",
+        "la": "mosuliqavit",
+        "en": "you came (plural/formal, if you came)"
       },
       "3pl": {
-        "ka": "ისინი ახლა მოდიან",
-        "la": "isini akhla modian",
-        "en": "They are coming now"
+        "ka": "მოსულიყვნენ",
+        "la": "mosuliqvnen",
+        "en": "they came (if they came)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე მოვედი",
-        "la": "me ukve movedi",
-        "en": "I have already come"
+        "ka": "მოვიდოდი",
+        "la": "movidodi",
+        "en": "I would come"
       },
       "2sg": {
-        "ka": "შენ უკვე მოხვედი",
-        "la": "shen ukve mokhvedi",
-        "en": "You have already come"
+        "ka": "მოხვიდოდი",
+        "la": "mokhvidodi",
+        "en": "you would come"
       },
       "3sg": {
-        "ka": "ის უკვე მოვიდა",
-        "la": "is ukve movida",
-        "en": "He/she has already come"
+        "ka": "მოვიდოდა",
+        "la": "movidoda",
+        "en": "he/she would come"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე მოვედით",
-        "la": "chven ukve movedit",
-        "en": "We have already come"
+        "ka": "მოვიდოდით",
+        "la": "movidodit",
+        "en": "we would come"
       },
       "2pl": {
-        "ka": "თქვენ უკვე მოხვედით",
-        "la": "tkven ukve mokhvedit",
-        "en": "You have already come (plural/formal)"
+        "ka": "მოხვიდოდით",
+        "la": "mokhvidodit",
+        "en": "you would come (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვე მოვიდნენ",
-        "la": "isini ukve movidnen",
-        "en": "They have already come"
+        "ka": "მოვიდოდნენ",
+        "la": "movidodnen",
+        "en": "they would come"
       }
     }
   }

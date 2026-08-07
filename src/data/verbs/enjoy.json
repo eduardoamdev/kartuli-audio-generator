@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა ვსიამოვნობ",
-        "la": "me akhla vsiamovneb",
-        "en": "I am enjoying"
+        "ka": "მესიამოვნებოდა",
+        "la": "mesiamovnebaoda",
+        "en": "I enjoyed (if I enjoyed)"
       },
       "2sg": {
-        "ka": "შენ ახლა სიამოვნობ",
-        "la": "shen akhla siamovneb",
-        "en": "you are enjoying"
+        "ka": "შეგესიამოვნებოდა",
+        "la": "shegesiambovnebaoda",
+        "en": "you enjoyed (if you enjoyed)"
       },
       "3sg": {
-        "ka": "ის ახლა სიამოვნობს",
-        "la": "is akhla siamovnebs",
-        "en": "he/she is enjoying"
+        "ka": "ესიამოვნებოდა",
+        "la": "esiameovnebaoda",
+        "en": "he/she enjoyed (if he/she enjoyed)"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა ვსიამოვნობთ",
-        "la": "chven akhla vsiamovnebt",
-        "en": "we are enjoying"
+        "ka": "გვსიამოვნებოდა",
+        "la": "gvsiamovnebaoda",
+        "en": "we enjoyed (if we enjoyed)"
       },
       "2pl": {
-        "ka": "თქვენ ახლა სიამოვნობთ",
-        "la": "tkven akhla siamovnebt",
-        "en": "you are enjoying (plural/formal)"
+        "ka": "შეგესიამოვნებოდათ",
+        "la": "shegesiameovnebodit",
+        "en": "you enjoyed (plural/formal, if you enjoyed)"
       },
       "3pl": {
-        "ka": "ისინი ახლა სიამოვნობენ",
-        "la": "isini akhla siamovneben",
-        "en": "they are enjoying"
+        "ka": "ესიამოვნებოდათ",
+        "la": "esiameovnebodnen",
+        "en": "they enjoyed (if they enjoyed)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე ვისიამოვნე",
-        "la": "me ukve visiamovne",
-        "en": "I have enjoyed"
+        "ka": "ვისიამოვნებდი",
+        "la": "visiamovnebd i",
+        "en": "I would enjoy"
       },
       "2sg": {
-        "ka": "შენ უკვე ისიამოვნე",
-        "la": "shen ukve isiamovne",
-        "en": "you have enjoyed"
+        "ka": "ისიამოვნებდი",
+        "la": "isiamovnebd i",
+        "en": "you would enjoy"
       },
       "3sg": {
-        "ka": "მან უკვე ისიამოვნა",
-        "la": "man ukve isiamovna",
-        "en": "he/she has enjoyed"
+        "ka": "ისიამოვნებდა",
+        "la": "isiamovnebd a",
+        "en": "he/she would enjoy"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე ვისიამოვნეთ",
-        "la": "chven ukve visiamovnet",
-        "en": "we have enjoyed"
+        "ka": "ვისიამოვნებდით",
+        "la": "visiamovnebd it",
+        "en": "we would enjoy"
       },
       "2pl": {
-        "ka": "თქვენ უკვე ისიამოვნეთ",
-        "la": "tkven ukve isiamovnet",
-        "en": "you have enjoyed (plural/formal)"
+        "ka": "ისიამოვნებდით",
+        "la": "isiamovnebd it",
+        "en": "you would enjoy (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ უკვე ისიამოვნეს",
-        "la": "mat ukve isiamovnes",
-        "en": "they have enjoyed"
+        "ka": "ისიამოვნებდნენ",
+        "la": "isiamovnebdnen",
+        "en": "they would enjoy"
       }
     }
   }

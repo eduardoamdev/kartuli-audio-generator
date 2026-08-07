@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "ats'mq'o mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti ts'arsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა მივდივარ",
-        "la": "me akhla mivdivar",
-        "en": "I am going now"
+        "ka": "წავსულიყავი",
+        "la": "ts'avsuliqavi",
+        "en": "I went (if I went)"
       },
       "2sg": {
-        "ka": "შენ ახლა მიდიხარ",
-        "la": "shen akhla midikhar",
-        "en": "You are going now"
+        "ka": "წასულიყავი",
+        "la": "ts'asuliqavi",
+        "en": "you went (if you went)"
       },
       "3sg": {
-        "ka": "ის ახლა მიდის",
-        "la": "is akhla midis",
-        "en": "He/she is going now"
+        "ka": "წასულიყო",
+        "la": "ts'asuliqo",
+        "en": "he/she went (if he/she went)"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა მივდივართ",
-        "la": "chven akhla mivdivart",
-        "en": "We are going now"
+        "ka": "წავსულიყავით",
+        "la": "ts'avsuliqavit",
+        "en": "we went (if we went)"
       },
       "2pl": {
-        "ka": "თქვენ ახლა მიდიხართ",
-        "la": "tkven akhla midikhart",
-        "en": "You are going now (plural/formal)"
+        "ka": "წასულიყავით",
+        "la": "ts'asuliqavit",
+        "en": "you went (plural/formal, if you went)"
       },
       "3pl": {
-        "ka": "ისინი ახლა მიდიან",
-        "la": "isini akhla midian",
-        "en": "They are going now"
+        "ka": "წასულიყვნენ",
+        "la": "ts'asuliqvnen",
+        "en": "they went (if they went)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "ats'mq'o srulq'opili",
-      "en": "present perfect context"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე წავედი",
-        "la": "me ukve ts'avedi",
-        "en": "I have already gone"
+        "ka": "წავიდოდი",
+        "la": "ts'avidodi",
+        "en": "I would go"
       },
       "2sg": {
-        "ka": "შენ უკვე წახვედი",
-        "la": "shen ukve ts'akhvedi",
-        "en": "You have already gone"
+        "ka": "წახვიდოდი",
+        "la": "ts'akhvidodi",
+        "en": "you would go"
       },
       "3sg": {
-        "ka": "ის უკვე წავიდა",
-        "la": "is ukve ts'avida",
-        "en": "He/she has already gone"
+        "ka": "წავიდოდა",
+        "la": "ts'avidoda",
+        "en": "he/she would go"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე წავედით",
-        "la": "chven ukve ts'avedit",
-        "en": "We have already gone"
+        "ka": "წავიდოდით",
+        "la": "ts'avidodit",
+        "en": "we would go"
       },
       "2pl": {
-        "ka": "თქვენ უკვე წახვედით",
-        "la": "tkven ukve ts'akhvedit",
-        "en": "You have already gone (plural/formal)"
+        "ka": "წახვიდოდით",
+        "la": "ts'akhvidodit",
+        "en": "you would go (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვე წავიდნენ",
-        "la": "isini ukve ts'avidnen",
-        "en": "They have already gone"
+        "ka": "წავიდოდნენ",
+        "la": "ts'avidodnen",
+        "en": "they would go"
       }
     }
   }

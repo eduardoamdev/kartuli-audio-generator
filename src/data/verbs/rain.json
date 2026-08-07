@@ -55,31 +55,31 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous"
+      "ka": "პირობითი წარსული",
+      "la": "pirobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "3sg": {
-        "ka": "ახლა წვიმს",
-        "la": "akhla tsvims",
-        "en": "it is raining"
+        "ka": "იწვიმებდა",
+        "la": "itsvimebda",
+        "en": "if it rained"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect"
+      "ka": "პირობითი ფორმა",
+      "la": "pirobiti porma",
+      "en": "conditional would form"
     },
     "conjugation": {
       "3sg": {
-        "ka": "უკვე იწვიმა",
-        "la": "ukve itsvima",
-        "en": "it has rained"
+        "ka": "იწვიმებდა",
+        "la": "itsvimebda",
+        "en": "it would rain"
       }
     }
   }

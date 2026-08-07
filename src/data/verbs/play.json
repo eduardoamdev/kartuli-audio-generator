@@ -14,129 +14,197 @@
     }
   },
   "present": {
-    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "name": {
+      "ka": "აწმყო",
+      "la": "atsmqo",
+      "en": "present"
+    },
     "conjugation": {
-      "1sg": { "ka": "ვთამაშობ", "la": "vtamashob", "en": "I play" },
-      "2sg": { "ka": "თამაშობ", "la": "tamashob", "en": "you play" },
-      "3sg": { "ka": "თამაშობს", "la": "tamashobs", "en": "he/she/it plays" },
-      "1pl": { "ka": "ვთამაშობთ", "la": "vtamashobt", "en": "we play" },
+      "1sg": {
+        "ka": "ვთამაშობ",
+        "la": "vtamashob",
+        "en": "I play"
+      },
+      "2sg": {
+        "ka": "თამაშობ",
+        "la": "tamashob",
+        "en": "you play"
+      },
+      "3sg": {
+        "ka": "თამაშობს",
+        "la": "tamashobs",
+        "en": "he/she/it plays"
+      },
+      "1pl": {
+        "ka": "ვთამაშობთ",
+        "la": "vtamashobt",
+        "en": "we play"
+      },
       "2pl": {
         "ka": "თამაშობთ",
         "la": "tamashobt",
         "en": "you play (plural/formal)"
       },
-      "3pl": { "ka": "თამაშობენ", "la": "tamashoben", "en": "they play" }
+      "3pl": {
+        "ka": "თამაშობენ",
+        "la": "tamashoben",
+        "en": "they play"
+      }
     }
   },
   "past": {
-    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "name": {
+      "ka": "წარსული",
+      "la": "tsarsuli",
+      "en": "past"
+    },
     "conjugation": {
-      "1sg": { "ka": "ვითამაშე", "la": "vitamashe", "en": "I played" },
-      "2sg": { "ka": "ითამაშე", "la": "itamashe", "en": "you played" },
-      "3sg": { "ka": "ითამაშა", "la": "itamasha", "en": "he/she/it played" },
-      "1pl": { "ka": "ვითამაშეთ", "la": "vitamashet", "en": "we played" },
+      "1sg": {
+        "ka": "ვითამაშე",
+        "la": "vitamashe",
+        "en": "I played"
+      },
+      "2sg": {
+        "ka": "ითამაშე",
+        "la": "itamashe",
+        "en": "you played"
+      },
+      "3sg": {
+        "ka": "ითამაშა",
+        "la": "itamasha",
+        "en": "he/she/it played"
+      },
+      "1pl": {
+        "ka": "ვითამაშეთ",
+        "la": "vitamashet",
+        "en": "we played"
+      },
       "2pl": {
         "ka": "ითამაშეთ",
         "la": "itamashet",
         "en": "you played (plural/formal)"
       },
-      "3pl": { "ka": "ითამაშეს", "la": "itamashe s", "en": "they played" }
+      "3pl": {
+        "ka": "ითამაშეს",
+        "la": "itamashe s",
+        "en": "they played"
+      }
     }
   },
   "future": {
-    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "name": {
+      "ka": "მომავალი",
+      "la": "momavali",
+      "en": "future"
+    },
     "conjugation": {
-      "1sg": { "ka": "ვითამაშებ", "la": "vitamasheb", "en": "I will play" },
-      "2sg": { "ka": "ითამაშებ", "la": "itamasheb", "en": "you will play" },
+      "1sg": {
+        "ka": "ვითამაშებ",
+        "la": "vitamasheb",
+        "en": "I will play"
+      },
+      "2sg": {
+        "ka": "ითამაშებ",
+        "la": "itamasheb",
+        "en": "you will play"
+      },
       "3sg": {
         "ka": "ითამაშებს",
         "la": "itamashebs",
         "en": "he/she/it will play"
       },
-      "1pl": { "ka": "ვითამაშებთ", "la": "vitamashebt", "en": "we will play" },
+      "1pl": {
+        "ka": "ვითამაშებთ",
+        "la": "vitamashebt",
+        "en": "we will play"
+      },
       "2pl": {
         "ka": "ითამაშებთ",
         "la": "itamashebt",
         "en": "you will play (plural/formal)"
       },
-      "3pl": { "ka": "ითამაშებენ", "la": "itamasheben", "en": "they will play" }
-    }
-  },
-  "present_continuous": {
-    "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo martskhene",
-      "en": "present continuous context"
-    },
-    "conjugation": {
-      "1sg": {
-        "ka": "მე ახლა ვთამაშობ",
-        "la": "me akhla vtamashob",
-        "en": "I am playing now"
-      },
-      "2sg": {
-        "ka": "შენ ახლა თამაშობ",
-        "la": "shen akhla tamashob",
-        "en": "You are playing now"
-      },
-      "3sg": {
-        "ka": "ის ახლა თამაშობს",
-        "la": "is akhla tamashobs",
-        "en": "He/she is playing now"
-      },
-      "1pl": {
-        "ka": "ჩვენ ახლა ვთამაშობთ",
-        "la": "chven akhla vtamashobt",
-        "en": "We are playing now"
-      },
-      "2pl": {
-        "ka": "თქვენ ახლა თამაშობთ",
-        "la": "tkven akhla tamashobt",
-        "en": "You are playing now (plural/formal)"
-      },
       "3pl": {
-        "ka": "ისინი ახლა თამაშობენ",
-        "la": "isini akhla tamashoben",
-        "en": "They are playing now"
+        "ka": "ითამაშებენ",
+        "la": "itamasheben",
+        "en": "they will play"
       }
     }
   },
-  "present_perfect": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი წარსული",
+      "la": "pirobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე ვითამაშე",
-        "la": "me ukve vitamashe",
-        "en": "I have already played"
+        "ka": "ვითამაშებდე",
+        "la": "vitamashebde",
+        "en": "if I played"
       },
       "2sg": {
-        "ka": "შენ უკვე ითამაშე",
-        "la": "shen ukve itamashe",
-        "en": "You have already played"
+        "ka": "ითამაშებდე",
+        "la": "itamashebde",
+        "en": "if you played"
       },
       "3sg": {
-        "ka": "ის უკვე ითამაშა",
-        "la": "is ukve itamasha",
-        "en": "He/she has already played"
+        "ka": "ითამაშებდეს",
+        "la": "itamashebdes",
+        "en": "if he/she/it played"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე ვითამაშეთ",
-        "la": "chven ukve vitamashet",
-        "en": "We have already played"
+        "ka": "ვითამაშებდეთ",
+        "la": "vitamashebdet",
+        "en": "if we played"
       },
       "2pl": {
-        "ka": "თქვენ უკვე ითამაშეთ",
-        "la": "tkven ukve itamashet",
-        "en": "You have already played (plural/formal)"
+        "ka": "ითამაშებდეთ",
+        "la": "itamashebdet",
+        "en": "if you played (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი უკვე ითამაშეს",
-        "la": "isini ukve itamashe s",
-        "en": "They have already played"
+        "ka": "ითამაშებდნენ",
+        "la": "itamashebdnen",
+        "en": "if they played"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი ფორმა",
+      "la": "pirobiti porma",
+      "en": "conditional would form"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვითამაშებდი",
+        "la": "vitamashebdi",
+        "en": "I would play"
+      },
+      "2sg": {
+        "ka": "ითამაშებდი",
+        "la": "itamashebdi",
+        "en": "you would play"
+      },
+      "3sg": {
+        "ka": "ითამაშებდა",
+        "la": "itamashebda",
+        "en": "he/she/it would play"
+      },
+      "1pl": {
+        "ka": "ვითამაშებდით",
+        "la": "vitamashebdith",
+        "en": "we would play"
+      },
+      "2pl": {
+        "ka": "ითამაშებდით",
+        "la": "itamashebdith",
+        "en": "you would play (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ითამაშებდნენ",
+        "la": "itamashebdnen",
+        "en": "they would play"
       }
     }
   }

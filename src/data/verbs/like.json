@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "pirobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა მომწონს",
-        "la": "me akhla momts’ons",
-        "en": "I like now"
+        "ka": "მომწონებოდა",
+        "la": "momts’onoda",
+        "en": "if I liked"
       },
       "2sg": {
-        "ka": "შენ ახლა მოგწონს",
-        "la": "shen akhla mogts’ons",
-        "en": "you like now"
+        "ka": "მოგწონებოდა",
+        "la": "mogts’onoda",
+        "en": "if you liked"
       },
       "3sg": {
-        "ka": "მას ახლა მოსწონს",
-        "la": "mas akhla mosts’ons",
-        "en": "he/she likes now"
+        "ka": "მოსწონებოდა",
+        "la": "mosts’onoda",
+        "en": "if he/she liked"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა მოგვწონს",
-        "la": "chven akhla mogvts’ons",
-        "en": "we like now"
+        "ka": "მოგვწონებოდა",
+        "la": "mogvts’onoda",
+        "en": "if we liked"
       },
       "2pl": {
-        "ka": "თქვენ ახლა მოგწონთ",
-        "la": "tkven akhla mogts’ont",
-        "en": "you like now (plural/formal)"
+        "ka": "მოგწონებოდათ",
+        "la": "mogts’onebodat",
+        "en": "if you liked (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ ახლა მოსწონთ",
-        "la": "mat akhla mosts’ont",
-        "en": "they like now"
+        "ka": "მოსწონებოდათ",
+        "la": "mosts’onebodat",
+        "en": "if they liked"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი ფორმა",
+      "la": "pirobiti porma",
+      "en": "conditional would form"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე უკვე მომეწონა",
-        "la": "me ukve mometsona",
-        "en": "I have already liked it"
+        "ka": "მომეწონებოდა",
+        "la": "mometson eboda",
+        "en": "I would like"
       },
       "2sg": {
-        "ka": "შენ უკვე მოგეწონა",
-        "la": "shen ukve mogetsona",
-        "en": "you have already liked it"
+        "ka": "მოგეწონებოდა",
+        "la": "mogetson eboda",
+        "en": "you would like"
       },
       "3sg": {
-        "ka": "მას უკვე მოეწონა",
-        "la": "mas ukve moetsona",
-        "en": "he/she has already liked it"
+        "ka": "მოეწონებოდა",
+        "la": "moetson eboda",
+        "en": "he/she would like"
       },
       "1pl": {
-        "ka": "ჩვენ უკვე მოგვეწონა",
-        "la": "chven ukve mogvetsona",
-        "en": "we have already liked it"
+        "ka": "მოგვეწონებოდა",
+        "la": "mogvetson eboda",
+        "en": "we would like"
       },
       "2pl": {
-        "ka": "თქვენ უკვე მოგეწონათ",
-        "la": "tkven ukve mogetsonat",
-        "en": "you have already liked it (plural/formal)"
+        "ka": "მოგეწონებოდათ",
+        "la": "mogetson e bodat",
+        "en": "you would like (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ უკვე მოეწონათ",
-        "la": "mat ukve moetsonat",
-        "en": "they have already liked it"
+        "ka": "მოეწონებოდათ",
+        "la": "moetson e bodat",
+        "en": "they would like"
       }
     }
   }

@@ -125,86 +125,86 @@
       },
       "3pl": {
         "ka": "დასხდებიან",
-        "la": "das khdebian",
+        "la": "daskhdebian",
         "en": "they will sit down"
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "pirobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა ვზივარ",
-        "la": "me akhla vzi̇var",
-        "en": "I am sitting now"
+        "ka": "ვიჯდე",
+        "la": "vijde",
+        "en": "if I sat"
       },
       "2sg": {
-        "ka": "შენ ახლა ზიხარ",
-        "la": "shen akhla zikhar",
-        "en": "You are sitting now"
+        "ka": "იჯდე",
+        "la": "ijde",
+        "en": "if you sat"
       },
       "3sg": {
-        "ka": "ის ახლა ზის",
-        "la": "is akhla zis",
-        "en": "He/she is sitting now"
+        "ka": "იჯდეს",
+        "la": "ijdes",
+        "en": "if he/she/it sat"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა ვსხედვართ",
-        "la": "chven akhla vskhedvart",
-        "en": "We are sitting now"
+        "ka": "ვისხდეთ",
+        "la": "viskhdet",
+        "en": "if we sat"
       },
       "2pl": {
-        "ka": "თქვენ ახლა სხედხართ",
-        "la": "tkven akhla skhedkhart",
-        "en": "You are sitting now (plural/formal)"
+        "ka": "ისხდეთ",
+        "la": "iskhdet",
+        "en": "if you sat (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი ახლა სხედან",
-        "la": "isini akhla skhedan",
-        "en": "They are sitting now"
+        "ka": "ისხდნენ",
+        "la": "iskhdnen",
+        "en": "if they sat"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი ფორმა",
+      "la": "pirobiti porma",
+      "en": "conditional would form"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე მჯდომია",
-        "la": "me mjdomia",
-        "en": "I have sat / I have been sitting"
+        "ka": "ვიჯდებოდი",
+        "la": "vijdebodi",
+        "en": "I would sit"
       },
       "2sg": {
-        "ka": "შენ მჯდარხარ",
-        "la": "shen mjdarkhar",
-        "en": "You have sat / been sitting"
+        "ka": "იჯდებოდი",
+        "la": "ijdebodi",
+        "en": "you would sit"
       },
       "3sg": {
-        "ka": "მას მჯდარა",
-        "la": "mas mjdara",
-        "en": "He/she has sat / been sitting"
+        "ka": "იჯდებოდა",
+        "la": "ijdeboda",
+        "en": "he/she/it would sit"
       },
       "1pl": {
-        "ka": "ჩვენ მსხდარვართ",
-        "la": "chven mskhdarvart",
-        "en": "We have sat / been sitting"
+        "ka": "ვისხდებოდით",
+        "la": "viskhdebodit",
+        "en": "we would sit"
       },
       "2pl": {
-        "ka": "თქვენ მსხდარხართ",
-        "la": "tkven mskhdarkhart",
-        "en": "You have sat (plural/formal)"
+        "ka": "ისხდებოდით",
+        "la": "iskhdebodit",
+        "en": "you would sit (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ მსხდარან",
-        "la": "mat mskhdaran",
-        "en": "They have sat / been sitting"
+        "ka": "ისხდებოდნენ",
+        "la": "iskhdebodnen",
+        "en": "they would sit"
       }
     }
   }

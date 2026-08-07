@@ -98,81 +98,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "ახლა ვსწავლობ",
-        "la": "akhla vstsavlob",
-        "en": "I am studying now"
+        "ka": "მესწავლა",
+        "la": "mestsavla",
+        "en": "I studied (if I studied)"
       },
       "2sg": {
-        "ka": "ახლა სწავლობ",
-        "la": "akhla stsavlob",
-        "en": "you are studying now"
+        "ka": "გესწავლა",
+        "la": "gestsavla",
+        "en": "you studied (if you studied)"
       },
       "3sg": {
-        "ka": "ახლა სწავლობს",
-        "la": "akhla stsavlobs",
-        "en": "he/she is studying now"
+        "ka": "ესწავლა",
+        "la": "estsavla",
+        "en": "he/she studied (if he/she studied)"
       },
       "1pl": {
-        "ka": "ახლა ვსწავლობთ",
-        "la": "akhla vstsavlobt",
-        "en": "we are studying now"
+        "ka": "გვესწავლა",
+        "la": "gvestsavla",
+        "en": "we studied (if we studied)"
       },
       "2pl": {
-        "ka": "ახლა სწავლობთ",
-        "la": "akhla stsavlobt",
-        "en": "you are studying now (plural/formal)"
+        "ka": "გესწავლათ",
+        "la": "gestsavlat",
+        "en": "you studied (plural/formal, if you studied)"
       },
       "3pl": {
-        "ka": "ახლა სწავლობენ",
-        "la": "akhla stsavloben",
-        "en": "they are studying now"
+        "ka": "ესწავლათ",
+        "la": "estsavlat",
+        "en": "they studied (if they studied)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მისწავლია",
-        "la": "mistsavlia",
-        "en": "I have studied"
+        "ka": "ვისწავლიდი",
+        "la": "vistsavlidi",
+        "en": "I would study"
       },
       "2sg": {
-        "ka": "გისწავლია",
-        "la": "gistsavlia",
-        "en": "you have studied"
+        "ka": "ისწავლიდი",
+        "la": "istsavlidi",
+        "en": "you would study"
       },
       "3sg": {
-        "ka": "უსწავლია",
-        "la": "ustsavlia",
-        "en": "he/she has studied"
+        "ka": "ისწავლიდა",
+        "la": "istsavlida",
+        "en": "he/she would study"
       },
       "1pl": {
-        "ka": "გვესწავლია",
-        "la": "gvestsavlia",
-        "en": "we have studied"
+        "ka": "ვისწავლიდით",
+        "la": "vistsavlidit",
+        "en": "we would study"
       },
       "2pl": {
-        "ka": "გისწავლიათ",
-        "la": "gistsavliat",
-        "en": "you have studied (plural/formal)"
+        "ka": "ისწავლიდით",
+        "la": "istsavlidit",
+        "en": "you would study (plural/formal)"
       },
       "3pl": {
-        "ka": "უსწავლიათ",
-        "la": "ustsavliat",
-        "en": "they have studied"
+        "ka": "ისწავლიდნენ",
+        "la": "istsavlidnen",
+        "en": "they would study"
       }
     }
   }

@@ -74,81 +74,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "p'irobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "ახლა მაქვს",
-        "la": "akhla makvs",
-        "en": "I have now"
+        "ka": "მქონოდა",
+        "la": "mkonda",
+        "en": "I had (if I had)"
       },
       "2sg": {
-        "ka": "ახლა გაქვს",
-        "la": "akhla gakvs",
-        "en": "you have now"
+        "ka": "გქონოდა",
+        "la": "gkonda",
+        "en": "you had (if you had)"
       },
       "3sg": {
-        "ka": "ახლა აქვს",
-        "la": "akhla akvs",
-        "en": "he/she has now"
+        "ka": "ჰქონოდა",
+        "la": "hkonda",
+        "en": "he/she had (if he/she had)"
       },
       "1pl": {
-        "ka": "ახლა გვაქვს",
-        "la": "akhla gvakvs",
-        "en": "we have now"
+        "ka": "გვქონოდა",
+        "la": "gvkonda",
+        "en": "we had (if we had)"
       },
       "2pl": {
-        "ka": "ახლა გაქვთ",
-        "la": "akhla gakvt",
-        "en": "you have now (plural/formal)"
+        "ka": "გქონოდათ",
+        "la": "gkondat",
+        "en": "you had (plural/formal, if you had)"
       },
       "3pl": {
-        "ka": "ახლა აქვთ",
-        "la": "akhla akvt",
-        "en": "they have now"
+        "ka": "ჰქონოდათ",
+        "la": "hkondat",
+        "en": "they had (if they had)"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი მომავალი",
+      "la": "p'irobiti momavali",
+      "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მქონია",
-        "la": "mkonia",
-        "en": "I have had"
+        "ka": "მექნებოდა",
+        "la": "mekneboda",
+        "en": "I would have"
       },
       "2sg": {
-        "ka": "გქონია",
-        "la": "gkonia",
-        "en": "you have had"
+        "ka": "გექნებოდა",
+        "la": "gekneboda",
+        "en": "you would have"
       },
       "3sg": {
-        "ka": "ჰქონია",
-        "la": "hkonia",
-        "en": "he/she has had"
+        "ka": "ექნებოდა",
+        "la": "ekneboda",
+        "en": "he/she would have"
       },
       "1pl": {
-        "ka": "გვქონია",
-        "la": "gvkonia",
-        "en": "we have had"
+        "ka": "გვექნებოდა",
+        "la": "gveqneboda",
+        "en": "we would have"
       },
       "2pl": {
-        "ka": "გქონიათ",
-        "la": "gkoniat",
-        "en": "you have had (plural/formal)"
+        "ka": "გექნებოდათ",
+        "la": "geknebodat",
+        "en": "you would have (plural/formal)"
       },
       "3pl": {
-        "ka": "ჰქონიათ",
-        "la": "hkoniat",
-        "en": "they have had"
+        "ka": "ექნებოდათ",
+        "la": "eknebodat",
+        "en": "they would have"
       }
     }
   }

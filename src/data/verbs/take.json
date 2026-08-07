@@ -130,81 +130,81 @@
       }
     }
   },
-  "present_continuous": {
+  "conditional_past": {
     "name": {
-      "ka": "აწმყო მიმდინარე",
-      "la": "atsmqo mimdinare",
-      "en": "present continuous context"
+      "ka": "პირობითი წარსული",
+      "la": "pirobiti tsarsuli",
+      "en": "conditional past"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ახლა ვიღებ",
-        "la": "me akhla viɣeb",
-        "en": "I am taking now"
+        "ka": "ავიღებდე",
+        "la": "aviɣebde",
+        "en": "if I took"
       },
       "2sg": {
-        "ka": "შენ ახლა იღებ",
-        "la": "shen akhla iɣeb",
-        "en": "You are taking now"
+        "ka": "აიღებდე",
+        "la": "aiɣebde",
+        "en": "if you took"
       },
       "3sg": {
-        "ka": "ის ახლა იღებს",
-        "la": "is akhla iɣebs",
-        "en": "He/she is taking now"
+        "ka": "აიღებდეს",
+        "la": "aiɣebdes",
+        "en": "if he/she/it took"
       },
       "1pl": {
-        "ka": "ჩვენ ახლა ვიღებთ",
-        "la": "chven akhla viɣebt",
-        "en": "We are taking now"
+        "ka": "ავიღებდეთ",
+        "la": "aviɣebdet",
+        "en": "if we took"
       },
       "2pl": {
-        "ka": "თქვენ ახლა იღებთ",
-        "la": "tkven akhla iɣebt",
-        "en": "You are taking now (plural/formal)"
+        "ka": "აიღებდეთ",
+        "la": "aiɣebdet",
+        "en": "if you took (plural/formal)"
       },
       "3pl": {
-        "ka": "ისინი ახლა იღებენ",
-        "la": "isini akhla iɣeben",
-        "en": "They are taking now"
+        "ka": "აიღებდნენ",
+        "la": "aiɣebdnen",
+        "en": "if they took"
       }
     }
   },
-  "present_perfect": {
+  "conditional_would": {
     "name": {
-      "ka": "აწმყო სრულყოფილი",
-      "la": "atsmqo srulqopili",
-      "en": "present perfect context"
+      "ka": "პირობითი ფორმა",
+      "la": "pirobiti porma",
+      "en": "conditional would form"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე ამიღია",
-        "la": "me amiɣia",
-        "en": "I have taken"
+        "ka": "ავიღებდი",
+        "la": "aviɣebdi",
+        "en": "I would take"
       },
       "2sg": {
-        "ka": "შენ აგიღია",
-        "la": "shen agiɣia",
-        "en": "You have taken"
+        "ka": "აიღებდი",
+        "la": "aiɣebdi",
+        "en": "you would take"
       },
       "3sg": {
-        "ka": "მას აუღია",
-        "la": "mas auɣia",
-        "en": "He/she has taken"
+        "ka": "აიღებდა",
+        "la": "aiɣebda",
+        "en": "he/she/it would take"
       },
       "1pl": {
-        "ka": "ჩვენ აგვიღია",
-        "la": "chven agviɣia",
-        "en": "We have taken"
+        "ka": "ავიღებდით",
+        "la": "aviɣebdit",
+        "en": "we would take"
       },
       "2pl": {
-        "ka": "თქვენ აგიღიათ",
-        "la": "tkven agiɣiat",
-        "en": "You have taken (plural/formal)"
+        "ka": "აიღებდით",
+        "la": "aiɣebdit",
+        "en": "you would take (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ აუღიათ",
-        "la": "mat auɣiat",
-        "en": "They have taken"
+        "ka": "აიღებდნენ",
+        "la": "aiɣebdnen",
+        "en": "they would take"
       }
     }
   }
