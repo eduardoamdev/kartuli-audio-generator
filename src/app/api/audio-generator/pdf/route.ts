@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { generatePDF } from "@/services/generatePDF";
+import { generateAudioGeneratorPDF } from "@/services/generateAudioGeneratorPDF";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const pdfFile = await generatePDF(body);
+    const pdfFile = await generateAudioGeneratorPDF(body);
 
     return new NextResponse(pdfFile, {
       status: 200,

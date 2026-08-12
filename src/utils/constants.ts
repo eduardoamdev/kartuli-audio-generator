@@ -19,3 +19,12 @@ export const NON_CLICKABLE_BUTTON_SURFACES = [
 ] as const;
 
 export const BUTTON_VARIANTS = ["blue", "purple", "teal"] as const;
+
+export const PERSON_LABELS: Record<string, string> = {
+  "1sg": "1st Person Singular",
+  "2sg": "2nd Person Singular",
+  "3sg": "3rd Person Singular",
+  "1pl": "1st Person Plural",
+  "2pl": "2nd Person Plural (Formal)",
+  "3pl": "3rd Person Plural",
+};

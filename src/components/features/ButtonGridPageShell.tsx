@@ -1,4 +1,7 @@
+"use client";
+
 import Button from "@/components/ui/Button";
+import { handleVerbPdfGeneratorClick } from "@/app/grammar-library/verbs/actions/handleVerbPdfGeneratorClick";
 
 import type { ReactNode } from "react";
 
@@ -9,6 +12,8 @@ type ButtonGridPageShellProps = {
   showBackButton?: boolean;
   backHref?: string;
   backLabel?: string;
+  showVerbPdfGeneratorButton?: boolean;
+  verbName?: string;
 };
 
 export default function ButtonGridPageShell({
@@ -18,6 +23,8 @@ export default function ButtonGridPageShell({
   showBackButton = false,
   backHref = "/grammar-library/selector",
   backLabel = "Back",
+  showVerbPdfGeneratorButton = false,
+  verbName,
 }: ButtonGridPageShellProps) {
   return (
     <main className="relative flex flex-1 overflow-hidden">
@@ -34,7 +41,17 @@ export default function ButtonGridPageShell({
               </span>
               {title}
             </div>
-
+            {showVerbPdfGeneratorButton && verbName ? (
+              <Button
+                type="button"
+                onClick={() => handleVerbPdfGeneratorClick(verbName)}
+                variant="outline"
+                fullWidth={false}
+                className="rounded-full px-4 py-2 text-sm"
+              >
+                Verb PDF generator
+              </Button>
+            ) : null}
             {showBackButton ? (
               <Button
                 href={backHref}

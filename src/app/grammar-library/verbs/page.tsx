@@ -1,6 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { DATA_DIRECTORY } from "@/utils/constants";
+import { DATA_DIRECTORY, PERSON_LABELS } from "@/utils/constants";
 import ButtonGridPageShell from "@/components/features/ButtonGridPageShell";
 import { notFound } from "next/navigation";
 
@@ -16,15 +16,6 @@ type TenseData = {
 };
 
 type VerbData = Record<string, TenseData>;
-
-const PERSON_LABELS: Record<string, string> = {
-  "1sg": "1st Person Singular",
-  "2sg": "2nd Person Singular",
-  "3sg": "3rd Person Singular",
-  "1pl": "1st Person Plural",
-  "2pl": "2nd Person Plural (Formal)",
-  "3pl": "3rd Person Plural",
-};
 
 interface VerbPageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -60,6 +51,8 @@ export default async function VerbPage({ searchParams }: VerbPageProps) {
       showBackButton={true}
       backHref="/grammar-library/verbs/selector"
       backLabel="Back to selector"
+      showVerbPdfGeneratorButton={true}
+      verbName={verbName}
     >
       <div className="space-y-12 pb-8">
         {Object.entries(verbData).map(([tenseKey, tenseObj]) => {

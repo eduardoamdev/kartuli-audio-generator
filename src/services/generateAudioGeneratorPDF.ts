@@ -1,17 +1,9 @@
 import puppeteer from "puppeteer";
-
 import type {
   GeneratedMessage,
   GeneratedTextEntry,
 } from "@/types/audioGenerator";
-
-const escapeHtml = (value: string): string =>
-  value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
+import { escapeHtml } from "@/utils/escapeHtml";
 
 const splitIntoParagraphs = (value: string | undefined): string[] => {
   if (typeof value !== "string") {
@@ -168,7 +160,7 @@ const buildPdfHtml = (text: GeneratedTextEntry | undefined): string => {
 	`;
 };
 
-export async function generatePDF(
+export async function generateAudioGeneratorPDF(
   texts?: GeneratedTextEntry,
 ): Promise<Uint8Array<ArrayBuffer>> {
   const browser = await puppeteer.launch({
