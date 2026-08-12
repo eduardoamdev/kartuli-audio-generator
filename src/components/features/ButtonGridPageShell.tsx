@@ -49,7 +49,7 @@ export default function ButtonGridPageShell({
                 fullWidth={false}
                 className="rounded-full px-4 py-2 text-sm"
               >
-                Verb PDF generator
+                Generate verb PDF
               </Button>
             ) : null}
             {showBackButton ? (
