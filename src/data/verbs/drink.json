@@ -1,0 +1,111 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "infinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "სმა",
+        "la": "sma",
+        "en": "to drink"
+      }
+    }
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვსვამ", "la": "vsvam", "en": "I drink" },
+      "2sg": { "ka": "სვამ", "la": "svam", "en": "you drink" },
+      "3sg": { "ka": "სვამს", "la": "svams", "en": "he/she/it drinks" },
+      "1pl": { "ka": "ვსვამთ", "la": "vsvamt", "en": "we drink" },
+      "2pl": {
+        "ka": "სვამთ",
+        "la": "svamt",
+        "en": "you drink (plural/formal)"
+      },
+      "3pl": { "ka": "სვამენ", "la": "svamen", "en": "they drink" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "დავლიე", "la": "davlie", "en": "I drank" },
+      "2sg": { "ka": "დალიე", "la": "dalie", "en": "you drank" },
+      "3sg": { "ka": "დალია", "la": "dalia", "en": "he/she/it drank" },
+      "1pl": { "ka": "დავლიეთ", "la": "davliet", "en": "we drank" },
+      "2pl": {
+        "ka": "დალიეთ",
+        "la": "daliet",
+        "en": "you drank (plural/formal)"
+      },
+      "3pl": { "ka": "დალიეს", "la": "dalies", "en": "they drank" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "დავლევ", "la": "davlev", "en": "I will drink" },
+      "2sg": { "ka": "დალევ", "la": "dalev", "en": "you will drink" },
+      "3sg": { "ka": "დალევს", "la": "dalevs", "en": "he/she/it will drink" },
+      "1pl": { "ka": "დავლევთ", "la": "davlevt", "en": "we will drink" },
+      "2pl": {
+        "ka": "დალევთ",
+        "la": "dalevt",
+        "en": "you will drink (plural/formal)"
+      },
+      "3pl": { "ka": "დალევენ", "la": "daleven", "en": "they will drink" }
+    }
+  },
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (were)"
+    },
+    "conjugation": {
+      "1sg": { "ka": "დამელია", "la": "damelia", "en": "I drank" },
+      "2sg": { "ka": "დაგელია", "la": "dagelia", "en": "you drank" },
+      "3sg": { "ka": "დაელია", "la": "daelia", "en": "he/she/it drank" },
+      "1pl": { "ka": "დაგველია", "la": "davgvelia", "en": "we drank" },
+      "2pl": {
+        "ka": "დაგელიათ",
+        "la": "dageliat",
+        "en": "you drank (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დაელიათ",
+        "la": "daeliat",
+        "en": "they drank"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": { "ka": "დავლევდი", "la": "davlevdi", "en": "I would drink" },
+      "2sg": { "ka": "დალევდი", "la": "dalevdi", "en": "you would drink" },
+      "3sg": {
+        "ka": "დალევდა",
+        "la": "dalevda",
+        "en": "he/she/it would drink"
+      },
+      "1pl": { "ka": "დავლევდით", "la": "davlevdit", "en": "we would drink" },
+      "2pl": {
+        "ka": "დალევდით",
+        "la": "dalevdit",
+        "en": "you would drink (plural/formal)"
+      },
+      "3pl": {
+        "ka": "დალევდნენ",
+        "la": "dalevdnen",
+        "en": "they would drink"
+      }
+    }
+  }
+}

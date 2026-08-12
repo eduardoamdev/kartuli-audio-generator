@@ -1,0 +1,107 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "infinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "ჭამა",
+        "la": "ch’ama",
+        "en": "to eat"
+      }
+    }
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვჭამ", "la": "vch’am", "en": "I eat" },
+      "2sg": { "ka": "ჭამ", "la": "ch’am", "en": "you eat" },
+      "3sg": { "ka": "ჭამს", "la": "ch’ams", "en": "he/she/it eats" },
+      "1pl": { "ka": "ვჭამთ", "la": "vch’amt", "en": "we eat" },
+      "2pl": { "ka": "ჭამთ", "la": "ch’amt", "en": "you eat (plural/formal)" },
+      "3pl": { "ka": "ჭამენ", "la": "ch’amen", "en": "they eat" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "ვჭამე", "la": "vch’ame", "en": "I ate" },
+      "2sg": { "ka": "ჭამე", "la": "ch’ame", "en": "you ate" },
+      "3sg": { "ka": "ჭამა", "la": "ch’ama", "en": "he/she/it ate" },
+      "1pl": { "ka": "ვჭამეთ", "la": "vch’amet", "en": "we ate" },
+      "2pl": {
+        "ka": "ჭამეთ",
+        "la": "ch’amet",
+        "en": "you ate (plural/formal)"
+      },
+      "3pl": { "ka": "ჭამეს", "la": "ch’ames", "en": "they ate" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "შევჭამ", "la": "shevch’am", "en": "I will eat" },
+      "2sg": { "ka": "შეჭამ", "la": "shech’am", "en": "you will eat" },
+      "3sg": { "ka": "შეჭამს", "la": "shech’ams", "en": "he/she/it will eat" },
+      "1pl": { "ka": "შევჭამთ", "la": "shevch’amt", "en": "we will eat" },
+      "2pl": {
+        "ka": "შეჭამთ",
+        "la": "shech’amt",
+        "en": "you will eat (plural/formal)"
+      },
+      "3pl": { "ka": "შეჭამენ", "la": "shech’amen", "en": "they will eat" }
+    }
+  },
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (were)"
+    },
+    "conjugation": {
+      "1sg": { "ka": "მეჭამა", "la": "mech’ama", "en": "I ate" },
+      "2sg": { "ka": "გეჭამა", "la": "gech’ama", "en": "you ate" },
+      "3sg": { "ka": "ეჭამა", "la": "ech’ama", "en": "he/she/it ate" },
+      "1pl": { "ka": "გვეჭამა", "la": "gvech’ama", "en": "we ate" },
+      "2pl": {
+        "ka": "გეჭამათ",
+        "la": "gech’amat",
+        "en": "you ate (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ეჭამათ",
+        "la": "ech’amat",
+        "en": "they ate"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": { "ka": "შევჭამდი", "la": "shevch’amdi", "en": "I would eat" },
+      "2sg": { "ka": "შეჭამდი", "la": "shech’amdi", "en": "you would eat" },
+      "3sg": {
+        "ka": "შეჭამდა",
+        "la": "shech’amda",
+        "en": "he/she/it would eat"
+      },
+      "1pl": { "ka": "შევჭამდით", "la": "shevch’amdit", "en": "we would eat" },
+      "2pl": {
+        "ka": "შეჭამდით",
+        "la": "shech’amdit",
+        "en": "you would eat (plural/formal)"
+      },
+      "3pl": {
+        "ka": "შეჭამდნენ",
+        "la": "shech’amdnen",
+        "en": "they would eat"
+      }
+    }
+  }
+}
