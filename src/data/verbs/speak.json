@@ -1,0 +1,155 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "infinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "ლაპარაკი",
+        "la": "lap’arak’i",
+        "en": "to speak"
+      }
+    }
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვლაპარაკობ", "la": "vlap’arak’ob", "en": "I speak" },
+      "2sg": { "ka": "ლაპარაკობ", "la": "lap’arak’ob", "en": "you speak" },
+      "3sg": {
+        "ka": "ლაპარაკობს",
+        "la": "lap’arak’obs",
+        "en": "he/she/it speaks"
+      },
+      "1pl": { "ka": "ვლაპარაკობთ", "la": "vlap’arak’obt", "en": "we speak" },
+      "2pl": {
+        "ka": "ლაპარაკობთ",
+        "la": "lap’arak’obt",
+        "en": "you speak (plural/formal)"
+      },
+      "3pl": { "ka": "ლაპარაკობენ", "la": "lap’arak’oben", "en": "they speak" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "ვილაპარაკე", "la": "vilap’arak’e", "en": "I spoke" },
+      "2sg": { "ka": "ილაპარაკე", "la": "ilap’arak’e", "en": "you spoke" },
+      "3sg": {
+        "ka": "ილაპარაკა",
+        "la": "ilap’arak’a",
+        "en": "he/she/it spoke"
+      },
+      "1pl": { "ka": "ვილაპარაკეთ", "la": "vilap’arak’et", "en": "we spoke" },
+      "2pl": {
+        "ka": "ილაპარაკეთ",
+        "la": "ilap’arak’et",
+        "en": "you spoke (plural/formal)"
+      },
+      "3pl": { "ka": "ილაპარაკეს", "la": "ilap’arak’es", "en": "they spoke" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვილაპარაკებ",
+        "la": "vilap’arak’eb",
+        "en": "I will speak"
+      },
+      "2sg": {
+        "ka": "ილაპარაკებ",
+        "la": "ilap’arak’eb",
+        "en": "you will speak"
+      },
+      "3sg": {
+        "ka": "ილაპარაკებს",
+        "la": "ilap’arak’eps",
+        "en": "he/she/it will speak"
+      },
+      "1pl": {
+        "ka": "ვილაპარაკებთ",
+        "la": "vilap’arak’ebt",
+        "en": "we will speak"
+      },
+      "2pl": {
+        "ka": "ილაპარაკებთ",
+        "la": "ilap’arak’ebt",
+        "en": "you will speak (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ილაპარაკებენ",
+        "la": "ilap’arak’eben",
+        "en": "they will speak"
+      }
+    }
+  },
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (were)"
+    },
+    "conjugation": {
+      "1sg": { "ka": "მელაპარაკა", "la": "melap’arak’a", "en": "I spoke" },
+      "2sg": { "ka": "გელაპარაკა", "la": "gelap’arak’a", "en": "you spoke" },
+      "3sg": {
+        "ka": "ელაპარაკა",
+        "la": "elap’arak’a",
+        "en": "he/she/it spoke"
+      },
+      "1pl": { "ka": "გველაპარაკა", "la": "gvelap’arak’a", "en": "we spoke" },
+      "2pl": {
+        "ka": "გელაპარაკათ",
+        "la": "gelap’arak’at",
+        "en": "you spoke (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ელაპარაკათ",
+        "la": "elap’arak’at",
+        "en": "they spoke"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "ვილაპარაკებდი",
+        "la": "vilap’arak’ebdi",
+        "en": "I would speak"
+      },
+      "2sg": {
+        "ka": "ილაპარაკებდი",
+        "la": "ilap’arak’ebdi",
+        "en": "you would speak"
+      },
+      "3sg": {
+        "ka": "ილაპარაკებდა",
+        "la": "ilap’arak’ebda",
+        "en": "he/she/it would speak"
+      },
+      "1pl": {
+        "ka": "ვილაპარაკებდით",
+        "la": "vilap’arak’ebdit",
+        "en": "we would speak"
+      },
+      "2pl": {
+        "ka": "ილაპარაკებდით",
+        "la": "ilap’arak’ebdit",
+        "en": "you would speak (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ილაპარაკებდნენ",
+        "la": "ilap’arak’ebdnen",
+        "en": "they would speak"
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "infinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "საუბარი",
+        "la": "saubari",
+        "en": "to talk"
+      }
+    }
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვსაუბრობ", "la": "vsaubrob", "en": "I talk" },
+      "2sg": { "ka": "საუბრობ", "la": "saubrob", "en": "you talk" },
+      "3sg": { "ka": "საუბრობს", "la": "saubrobs", "en": "he/she/it talks" },
+      "1pl": { "ka": "ვსაუბრობთ", "la": "vsaubrobt", "en": "we talk" },
+      "2pl": {
+        "ka": "საუბრობთ",
+        "la": "saubrobt",
+        "en": "you talk (plural/formal)"
+      },
+      "3pl": { "ka": "საუბრობენ", "la": "saubroben", "en": "they talk" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "ვისაუბრე", "la": "visaubre", "en": "I talked" },
+      "2sg": { "ka": "ისაუბრე", "la": "isaubre", "en": "you talked" },
+      "3sg": { "ka": "ისაუბრა", "la": "isaubra", "en": "he/she/it talked" },
+      "1pl": { "ka": "ვისაუბრეთ", "la": "visaubret", "en": "we talked" },
+      "2pl": {
+        "ka": "ისაუბრეთ",
+        "la": "isaubret",
+        "en": "you talked (plural/formal)"
+      },
+      "3pl": { "ka": "ისაუბრეს", "la": "isaubres", "en": "they talked" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "ვისაუბრებ", "la": "visaubreb", "en": "I will talk" },
+      "2sg": { "ka": "ისაუბრებ", "la": "isaubreb", "en": "you will talk" },
+      "3sg": {
+        "ka": "ისაუბრებს",
+        "la": "isaubrebs",
+        "en": "he/she/it will talk"
+      },
+      "1pl": { "ka": "ვისაუბრებთ", "la": "visaubrebt", "en": "we will talk" },
+      "2pl": {
+        "ka": "ისაუბრებთ",
+        "la": "isaubrebt",
+        "en": "you will talk (plural/formal)"
+      },
+      "3pl": { "ka": "ისაუბრებენ", "la": "isaubreben", "en": "they will talk" }
+    }
+  },
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (were)"
+    },
+    "conjugation": {
+      "1sg": { "ka": "მესაუბრა", "la": "mesaubra", "en": "I talked" },
+      "2sg": { "ka": "გესაუბრა", "la": "gesaubra", "en": "you talked" },
+      "3sg": { "ka": "ესაუბრა", "la": "esaubra", "en": "he/she/it talked" },
+      "1pl": { "ka": "გვესაუბრა", "la": "gvesaubra", "en": "we talked" },
+      "2pl": {
+        "ka": "გესაუბრათ",
+        "la": "gesaubrat",
+        "en": "you talked (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ესაუბრათ",
+        "la": "esaubrat",
+        "en": "they talked"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": { "ka": "ვისაუბრებდი", "la": "visaurebdi", "en": "I would talk" },
+      "2sg": { "ka": "ისაუბრებდი", "la": "isaurebdi", "en": "you would talk" },
+      "3sg": {
+        "ka": "ისაუბრებდა",
+        "la": "isaurebda",
+        "en": "he/she/it would talk"
+      },
+      "1pl": {
+        "ka": "ვისაუბრებდით",
+        "la": "visaurebdit",
+        "en": "we would talk"
+      },
+      "2pl": {
+        "ka": "ისაუბრებდით",
+        "la": "isaurebdit",
+        "en": "you would talk (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ისაუბრებდნენ",
+        "la": "isaurebdnen",
+        "en": "they would talk"
+      }
+    }
+  }
+}

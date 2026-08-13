@@ -1,0 +1,107 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "infinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "თქმა",
+        "la": "tkma",
+        "en": "to say"
+      }
+    }
+  },
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვამბობ", "la": "vambob", "en": "I say" },
+      "2sg": { "ka": "ამბობ", "la": "ambob", "en": "you say" },
+      "3sg": { "ka": "ამბობს", "la": "ambobs", "en": "he/she/it says" },
+      "1pl": { "ka": "ვამბობთ", "la": "vambobt", "en": "we say" },
+      "2pl": {
+        "ka": "ამბობთ",
+        "la": "ambobt",
+        "en": "you say (plural/formal)"
+      },
+      "3pl": { "ka": "ამბობენ", "la": "amboben", "en": "they say" }
+    }
+  },
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "ვთქვი", "la": "vtqvi", "en": "I said" },
+      "2sg": { "ka": "თქვი", "la": "tqvi", "en": "you said" },
+      "3sg": { "ka": "თქვა", "la": "tqva", "en": "he/she/it said" },
+      "1pl": { "ka": "ვთქვით", "la": "vtqvit", "en": "we said" },
+      "2pl": {
+        "ka": "თქვით",
+        "la": "tqvit",
+        "en": "you said (plural/formal)"
+      },
+      "3pl": { "ka": "თქვეს", "la": "tqves", "en": "they said" }
+    }
+  },
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "ვიტყვი", "la": "vitqvi", "en": "I will say" },
+      "2sg": { "ka": "იტყვი", "la": "itqvi", "en": "you will say" },
+      "3sg": { "ka": "იტყვის", "la": "itqvis", "en": "he/she/it will say" },
+      "1pl": { "ka": "ვიტყვით", "la": "vitqvit", "en": "we will say" },
+      "2pl": {
+        "ka": "იტყვით",
+        "la": "itqvit",
+        "en": "you will say (plural/formal)"
+      },
+      "3pl": { "ka": "იტყვიან", "la": "itqvian", "en": "they will say" }
+    }
+  },
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (were)"
+    },
+    "conjugation": {
+      "1sg": { "ka": "მეთქვა", "la": "metqva", "en": "I said" },
+      "2sg": { "ka": "გეთქვა", "la": "getqva", "en": "you said" },
+      "3sg": { "ka": "ეთქვა", "la": "etqva", "en": "he/she/it said" },
+      "1pl": { "ka": "გვეთქვა", "la": "gvetqva", "en": "we said" },
+      "2pl": {
+        "ka": "გეთქვათ",
+        "la": "getqvat",
+        "en": "you said (plural/formal)"
+      },
+      "3pl": {
+        "ka": "ეთქვათ",
+        "la": "etqvat",
+        "en": "they said"
+      }
+    }
+  },
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": { "ka": "ვიტყოდი", "la": "vitqodi", "en": "I would say" },
+      "2sg": { "ka": "იტყოდი", "la": "itqodi", "en": "you would say" },
+      "3sg": { "ka": "იტყოდა", "la": "itqoda", "en": "he/she/it would say" },
+      "1pl": { "ka": "ვიტყოდით", "la": "vitqodit", "en": "we would say" },
+      "2pl": {
+        "ka": "იტყოდით",
+        "la": "itqodit",
+        "en": "you would say (plural/formal)"
+      },
+      "3pl": {
+        "ka": "იტყოდნენ",
+        "la": "itqodnen",
+        "en": "they would say"
+      }
+    }
+  }
+}
