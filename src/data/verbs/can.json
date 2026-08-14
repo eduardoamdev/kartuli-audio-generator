@@ -2,209 +2,145 @@
   "infinitive": {
     "name": {
       "ka": "ინფინიტივი",
-      "la": "inpinit'ivi",
+      "la": "infinit’ivi",
       "en": "infinitive"
     },
     "conjugation": {
       "infinitive": {
-        "ka": "სჭირდებოდეს",
-        "la": "sch'irdebodes",
-        "en": "to need"
+        "ka": "შეძლება",
+        "la": "sheʒleba",
+        "en": "to can"
       }
     }
   },
   "present": {
-    "name": {
-      "ka": "აწმყო",
-      "la": "atsmqo",
-      "en": "present"
-    },
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
     "conjugation": {
-      "1sg": {
-        "ka": "მე მჭირდება",
-        "la": "me mch'irdeba",
-        "en": "I need"
-      },
-      "2sg": {
-        "ka": "შენ გჭირდება",
-        "la": "shen gch'irdeba",
-        "en": "you need"
-      },
-      "3sg": {
-        "ka": "მას სჭირდება",
-        "la": "mas sch'irdeba",
-        "en": "he/she needs"
-      },
-      "1pl": {
-        "ka": "ჩვენ გვჭირდება",
-        "la": "chven gvch'irdeba",
-        "en": "we need"
-      },
+      "1sg": { "ka": "შემიძლია", "la": "shemidzlia", "en": "I can" },
+      "2sg": { "ka": "შეგიძლია", "la": "shegidzlia", "en": "you can" },
+      "3sg": { "ka": "შეუძლია", "la": "sheudzlia", "en": "he/she/it can" },
+      "1pl": { "ka": "შეგვიძლია", "la": "shegvidzlia", "en": "we can" },
       "2pl": {
-        "ka": "თქვენ გჭირდებათ",
-        "la": "tkven gch'irdebat",
-        "en": "you need (plural/formal)"
+        "ka": "შეგიძლიათ",
+        "la": "shegidzliat",
+        "en": "you can (plural/formal)"
       },
-      "3pl": {
-        "ka": "მათ სჭირდებათ",
-        "la": "mat sch'irdebat",
-        "en": "they need"
-      }
+      "3pl": { "ka": "შეუძლიათ", "la": "sheudzliat", "en": "they can" }
     }
   },
   "past": {
-    "name": {
-      "ka": "წარსული",
-      "la": "tsarsuli",
-      "en": "past"
-    },
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
     "conjugation": {
-      "1sg": {
-        "ka": "მე მჭირდებოდა",
-        "la": "me mch'irdeboda",
-        "en": "I needed"
-      },
-      "2sg": {
-        "ka": "შენ გჭირდებოდა",
-        "la": "shen gch'irdeboda",
-        "en": "you needed"
-      },
-      "3sg": {
-        "ka": "მას სჭირდებოდა",
-        "la": "mas sch'irdeboda",
-        "en": "he/she needed"
-      },
-      "1pl": {
-        "ka": "ჩვენ გვჭირდებოდა",
-        "la": "chven gvch'irdeboda",
-        "en": "we needed"
-      },
+      "1sg": { "ka": "შემეძლო", "la": "shemedzlo", "en": "I could" },
+      "2sg": { "ka": "შეგეძლო", "la": "shegedzlo", "en": "you could" },
+      "3sg": { "ka": "შეეძლო", "la": "sheudzlo", "en": "he/she/it could" },
+      "1pl": { "ka": "შეგვეძლო", "la": "shegvedzlo", "en": "we could" },
       "2pl": {
-        "ka": "თქვენ გჭირდებოდათ",
-        "la": "tkven gch'irdebodat",
-        "en": "you needed (plural/formal)"
+        "ka": "შეგეძლოთ",
+        "la": "shegedzlot",
+        "en": "you could (plural/formal)"
       },
-      "3pl": {
-        "ka": "მათ სჭირდებოდათ",
-        "la": "mat sch'irdebodat",
-        "en": "they needed"
-      }
+      "3pl": { "ka": "შეეძლოთ", "la": "sheudzlot", "en": "they could" }
     }
   },
   "future": {
-    "name": {
-      "ka": "მომავალი",
-      "la": "momavali",
-      "en": "future"
-    },
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
     "conjugation": {
       "1sg": {
-        "ka": "მე დამჭირდება",
-        "la": "me damch'irdeba",
-        "en": "I will need"
+        "ka": "შემეძლება",
+        "la": "shemedzleba",
+        "en": "I will be able to"
       },
       "2sg": {
-        "ka": "შენ დაგჭირდება",
-        "la": "shen dagch'irdeba",
-        "en": "you will need"
+        "ka": "შეგეძლება",
+        "la": "shegedzleba",
+        "en": "you will be able to"
       },
       "3sg": {
-        "ka": "მას დასჭირდება",
-        "la": "mas dasch'irdeba",
-        "en": "he/she will need"
+        "ka": "შეეძლება",
+        "la": "sheudzleba",
+        "en": "he/she/it will be able to"
       },
       "1pl": {
-        "ka": "ჩვენ დაგვჭირდება",
-        "la": "chven dagvch'irdeba",
-        "en": "we will need"
+        "ka": "შეგვეძლება",
+        "la": "shegvedzleba",
+        "en": "we will be able to"
       },
       "2pl": {
-        "ka": "თქვენ დაგჭირდებათ",
-        "la": "tkven dagch'irdebat",
-        "en": "you will need (plural/formal)"
+        "ka": "შეგეძლებათ",
+        "la": "shegedzlebat",
+        "en": "you will be able to (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ დასჭირდებათ",
-        "la": "mat dasch'irdebat",
-        "en": "they will need"
+        "ka": "შეეძლებათ",
+        "la": "sheudzlebat",
+        "en": "they will be able to"
       }
     }
   },
   "conditional_past": {
     "name": {
       "ka": "პირობითი წარსული",
-      "la": "p'irobiti tsarsuli",
-      "en": "conditional past"
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (were)"
     },
     "conjugation": {
-      "1sg": {
-        "ka": "მე დამჭირვებოდა",
-        "la": "me damch'irveboda",
-        "en": "I had needed"
-      },
-      "2sg": {
-        "ka": "შენ დაგჭირვებოდა",
-        "la": "shen dagch'irveboda",
-        "en": "you had needed"
-      },
+      "1sg": { "ka": "შემძლებოდა", "la": "shemʒleboda", "en": "I could" },
+      "2sg": { "ka": "შეგძლებოდა", "la": "shegʒleboda", "en": "you could" },
       "3sg": {
-        "ka": "მას დასჭირვებოდა",
-        "la": "mas dasch'irveboda",
-        "en": "he/she had needed"
+        "ka": "შესძლებოდა",
+        "la": "sheʒleboda",
+        "en": "he/she/it could"
       },
-      "1pl": {
-        "ka": "ჩვენ დაგვჭირვებოდა",
-        "la": "chven dagvch'irveboda",
-        "en": "we had needed"
-      },
+      "1pl": { "ka": "შეგვძლებოდა", "la": "shegvʒleboda", "en": "we could" },
       "2pl": {
-        "ka": "თქვენ დაგჭირვებოდათ",
-        "la": "tkven dagch'irvebodat",
-        "en": "you had needed (plural/formal)"
+        "ka": "შეგძლებოდათ",
+        "la": "shegʒlebodyt",
+        "en": "you could (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ დასჭირვებოდათ",
-        "la": "mat dasch'irvebodat",
-        "en": "they had needed"
+        "ka": "შესძლებოდათ",
+        "la": "sheʒlebodyt",
+        "en": "they could"
       }
     }
   },
   "conditional_would": {
     "name": {
       "ka": "პირობითი მომავალი",
-      "la": "p'irobiti momavali",
+      "la": "p’irobiti momavali",
       "en": "conditional would"
     },
     "conjugation": {
       "1sg": {
-        "ka": "მე დამჭირდებოდა",
-        "la": "me damch'irdeboda",
-        "en": "I would need"
+        "ka": "შემეძლებოდა",
+        "la": "shemedzleboda",
+        "en": "I would be able to"
       },
       "2sg": {
-        "ka": "შენ დაგჭირდებოდა",
-        "la": "shen dagch'irdeboda",
-        "en": "you would need"
+        "ka": "შეგეძლებოდა",
+        "la": "shegedzleboda",
+        "en": "you would be able to"
       },
       "3sg": {
-        "ka": "მას დასჭირდებოდა",
-        "la": "mas dasch'irdeboda",
-        "en": "he/she would need"
+        "ka": "შეეძლებოდა",
+        "la": "sheudzleboda",
+        "en": "he/she/it would be able to"
       },
       "1pl": {
-        "ka": "ჩვენ დაგვჭირდებოდა",
-        "la": "chven dagvch'irdeboda",
-        "en": "we would need"
+        "ka": "შეგვეძლებოდა",
+        "la": "shegvedzleboda",
+        "en": "we would be able to"
       },
       "2pl": {
-        "ka": "თქვენ დაგჭირდებოდათ",
-        "la": "tkven dagch'irdebodat",
-        "en": "you would need (plural/formal)"
+        "ka": "შეგეძლებოდათ",
+        "la": "shegedzlebodyt",
+        "en": "you would be able to (plural/formal)"
       },
       "3pl": {
-        "ka": "მათ დასჭირდებოდათ",
-        "la": "mat dasch'irdebodat",
-        "en": "they would need"
+        "ka": "შეეძლებოდათ",
+        "la": "sheudzlebodyt",
+        "en": "they would be able to"
       }
     }
   }
