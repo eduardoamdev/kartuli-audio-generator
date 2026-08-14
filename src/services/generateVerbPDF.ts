@@ -60,17 +60,18 @@ const buildVerbPdfHtml = (verbName: string, verbData: VerbData): string => {
             color: #1f1720;
           }
           main {
-            padding: 28px 24px 40px;
+            padding-right: 20px;
+            padding-left: 20px;
           }
           h1 {
             margin: 0 0 10px;
-            font-size: 26px;
+            font-size: 24px;
             color: #4b1639;
           }
           .subtitle {
             margin: 0 0 28px;
             color: #7b3b5c;
-            font-size: 14px;
+            font-size: 12px;
             letter-spacing: 0.08em;
             text-transform: uppercase;
           }
@@ -80,12 +81,12 @@ const buildVerbPdfHtml = (verbName: string, verbData: VerbData): string => {
           }
           h2 {
             margin: 0 0 4px;
-            font-size: 20px;
+            font-size: 18px;
             color: #2d1228;
           }
           h3 {
             margin: 0 0 14px;
-            font-size: 14px;
+            font-size: 12px;
             color: #7b3b5c;
             font-weight: 600;
           }
@@ -107,13 +108,13 @@ const buildVerbPdfHtml = (verbName: string, verbData: VerbData): string => {
           }
           th {
             background: #fdf0f7;
-            font-size: 12px;
+            font-size: 10px;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: #6b2854;
           }
           td {
-            font-size: 13px;
+            font-size: 11px;
             color: #2f172a;
           }
         </style>
