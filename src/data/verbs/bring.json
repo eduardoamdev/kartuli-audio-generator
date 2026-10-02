@@ -1,0 +1,116 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "npinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "მოტანა",
+        "la": "motana",
+        "en": "to bring"
+      }
+    }
+  },
+
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "მომაქვს", "la": "momakvs", "en": "I bring" },
+      "2sg": { "ka": "მოგაქვს", "la": "mogakvs", "en": "you bring" },
+      "3sg": { "ka": "მოაქვს", "la": "moakvs", "en": "he/she/it brings" },
+      "1pl": { "ka": "მოგვაქვს", "la": "mogvakvs", "en": "we bring" },
+      "2pl": {
+        "ka": "მოგაქვთ",
+        "la": "mogaqvt",
+        "en": "you bring (plural/formal)"
+      },
+      "3pl": { "ka": "მოაქვთ", "la": "moaqvt", "en": "they bring" }
+    }
+  },
+
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "მოვიტანე", "la": "movitane", "en": "I brought" },
+      "2sg": { "ka": "მოიტანე", "la": "moitane", "en": "you brought" },
+      "3sg": { "ka": "მოიტანა", "la": "moitana", "en": "he/she/it brought" },
+      "1pl": { "ka": "მოვიტანეთ", "la": "movitanet", "en": "we brought" },
+      "2pl": {
+        "ka": "მოიტანეთ",
+        "la": "moitanet",
+        "en": "you brought (plural/formal)"
+      },
+      "3pl": { "ka": "მოიტანეს", "la": "moitanes", "en": "they brought" }
+    }
+  },
+
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "მოვიტან", "la": "movitan", "en": "I will bring" },
+      "2sg": { "ka": "მოიტან", "la": "moitan", "en": "you will bring" },
+      "3sg": { "ka": "მოიტანს", "la": "moitans", "en": "he/she/it will bring" },
+      "1pl": { "ka": "მოვიტანთ", "la": "movitant", "en": "we will bring" },
+      "2pl": {
+        "ka": "მოიტანთ",
+        "la": "moitant",
+        "en": "you will bring (plural/formal)"
+      },
+      "3pl": { "ka": "მოიტანენ", "la": "moitanen", "en": "they will bring" }
+    }
+  },
+
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (had brought)"
+    },
+    "conjugation": {
+      "1sg": { "ka": "მომეტანა", "la": "mometana", "en": "I had brought" },
+      "2sg": { "ka": "მოგეტანა", "la": "mogetana", "en": "you had brought" },
+      "3sg": {
+        "ka": "მოეტანა",
+        "la": "moetana",
+        "en": "he/she/it had brought"
+      },
+      "1pl": { "ka": "მოგვეტანა", "la": "mogvetana", "en": "we had brought" },
+      "2pl": {
+        "ka": "მოგეტანათ",
+        "la": "mogetanat",
+        "en": "you had brought (plural/formal)"
+      },
+      "3pl": { "ka": "მოეტანათ", "la": "moetanat", "en": "they had brought" }
+    }
+  },
+
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": { "ka": "მოვიტანდი", "la": "movitandi", "en": "I would bring" },
+      "2sg": { "ka": "მოიტანდი", "la": "moitandi", "en": "you would bring" },
+      "3sg": {
+        "ka": "მოიტანდა",
+        "la": "moitanda",
+        "en": "he/she/it would bring"
+      },
+      "1pl": { "ka": "მოვიტანდით", "la": "movitandit", "en": "we would bring" },
+      "2pl": {
+        "ka": "მოიტანდით",
+        "la": "moitandit",
+        "en": "you would bring (plural/formal)"
+      },
+      "3pl": {
+        "ka": "მოიტანდნენ",
+        "la": "moitandnen",
+        "en": "they would bring"
+      }
+    }
+  }
+}

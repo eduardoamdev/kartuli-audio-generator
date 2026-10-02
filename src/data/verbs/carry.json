@@ -1,0 +1,172 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "npinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "წაღება",
+        "la": "ts’agheba",
+        "en": "to take / to carry"
+      }
+    }
+  },
+
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "მიმაქვს", "la": "mimakvs", "en": "I take / carry" },
+      "2sg": { "ka": "მიგაქვს", "la": "migakvs", "en": "you take / carry" },
+      "3sg": {
+        "ka": "მიაქვს",
+        "la": "miakvs",
+        "en": "he/she/it takes / carries"
+      },
+      "1pl": { "ka": "მიგვაქვს", "la": "migvakvs", "en": "we take / carry" },
+      "2pl": {
+        "ka": "მიგაქვთ",
+        "la": "migaqvt",
+        "en": "you take / carry (plural/formal)"
+      },
+      "3pl": { "ka": "მიაქვთ", "la": "miaqvt", "en": "they take / carry" }
+    }
+  },
+
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "წავიღე", "la": "ts’avighe", "en": "I took / carried" },
+      "2sg": { "ka": "წაიღე", "la": "ts’aighe", "en": "you took / carried" },
+      "3sg": {
+        "ka": "წაიღო",
+        "la": "ts’aigho",
+        "en": "he/she/it took / carried"
+      },
+      "1pl": { "ka": "წავიღეთ", "la": "ts’avighet", "en": "we took / carried" },
+      "2pl": {
+        "ka": "წაიღეთ",
+        "la": "ts’aighet",
+        "en": "you took / carried (plural/formal)"
+      },
+      "3pl": { "ka": "წაიღეს", "la": "ts’aighes", "en": "they took / carried" }
+    }
+  },
+
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": {
+        "ka": "წავიღებ",
+        "la": "ts’avigheb",
+        "en": "I will take / carry"
+      },
+      "2sg": {
+        "ka": "წაიღებ",
+        "la": "ts’aigheb",
+        "en": "you will take / carry"
+      },
+      "3sg": {
+        "ka": "წაიღებს",
+        "la": "ts’aighebs",
+        "en": "he/she/it will take / carry"
+      },
+      "1pl": {
+        "ka": "წავიღებთ",
+        "la": "ts’avighebt",
+        "en": "we will take / carry"
+      },
+      "2pl": {
+        "ka": "წაიღებთ",
+        "la": "ts’aighebt",
+        "en": "you will take / carry (plural/formal)"
+      },
+      "3pl": {
+        "ka": "წაიღებენ",
+        "la": "ts’aigheben",
+        "en": "they will take / carry"
+      }
+    }
+  },
+
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (had taken)"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "წამეღო",
+        "la": "tsamegho",
+        "en": "I had taken / carried"
+      },
+      "2sg": {
+        "ka": "წაგეღო",
+        "la": "tsagegho",
+        "en": "you had taken / carried"
+      },
+      "3sg": {
+        "ka": "წაეღო",
+        "la": "tsaeghe",
+        "en": "he/she/it had taken / carried"
+      },
+      "1pl": {
+        "ka": "წაგვეღო",
+        "la": "tsagvegho",
+        "en": "we had taken / carried"
+      },
+      "2pl": {
+        "ka": "წაგეღოთ",
+        "la": "tsageghot",
+        "en": "you had taken / carried (plural/formal)"
+      },
+      "3pl": {
+        "ka": "წაეღოთ",
+        "la": "tsaegot",
+        "en": "they had taken / carried"
+      }
+    }
+  },
+
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "წავიღებდი",
+        "la": "ts’avighebdi",
+        "en": "I would take / carry"
+      },
+      "2sg": {
+        "ka": "წაიღებდი",
+        "la": "ts’aighebdi",
+        "en": "you would take / carry"
+      },
+      "3sg": {
+        "ka": "წაიღებდა",
+        "la": "ts’aighebda",
+        "en": "he/she/it would take / carry"
+      },
+      "1pl": {
+        "ka": "წავიღებდით",
+        "la": "ts’avighebdit",
+        "en": "we would take / carry"
+      },
+      "2pl": {
+        "ka": "წაიღებდით",
+        "la": "ts’aighebdit",
+        "en": "you would take / carry (plural/formal)"
+      },
+      "3pl": {
+        "ka": "წაიღებდნენ",
+        "la": "ts’aighebdnen",
+        "en": "they would take / carry"
+      }
+    }
+  }
+}

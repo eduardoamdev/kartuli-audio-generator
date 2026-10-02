@@ -1,0 +1,140 @@
+{
+  "infinitive": {
+    "name": {
+      "ka": "ინფინიტივი",
+      "la": "npinit’ivi",
+      "en": "infinitive"
+    },
+    "conjugation": {
+      "infinitive": {
+        "ka": "კეთება",
+        "la": "keteba",
+        "en": "to do"
+      }
+    }
+  },
+
+  "present": {
+    "name": { "ka": "აწმყო", "la": "atsmqo", "en": "present" },
+    "conjugation": {
+      "1sg": { "ka": "ვაკეთებ", "la": "vak'eteb", "en": "I do" },
+      "2sg": { "ka": "აკეთებ", "la": "ak'eteb", "en": "you do" },
+      "3sg": { "ka": "აკეთებს", "la": "ak'etebs", "en": "he/she/it does" },
+      "1pl": { "ka": "ვაკეთებთ", "la": "vak'etebt", "en": "we do" },
+      "2pl": {
+        "ka": "აკეთებთ",
+        "la": "ak'etebt",
+        "en": "you do (plural/formal)"
+      },
+      "3pl": { "ka": "აკეთებენ", "la": "ak'eteben", "en": "they do" }
+    }
+  },
+
+  "past": {
+    "name": { "ka": "წარსული", "la": "tsarsuli", "en": "past" },
+    "conjugation": {
+      "1sg": { "ka": "გავაკეთე", "la": "gavak'ete", "en": "I did" },
+      "2sg": { "ka": "გააკეთე", "la": "gaak'ete", "en": "you did" },
+      "3sg": { "ka": "გააკეთა", "la": "gaak'eta", "en": "he/she/it did" },
+      "1pl": { "ka": "გავაკეთეთ", "la": "gavak'etet", "en": "we did" },
+      "2pl": {
+        "ka": "გააკეთეთ",
+        "la": "gaak'etet",
+        "en": "you did (plural/formal)"
+      },
+      "3pl": { "ka": "გააკეთეს", "la": "gaak'etes", "en": "they did" }
+    }
+  },
+
+  "future": {
+    "name": { "ka": "მომავალი", "la": "momavali", "en": "future" },
+    "conjugation": {
+      "1sg": { "ka": "გავაკეთებ", "la": "gavak'eteb", "en": "I will do" },
+      "2sg": { "ka": "გააკეთებ", "la": "gaak'eteb", "en": "you will do" },
+      "3sg": {
+        "ka": "გააკეთებს",
+        "la": "gaak'etebs",
+        "en": "he/she/it will do"
+      },
+      "1pl": { "ka": "გავაკეთებთ", "la": "gavak'etebt", "en": "we will do" },
+      "2pl": {
+        "ka": "გააკეთებთ",
+        "la": "gaak'etebt",
+        "en": "you will do (plural/formal)"
+      },
+      "3pl": { "ka": "გააკეთებენ", "la": "gaak'eteben", "en": "they will do" }
+    }
+  },
+
+  "conditional_past": {
+    "name": {
+      "ka": "პირობითი წარსული",
+      "la": "p’irobiti tsarsuli",
+      "en": "conditional past (had done)"
+    },
+    "conjugation": {
+      "1sg": {
+        "ka": "გამეკეთებინა",
+        "la": "gamek'etebina",
+        "en": "I had done"
+      },
+      "2sg": {
+        "ka": "გაგეკეთებინა",
+        "la": "gagek'etebina",
+        "en": "you had done"
+      },
+      "3sg": {
+        "ka": "გაეკეთებინა",
+        "la": "gaek'etebina",
+        "en": "he/she/it had done"
+      },
+      "1pl": {
+        "ka": "გაგვეკეთებინა",
+        "la": "gagvek'etebina",
+        "en": "we had done"
+      },
+      "2pl": {
+        "ka": "გაგეკეთებინათ",
+        "la": "gagek'etebinat",
+        "en": "you had done (plural/formal)"
+      },
+      "3pl": {
+        "ka": "გაეკეთებინათ",
+        "la": "gaek'etebinat",
+        "en": "they had done"
+      }
+    }
+  },
+
+  "conditional_would": {
+    "name": {
+      "ka": "პირობითი მომავალი",
+      "la": "p’irobiti momavali",
+      "en": "conditional would"
+    },
+    "conjugation": {
+      "1sg": { "ka": "გავაკეთებდი", "la": "gavak'etebdi", "en": "I would do" },
+      "2sg": { "ka": "გააკეთებდი", "la": "gaak'etebdi", "en": "you would do" },
+      "3sg": {
+        "ka": "გააკეთებდა",
+        "la": "gaak'etebda",
+        "en": "he/she/it would do"
+      },
+      "1pl": {
+        "ka": "გავაკეთებდით",
+        "la": "gavak'etebdit",
+        "en": "we would do"
+      },
+      "2pl": {
+        "ka": "გააკეთებდით",
+        "la": "gaak'etebdit",
+        "en": "you would do (plural/formal)"
+      },
+      "3pl": {
+        "ka": "გააკეთებდნენ",
+        "la": "gaak'etebdnen",
+        "en": "they would do"
+      }
+    }
+  }
+}
